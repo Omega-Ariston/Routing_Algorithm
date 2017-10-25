@@ -27,7 +27,11 @@ package Generic_Message_Structures is
       The_Message : The_Core_Message := Message_Strings.To_Bounded_String ("");
       Hop_Counter : Natural          := 0;
    end record;
-
+   type Neighbours is array (1 .. Positive (Router_Range'Last)) of Natural;
+   type Router_Status is record
+      Sender : Positive := Positive'Invalid_Value;
+      Neighbour : Neighbours := (others => 0);
+   end record;
    -- Leave anything above this line as it will be used by the testing framework
    -- to communicate with your router.
 

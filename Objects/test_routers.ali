@@ -1,0 +1,470 @@
+V "GNAT Lib v2017"
+M P W=b
+A -gnatA
+A -g
+A -gnatVa
+A -gnatVr
+A -gnatVp
+A -gnatVm
+A -gnatVi
+A -gnatVf
+A -gnatVe
+A -gnatVd
+A -gnatVc
+A -gnatVO
+A -gnatw.a
+A -gnatw.b
+A -gnatwc
+A -gnatw.c
+A -gnatwd
+A -gnatwf
+A -gnatwg
+A -gnatwh
+A -gnatw.h
+A -gnatwi
+A -gnatw.i
+A -gnatwj
+A -gnatwk
+A -gnatw.k
+A -gnatwl
+A -gnatw.l
+A -gnatwm
+A -gnatw.m
+A -gnatw.n
+A -gnatwo
+A -gnatw.o
+A -gnatwp
+A -gnatw.p
+A -gnatwq
+A -gnatwr
+A -gnatw.r
+A -gnatw.s
+A -gnatwt
+A -gnatw.t
+A -gnatwu
+A -gnatw.u
+A -gnatwv
+A -gnatw.v
+A -gnatww
+A -gnatw.w
+A -gnatwx
+A -gnatw.x
+A -gnatwy
+A -gnatwz
+A -gnat12
+A -gnatya
+A -gnatyA
+A -gnatyb
+A -gnatyB
+A -gnatyc
+A -gnatyC
+A -gnatye
+A -gnatyh
+A -gnatyf
+A -gnatyi
+A -gnatyk
+A -gnatyl
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnato
+A -gnatE
+A -g
+A -gnata
+A -mtune=generic
+A -march=pentium4
+P SS ZX
+
+RN
+RV NO_ABORT_STATEMENTS
+RV NO_DELAY
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_ENUMERATION_MAPS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_FIXED_POINT
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_PROTECTED_OBJECTS
+RV NO_NESTED_FINALIZATION
+RV NO_PROTECTED_TYPES
+RV NO_RELATIVE_DELAY
+RV NO_SECONDARY_STACK
+RV NO_SELECT_STATEMENTS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_TASK_HIERARCHY
+RV NO_TASKING
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV NO_OBSOLESCENT_FEATURES
+RV SPARK_05
+RV MAX_TASK_ENTRIES=5
+RV MAX_TASKS=1+
+RV MAX_ENTRY_QUEUE_LENGTH=1+
+
+U test_routers%b	test_routers.adb	59032ec0 DE NE OO SU IS
+W ada%s			ada.ads			ada.ali
+W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W ada.numerics.discrete_random%s
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+Z ada.strings%s		a-string.ads		a-string.ali
+Z ada.strings.bounded%s	a-strbou.adb		a-strbou.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z exceptions%s		exceptions.adb		exceptions.ali
+W generic_message_structures%s  generic_message_structures.ads  generic_message_structures.ali
+W generic_router%s	generic_router.adb	generic_router.ali
+Z generic_router_links%s  generic_router_links.adb  generic_router_links.ali
+W generic_routers%s	generic_routers.adb	generic_routers.ali
+W generic_routers_configuration%s  generic_routers_configuration.ads  generic_routers_configuration.ali
+W gnat%s		gnat.ads		gnat.ali
+W gnat.command_line%s	g-comlin.adb		g-comlin.ali
+Z id_dispenser%s	id_dispenser.adb	id_dispenser.ali
+W interfaces%s		interfac.ads		interfac.ali
+W routers_configuration_structures%s  routers_configuration_structures.adb  routers_configuration_structures.ali
+W system%s		system.ads		system.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.concat_3%s	s-conca3.adb		s-conca3.ali
+W system.concat_4%s	s-conca4.adb		s-conca4.ali
+W system.exception_table%s  s-exctab.adb	s-exctab.ali
+W system.fat_flt%s	s-fatflt.ads		s-fatflt.ali
+W system.finalization_masters%s  s-finmas.adb	s-finmas.ali
+W system.img_bool%s	s-imgboo.adb		s-imgboo.ali
+W system.img_enum_new%s	s-imenne.adb		s-imenne.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+Z system.random_numbers%s  s-rannum.adb		s-rannum.ali
+W system.scalar_values%s  s-scaval.adb		s-scaval.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.task_info%s	s-tasinf.adb		s-tasinf.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+W system.val_bool%s	s-valboo.adb		s-valboo.ali
+W system.val_enum%s	s-valenu.adb		s-valenu.ali
+W system.val_int%s	s-valint.adb		s-valint.ali
+W system.val_real%s	s-valrea.adb		s-valrea.ali
+W topologies%s		topologies.adb		topologies.ali
+
+D ada.ads		20170516105950 76789da1 ada%s
+D a-calend.ads		20170516105954 2d5f01d4 ada.calendar%s
+D a-caldel.ads		20170516105948 9f20b83d ada.calendar.delays%s
+D a-charac.ads		20170516105954 2d3ec45b ada.characters%s
+D a-chlat1.ads		20170516105952 66457d31 ada.characters.latin_1%s
+D a-comlin.ads		20170516105952 4aa66568 ada.command_line%s
+D a-except.ads		20170516105952 291912d5 ada.exceptions%s
+D a-finali.ads		20170516105954 bf4f806b ada.finalization%s
+D a-flteio.ads		20170516105952 e18a47a0 ada.float_text_io%s
+D a-inteio.ads		20170516105954 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20170516105948 e4a01f64 ada.io_exceptions%s
+D a-numeri.ads		20170516105950 bb51c45a ada.numerics%s
+D a-nudira.ads		20170516105950 71e55def ada.numerics.discrete_random%s
+D a-nudira.adb		20170516105950 72908cdb ada.numerics.discrete_random%b
+D a-reatim.ads		20170516105950 a87e2da7 ada.real_time%s
+D a-stream.ads		20170516105952 119b8fb3 ada.streams%s
+D a-string.ads		20170516105952 90ac6797 ada.strings%s
+D a-strbou.ads		20170516105950 53ab54ae ada.strings.bounded%s
+D a-strbou.adb		20170516105952 adb4aa70 ada.strings.bounded%b
+D a-strmap.ads		20170516105952 e8bb714a ada.strings.maps%s
+D a-strsup.ads		20170516105950 a27dcb33 ada.strings.superbounded%s
+D a-tags.ads		20170516105954 d3a89129 ada.tags%s
+D a-textio.ads		20170516105954 386df5d4 ada.text_io%s
+D a-tiflio.ads		20170516105948 56fbda09 ada.text_io.float_io%s
+D a-tiinio.ads		20170516105950 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20170516105954 31484697 ada.unchecked_conversion%s
+D a-uncdea.ads		20170516105954 f15a5ed1 ada.unchecked_deallocation%s
+D exceptions.ads	20171025031224 93f8a807 exceptions%s
+D generic_message_structures.ads  20171025065138 ad5d2814 generic_message_structures%s
+D generic_router.ads	20171025050034 ba2a77db generic_router%s
+D generic_router.adb	20171025082448 4c7efc88 generic_router%b
+D generic_router_links.ads  20171025031224 267d71e6 generic_router_links%s
+D generic_router_links.adb  20171025031224 2cc629d1 generic_router_links%b
+D generic_routers.ads	20171025031224 07a22505 generic_routers%s
+D generic_routers.adb	20171025031224 9498dc0a generic_routers%b
+D generic_routers_configuration.ads  20171025031224 5fb99a32 generic_routers_configuration%s
+D gnat.ads		20170516105956 fd2ad2f1 gnat%s
+D g-comlin.ads		20170516105954 493e888e gnat.command_line%s
+D g-dirope.ads		20170516105948 940c4438 gnat.directory_operations%s
+D g-os_lib.ads		20170516105948 0db74523 gnat.os_lib%s
+D g-regexp.ads		20170516105954 691be386 gnat.regexp%s
+D g-string.ads		20170516105954 c6abc540 gnat.strings%s
+D id_dispenser.ads	20171025031224 a411273f id_dispenser%s
+D id_dispenser.adb	20171025031224 d484d9fa id_dispenser%b
+D interfac.ads		20170516105950 5ab55268 interfaces%s
+D i-c.ads		20170516105948 5421119b interfaces.c%s
+D i-cstrin.ads		20170516105952 341d0ddf interfaces.c.strings%s
+D i-cstrea.ads		20170516105950 e53d8b8e interfaces.c_streams%s
+D routers_configuration_structures.ads  20171025031224 4685d3a5 routers_configuration_structures%s
+D system.ads		20170516105954 32a08138 system%s
+D s-atacco.ads		20170516105954 4c36d12f system.address_to_access_conversions%s
+D s-conca2.ads		20170516105952 02a0d7d0 system.concat_2%s
+D s-conca3.ads		20170516105954 0b705ca5 system.concat_3%s
+D s-conca4.ads		20170516105954 7e642b20 system.concat_4%s
+D s-crtl.ads		20170516105948 0ebbdb71 system.crtl%s
+D s-exctab.ads		20170516105954 54135002 system.exception_table%s
+D s-fatflt.ads		20170516105952 11beb392 system.fat_flt%s
+D s-fatgen.ads		20170516105956 49cbaf86 system.fat_gen%s
+D s-fatlfl.ads		20170516105952 378cba9f system.fat_lflt%s
+D s-fatllf.ads		20170516105948 4d5c1475 system.fat_llf%s
+D s-fatsfl.ads		20170516105954 e2f873d3 system.fat_sflt%s
+D s-ficobl.ads		20170516105956 078245e4 system.file_control_block%s
+D s-finmas.ads		20170516105954 7811a767 system.finalization_masters%s
+D s-finroo.ads		20170516105954 4ff27390 system.finalization_root%s
+D s-imgboo.ads		20170516105948 f5d971eb system.img_bool%s
+D s-imenne.ads		20170516105950 614c06c0 system.img_enum_new%s
+D s-imgint.ads		20170516105950 02dbe0c2 system.img_int%s
+D s-imguns.ads		20170516105952 9ff43cf7 system.img_uns%s
+D s-memory.ads		20170516105952 597d6634 system.memory%s
+D s-multip.ads		20170516105948 38ac9f73 system.multiprocessors%s
+D s-osinte.ads		20170516105954 2e5b26a9 system.os_interface%s
+D s-os_lib.ads		20170516105954 62a32069 system.os_lib%s
+D s-parame.ads		20170516105954 7e2a0d7f system.parameters%s
+D s-pooglo.ads		20170516105948 ede33ef8 system.pool_global%s
+D s-rannum.ads		20170516105952 99ade2f2 system.random_numbers%s
+D s-rannum.adb		20170516105954 20ba1217 system.random_numbers%b
+D s-ransee.ads		20170516105954 01a57b33 system.random_seed%s
+D s-regexp.ads		20170516105954 9c7d27a7 system.regexp%s
+D s-scaval.ads		20170516105948 bea40757 system.scalar_values%s
+D s-secsta.ads		20170516105954 9751b57e system.secondary_stack%s
+D s-soflin.ads		20170516105950 14e1eb6c system.soft_links%s
+D s-stache.ads		20170516105954 a37c21ec system.stack_checking%s
+D s-stausa.ads		20170516105954 017a0a05 system.stack_usage%s
+D s-stalib.ads		20170516105954 09bd3940 system.standard_library%s
+D s-stalib.adb		20170516105948 f2fe2716 system.standard_library%b
+D s-stoele.ads		20170516105956 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20170516105954 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20170516105950 b16154c2 system.storage_pools%s
+D s-stposu.ads		20170516105948 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20170516105948 aedef97e system.stream_attributes%s
+D s-string.ads		20170516105954 8fe54fb7 system.strings%s
+D s-tasinf.ads		20170516105952 601f6b72 system.task_info%s
+D s-taspri.ads		20170516105952 6c1d93d4 system.task_primitives%s
+D s-taprop.ads		20170516105950 1dd2e1b6 system.task_primitives.operations%s
+D s-taskin.ads		20170516105956 05d6152c system.tasking%s
+D s-taprob.ads		20170516105950 acd6094d system.tasking.protected_objects%s
+D s-tpoben.ads		20170516105956 60ad3dae system.tasking.protected_objects.entries%s
+D s-tasren.ads		20170516105950 a67a9949 system.tasking.rendezvous%s
+D s-tassta.ads		20170516105952 5a53a7c6 system.tasking.stages%s
+D s-traent.ads		20170516105950 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20170516105952 34867c83 system.unsigned_types%s
+D s-valboo.ads		20170516105950 fa926c1e system.val_bool%s
+D s-valenu.ads		20170516105954 bb1a4295 system.val_enum%s
+D s-valint.ads		20170516105952 48a52a3f system.val_int%s
+D s-valrea.ads		20170516105954 fe297711 system.val_real%s
+D s-valuns.ads		20170516105954 10a8ed3b system.val_uns%s
+D s-wchcon.ads		20170516105954 1b7d22d2 system.wch_con%s
+D s-win32.ads		20170516105948 b7f96285 system.win32%s
+D test_routers.adb	20171025031224 72c5ca05 test_routers%b
+D topologies.ads	20171025031224 35583929 topologies%s
+X 1 ada.ads
+16K9*Ada 20e8 109|5r6 5r44 6r6 6r44 7r6 7r44 8r6 8r44
+X 9 a-flteio.ads
+20K13*Float_Text_IO[24|46] 109|5w10 5r48
+X 10 a-inteio.ads
+18K13*Integer_Text_IO[25|46] 109|6w10 6r48
+X 12 a-numeri.ads
+16K13*Numerics 32e17 109|7r10 7r48
+X 13 a-nudira.ads
+44k22*Discrete_Random 75e33 109|7w19 93r47
+50R9 Generator<75|63R9> 109|98r29[93]
+52V13 Random{36|15I9[109|84]} 109|202s62[93]
+55U14 Reset<75|100p14> 109|198s16[93]
+X 14 a-nudira.adb
+53V16 Random[75|83]{36|15I9[109|84]} 76|392b13[109|93]
+X 18 a-strbou.ads
+50R12 Bounded_String<21|47R9>
+63V16 To_Bounded_String{50R12[29|15[109|85]]} 109|229s74[29|15[109|85]]
+X 23 a-textio.ads
+49K13*Text_IO 471e16 109|8w10 8r48
+166U14*New_Line 109|25s7 26s7 27s7 28s7 29s7 30s7 31s7 32s7 33s7 34s7 35s7
+. 36s7 37s7 38s7 39s7 40s7 41s7 42s7 43s7 44s7 70s13 70s69 79s7 105s13 110s13
+. 116s13 138s16 145s13 151s13 156s13 162s13 178s16 185s13 193s162 289s66
+. 290s66 291s77 307s13 316s129 317s129 318s129 319s129 320s129 321s102 322s129
+. 323s102 324s129 325s102 326s129 327s129 328s130 329s130 331s105 333s99
+. 335s98 336s98 341s10
+208U14*Put 109|70s55 115s13 137s16 144s13 161s13 177s16 184s13
+242U14*Put 109|25s17 26s17 26s72 27s17 28s17 29s17 30s17 31s17 32s17 33s17
+. 34s17 35s17 36s17 36s72 37s17 37s72 38s17 39s17 40s17 40s72 41s17 42s17
+. 70s23 106s13 111s13 113s16 119s16 122s22 126s28 128s28 131s25 134s22 140s13
+. 142s16 152s13 157s13 159s16 165s16 168s22 170s22 174s22 180s13 182s16 193s13
+. 193s142 206s28 289s22 290s22 291s22 316s43 317s43 318s43 319s43 320s43
+. 321s16 322s43 323s16 324s43 325s16 326s43 327s43 328s44 329s44 331s10 333s13
+. 335s13 336s13
+263U14*Put_Line 109|80s7 191s13 192s13 206s80 212s56 215s13 233s22 234s22
+. 253s22 254s22 295s31 310s13 313s10 314s10
+X 24 a-tiflio.ads
+68U14*Put 109|38s72[9|20] 39s72[9|20] 193s74[9|20] 291s52[9|20]
+X 25 a-tiinio.ads
+66U14*Put 109|32s72[10|18] 33s72[10|18] 34s72[10|18] 35s72[10|18] 42s72[10|18]
+. 108s16[10|18] 118s16[10|18] 154s16[10|18] 164s16[10|18] 172s22[10|18] 206s50[10|18]
+. 212s16[10|18] 289s47[10|18] 290s47[10|18] 316s85[10|18] 317s85[10|18] 318s85[10|18]
+. 319s85[10|18] 320s85[10|18] 321s58[10|18] 322s85[10|18] 323s58[10|18] 324s85[10|18]
+. 325s58[10|18] 326s85[10|18] 327s85[10|18] 328s86[10|18] 329s86[10|18] 331s55[10|18]
+. 333s56[10|18] 335s55[10|18] 336s55[10|18]
+X 29 generic_message_structures.ads
+11k9*Generic_Message_Structures 40e31 109|9w6 85r47
+15K12 Message_Strings[18|46] 109|96r14[85]
+18R12 The_Core_Message{18|50R12[15[109|85]]}
+21i7 Destination{36|15I9[109|84]} 109|228m59[85]
+22r7 The_Message{18R12[109|85]} 109|229m59[85]
+25R9 Messages_Mailbox 109|241r37[85]
+26i7 Sender{36|15I9[109|84]} 109|246r52[85]
+28i7 Hop_Counter{natural} 109|246r89[85] 247r61[85] 248r73[85] 249r73[85]
+X 30 generic_router.ads
+13k9*Generic_Router 43e19 109|10w6 86r47
+27T14 Router_Task
+31Y13 Send_Message 109|228s44[86]
+32Y13 Receive_Message 109|245s46[86]
+X 34 generic_routers.ads
+11k9*Generic_Routers 25e20 109|11w6 87r47
+17a4 Router_Tasks(30|27T14[109|86]) 109|228r22[87] 245r22[87]
+18a4 Router_Active(boolean) 109|124r25[87] 124r52[87] 171r25[87] 171r52[87]
+. 204r28[87] 262r41[87] 262r68[87] 273r41[87] 273r68[87]
+20b4 Routers_Configured{boolean} 109|189r13[87]
+22U14 Router_Shutdown 109|205s28[87]
+23U14 Global_Shutdown 109|343s10[87]
+X 36 generic_routers_configuration.ads
+11k9*Generic_Routers_Configuration 17e34 109|12w6 84r47
+13c4 Connection_Topology<110|7R9> 109|123r42[84] 125r45[84] 331r79[84] 332r25[84]
+. 332r60[84] 333r73[84] 335r72[84] 336r72[84]
+15I9 Router_Range<integer> 109|93r78[84] 100r39[84] 100r53[84] 107r22[84]
+. 112r22[84] 117r22[84] 120r25[84] 141r22[84] 153r22[84] 158r22[84] 163r22[84]
+. 166r25[84] 181r22[84] 202r46[84] 224r56[84] 233r72[84] 239r59[84] 253r86[84]
+. 253r131[84] 260r44[84] 261r28[84] 272r28[84] 287r79[84] 287r105[84] 292r31[84]
+. 293r34[84] 295r85[84] 295r117[84] 296r61[84] 296r93[84]
+X 37 gnat.ads
+34K9*GNAT 37e9 109|13r6 13r44
+X 38 g-comlin.ads
+287K14*Command_Line 1201e22 109|13w11 13r49
+304U14*Initialize_Option_Scan 109|48s4
+377V13*Getopt{character} 109|51s41
+475V13*Parameter{string} 109|55s104 56s88 57s88 58s88 59s88 60s87 61s87 62s88
+. 63s88 64s90 65s87
+X 45 interfac.ads
+74M9*Unsigned_32
+77M9*Unsigned_64
+X 49 routers_configuration_structures.ads
+7K9*Routers_Configuration_Structures 29e37 109|14w6 14r44
+9E9*Preconfigured_Topologies 9e159 109|26r77 55r72 314r57
+9n38*Line{9E9} 109|316r18
+9n44*Ring{9E9} 109|317r18
+9n50*Star{9E9} 109|318r18
+9n56*Fully_Connected{9E9} 109|319r18
+9n73*Tree{9E9} 109|320r18
+9n79*Mesh{9E9} 109|322r18
+9n85*Torus{9E9} 109|324r18
+9n92*Hypercube{9E9} 109|326r18
+9n103*Cube_Connected_Cycles{9E9} 109|327r18
+9n126*Butterfly{9E9} 109|328r18
+9n137*Wrap_Around_Butterfly{9E9} 109|329r18
+11E9*Test_Modes 11e47 109|40r77 64r72
+11n24*One_To_All{11E9} 109|264r33 275r33
+11n36*All_to_One{11E9} 109|265r33 276r33
+13R9*Command_Line_Options 25e14 109|19r30
+14e7*Selected_Topology{9E9} 109|26r133 55m49 314r113 315r39
+15i7*Size{positive} 109|32r101 56m49 316r114 317r114 318r114 319r114 323r87
+. 325r87
+16i7*Degree{positive} 109|33r101 57m49 320r114
+17i7*Depths{positive} 109|34r101 58m49 321r87
+18i7*Dimension{positive} 109|35r101 59m49 322r114 324r114 326r114 327r114
+. 328r115 329r115
+19b7*Print_Connections{boolean} 109|36r116 60m49 338r37
+20b7*Print_Distances{boolean} 109|37r116 61m49 301r49
+21o7*Routers_Settle_Time{duration} 109|38r108 62m49 193r110 195r43
+22o7*Comms_Timeout{duration} 109|39r108 63m49 232r52 252r52
+23e7*Test_Mode{11E9} 109|40r119 64m49 263r54 274r54
+24i7*Dropouts{natural} 109|42r101 65m49 197r40 199r55 212r45
+X 50 system.ads
+67M9*Address
+X 69 s-memory.ads
+53V13*Alloc{50|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{50|67M9} 105i<c,__gnat_realloc>22
+X 75 s-rannum.ads
+75V13*Random{45|74M9} 76|221i21
+76V13*Random{45|77M9} 76|221i21
+X 83 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+X 85 s-stalib.adb
+93U14 Break_Start 94i<c,__gnat_break_start>22
+X 109 test_routers.adb
+17U11*Test_Routers 17b11 348l5 348t17
+19r4 Command_Line_Parameters{49|13R9} 26r109 32r77 33r77 34r77 35r77 36r92
+. 37r92 38r84 39r84 40r95 42r77 55m25 56m25 57m25 58m25 59m25 60m25 61m25
+. 62m25 63m25 64m25 65m25 84r78 193r86 195r19 197r16 199r31 212r21 232r28
+. 252r28 263r30 274r30 301r25 314r89 315r15 316r90 317r90 318r90 319r90 320r90
+. 321r63 322r90 323r63 324r90 325r63 326r90 327r90 328r91 329r91 338r13
+20b4 Options_Ok{boolean} 71m13 77r7
+22U14 Print_Options 22b14 45l8 45t21 75s4
+51e10 Option{character} 53r15 70r60
+84K18 Routers_Configuration[36|11] 85r78 89r14
+85K18 Message_Structures[29|11] 86r78 90r14
+86K18 Router[30|13] 87r78
+87K18 Routers[34|11] 91r14
+93K18 Random_Router[13|44] 94r14
+98r10 Router_Generator{13|50R9[93]} 198r23 202r70
+100A15 Distances_Map(natural)<36|15I9[84]><36|15I9[84]> 148r46 221r42
+102U20 Print_Connections 102b20 146l14 146t31 339s13
+107i17 i{36|15I9[84]} 108r30
+112i17 i{36|15I9[84]}
+117i17 i{36|15I9[84]} 118r30 121r22 123r73 124r40 125r90
+120i20 j{36|15I9[84]} 121r26 123r87 124r67 125r76
+141i17 i{36|15I9[84]}
+148U20 Print_Distance_Map 148b20 148>40 186l14 186t32 302s25
+148a40 Map{100A15} 169r25 172r27
+153i17 i{36|15I9[84]} 154r30
+158i17 i{36|15I9[84]}
+163i17 i{36|15I9[84]} 164r30 167r22 169r30 171r40 172r32
+166i20 j{36|15I9[84]} 167r26 169r33 171r67 172r35
+181i17 i{36|15I9[84]}
+199i20 Id{integer}
+202i25 Candidate{36|15I9[84]} 204r43 205r45 206r64
+218i16 Sum_Hops{natural} 247m22 247r34 287r58
+219i16 Min_Hops{natural} 248m22 248r47 289r52
+220i16 Max_Hops{natural} 249m22 249r47 290r52
+221a16 Distance_Map{100A15} 246m22 294r31 294r54 295r164 296r140 302r45
+222b16 Measurements_Successful{boolean} 264m47 265m47 267r32 275m47 276m47
+. 278r32 285r19
+224V25 Send_Probe{boolean} 224b25 224>37 224>45 237l20 237t30 264s74 265s74
+224i37 Sender{36|15I9[84]} 228r36 233r92
+224i45 Receiver{36|15I9[84]} 228r74
+239V25 Receive_Probe{boolean} 239b25 239>40 239>48 257l20 257t33 275s74 276s74
+239i40 Sender{36|15I9[84]} 253r106
+239i48 Receiver{36|15I9[84]} 245r36 246r60 253r151
+241r19 Mailbox_Message{29|25R9[85]} 245m63 246r36 246r73 247r45 248r57 249r57
+260l16 Main_Measurement 268r33 279r33 283l25 283e41
+260i39 i{36|15I9[84]} 262r25 262r56 264r86 265r89 273r25 273r56 275r89 276r92
+261i23 j{36|15I9[84]} 262r30 262r83 264r89 265r86
+272i23 j{36|15I9[84]} 273r30 273r83 275r92 276r89
+287f22 Avg_Hops{float} 291r57
+292i26 i{36|15I9[84]} 293r56 294r45 294r71 295r105 295r178 296r113 296r157
+293i29 j<integer> 294r48 294r68 295r137 295r181 296r81 296r154
+X 110 topologies.ads
+5K9*Topologies 109|15w6 15r44 110|28e15
+7h9*Topology_Kind
+9y13*Nodes_in_Topology{positive} 109|331R60
+10y13*Nodes_Connected{boolean} 109|123R25 125R28
+13V13*Min_Degree{natural} 109|332s13 333s61 335s60
+14V13*Max_Degree{natural} 109|332s48 336s60
+

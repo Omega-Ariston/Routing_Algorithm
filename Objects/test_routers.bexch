@@ -1,0 +1,31 @@
+[GENERATED OBJECT FILE]
+b__test_routers.o
+[PROJECT FILES]
+C:\Users\chenj\Documents\Program\Distributed_Router\routers.gpr
+20171025031224
+[BOUND OBJECT FILES]
+C:\Users\chenj\Documents\Program\Distributed_Router\Objects\exceptions.o
+C:\Users\chenj\Documents\Program\Distributed_Router\Objects\generic_router_links.o
+C:\Users\chenj\Documents\Program\Distributed_Router\Objects\id_dispenser.o
+C:\Users\chenj\Documents\Program\Distributed_Router\Objects\topologies.o
+C:\Users\chenj\Documents\Program\Distributed_Router\Objects\routers_configuration_structures.o
+C:\Users\chenj\Documents\Program\Distributed_Router\Objects\generic_routers_configuration.o
+C:\Users\chenj\Documents\Program\Distributed_Router\Objects\generic_message_structures.o
+C:\Users\chenj\Documents\Program\Distributed_Router\Objects\generic_router.o
+C:\Users\chenj\Documents\Program\Distributed_Router\Objects\generic_routers.o
+C:\Users\chenj\Documents\Program\Distributed_Router\Objects\test_routers.o
+[GENERATED SOURCE FILES]
+b__test_routers.ads
+b__test_routers.adb
+b__test_routers.ali
+[RESULTING OPTIONS]
+-LC:\Users\chenj\Documents\Program\Distributed_Router\Objects\
+-LC:\Users\chenj\Documents\Program\Distributed_Router\Objects\
+-LC:/gnat/2017/lib/gcc/i686-pc-mingw32/6.3.1/adalib/
+-static
+-static-libgcc
+C:/gnat/2017/lib/gcc/i686-pc-mingw32/6.3.1/adalib/libgnarl.a
+C:/gnat/2017/lib/gcc/i686-pc-mingw32/6.3.1/adalib/libgnat.a
+-Xlinker
+--stack=0x200000,0x1000
+-mthreads

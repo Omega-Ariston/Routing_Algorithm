@@ -1,0 +1,370 @@
+V "GNAT Lib v2017"
+A -gnatA
+A -g
+A -gnatVa
+A -gnatVr
+A -gnatVp
+A -gnatVm
+A -gnatVi
+A -gnatVf
+A -gnatVe
+A -gnatVd
+A -gnatVc
+A -gnatVO
+A -gnatw.a
+A -gnatw.b
+A -gnatwc
+A -gnatw.c
+A -gnatwd
+A -gnatwf
+A -gnatwg
+A -gnatwh
+A -gnatw.h
+A -gnatwi
+A -gnatw.i
+A -gnatwj
+A -gnatwk
+A -gnatw.k
+A -gnatwl
+A -gnatw.l
+A -gnatwm
+A -gnatw.m
+A -gnatw.n
+A -gnatwo
+A -gnatw.o
+A -gnatwp
+A -gnatw.p
+A -gnatwq
+A -gnatwr
+A -gnatw.r
+A -gnatw.s
+A -gnatwt
+A -gnatw.t
+A -gnatwu
+A -gnatw.u
+A -gnatwv
+A -gnatw.v
+A -gnatww
+A -gnatw.w
+A -gnatwx
+A -gnatw.x
+A -gnatwy
+A -gnatwz
+A -gnat12
+A -gnatya
+A -gnatyA
+A -gnatyb
+A -gnatyB
+A -gnatyc
+A -gnatyC
+A -gnatye
+A -gnatyh
+A -gnatyf
+A -gnatyi
+A -gnatyk
+A -gnatyl
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnato
+A -gnatE
+A -g
+A -gnata
+A -mtune=generic
+A -march=pentium4
+P SS ZX
+
+RN
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_RECURSION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U topologies%b		topologies.adb		80fb7ec4 DE OO PF PK
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.streams%s		a-stream.adb		a-stream.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+W system.exp_int%s	s-expint.adb		s-expint.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+U topologies%s		topologies.ads		35583929 DE EE OO PK
+W ada.streams%s		a-stream.adb		a-stream.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W system%s		system.ads		system.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+
+D ada.ads		20170516105950 76789da1 ada%s
+D a-except.ads		20170516105952 291912d5 ada.exceptions%s
+D a-finali.ads		20170516105954 bf4f806b ada.finalization%s
+D a-stream.ads		20170516105952 119b8fb3 ada.streams%s
+D a-tags.ads		20170516105954 d3a89129 ada.tags%s
+D a-unccon.ads		20170516105954 31484697 ada.unchecked_conversion%s
+D interfac.ads		20170516105950 5ab55268 interfaces%s
+D system.ads		20170516105954 32a08138 system%s
+D s-exctab.ads		20170516105954 54135002 system.exception_table%s
+D s-expint.ads		20170516105954 192336fc system.exp_int%s
+D s-finmas.ads		20170516105954 7811a767 system.finalization_masters%s
+D s-finroo.ads		20170516105954 4ff27390 system.finalization_root%s
+D s-parame.ads		20170516105954 7e2a0d7f system.parameters%s
+D s-secsta.ads		20170516105954 9751b57e system.secondary_stack%s
+D s-soflin.ads		20170516105950 14e1eb6c system.soft_links%s
+D s-stache.ads		20170516105954 a37c21ec system.stack_checking%s
+D s-stalib.ads		20170516105954 09bd3940 system.standard_library%s
+D s-stoele.ads		20170516105956 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20170516105954 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20170516105950 b16154c2 system.storage_pools%s
+D s-stposu.ads		20170516105948 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20170516105948 aedef97e system.stream_attributes%s
+D s-traent.ads		20170516105950 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20170516105952 34867c83 system.unsigned_types%s
+D topologies.ads	20171025031224 35583929 topologies%s
+D topologies.adb	20171025031224 b5a347ed topologies%b
+X 25 topologies.ads
+5K9*Topologies 28l5 28e15 26|5b14 501l5 501t15
+7h9*Topology_Kind 9p13 9r48 10p13 10r48 13r48 14r48 16r71 17r71 18r71 19r71
+. 20r71 21r71 22r71 23r71 24r71 25r71 26r71 26|9r42 13r47 21r44 439r41 463r41
+. 489r65 490r65 491r65 492r65 493r65 494r65 495r65 496r65 497r65 498r65 499r65
+9y13*Nodes_in_Topology{positive} 9>32 26|441R50 465R50
+9r32 Configuration{7R9}
+10y13*Nodes_Connected{boolean} 10>32 11>32 11>40 26|451R19 475R19
+10r32 Configuration{7R9}
+11i32 Node_A{positive}
+11i40 Node_B{positive}
+13V13*Min_Degree{natural} 13>32 26|439b13 459l8 459t18
+13c32 Configuration<7R9> 26|439b25 441r69 451r36
+14V13*Max_Degree{natural} 14>32 26|463b13 483l8 483t18
+14c32 Configuration<7R9> 26|463b25 465r69 475r36
+16V13*Line{7C9} 16>36 26|489b13
+16i36 Size{positive} 26|489r128
+17V13*Ring{7C9} 17>36 26|490b13
+17i36 Size{positive} 26|490r129
+18V13*Star{7C9} 18>36 26|491b13
+18i36 Size{positive} 26|491r112
+19V13*Fully_Connected{7C9} 19>36 26|492b13
+19i36 Size{positive} 26|492r123
+20V13*Trees{7C9} 20>36 20>44 26|493b13
+20i36 Degree{positive} 26|493r115
+20i44 Depths{positive} 26|493r133
+21V13*Mesh{7C9} 21>36 21>47 26|494b13
+21i36 Dimension{positive} 26|494r117
+21i47 Size{positive} 26|494r136
+22V13*Torus{7C9} 22>36 22>47 26|495b13
+22i36 Dimension{positive} 26|495r118
+22i47 Size{positive} 26|495r137
+23V13*Hypercube{7C9} 23>36 26|496b13
+23i36 Dimension{positive} 26|496r118
+24V13*Cube_Connected_Cycles{7C9} 24>36 26|497b13
+24i36 Dimension{positive} 26|497r134
+25V13*Butterfly{7C9} 25>36 26|498b13
+25i36 Dimension{positive} 26|498r122
+26V13*Wrap_Around_Butterfly{7C9} 26>36 26|499b13
+26i36 Dimension{positive} 26|499r134
+X 26 topologies.adb
+9H9 Topology_by_Size<25|7R9> 25|9p13 10p13 26|11e14 79r30 87r41
+10i7*Size{positive} 417r21 428r21 491m104 492m115
+13H9 Topology_by_Dimension<25|7R9> 25|9p13 10p13 26|15e14 17r56 31r47 63r35
+. 71r47
+14i7*Dimension{positive} 97r21 97r54 102r66 103r59 112r94 113r94 146r85 147r85
+. 199r43 205r53 229r47 246r43 252r53 276r47 293r22 293r59 298r65 299r58 300r58
+. 309r97 310r97 355r21 355r53 360r65 361r58 362r58 371r96 372r96 404r65 405r73
+. 407r80 409r80 489m104 490m105 494m104 495m105 496m105 497m121 498m109 499m121
+17H9 Topology_by_Dimension_and_Size<13R9> 25|9p13 10p13 26|19e14 47r30 55r31
+18i7*Size{positive} 199r21 204r65 213r63 213r93 246r21 251r65 260r63 260r93
+. 278r64 279r66 489m120 490m121 494m128 495m129 496m129
+21H9 Topology_by_Degree<25|7R9> 25|9p13 10p13 26|23e14 25r55
+22i7*Degree{positive} 160r42 174r41 493m105
+25H9 Topology_by_Degree_and_Depths<21R9> 25|9p13 10p13 26|27e14 39r31
+26i7*Depths{positive} 159r39 173r36 493m123
+31R9 Topology_Cube_Connected_Cycles<13R9> 31e85 33P24 33r59 34P24 34r59 95r59
+. 99r58 497r89
+33V24 Nodes_in_Topology{positive}<25|9p13> 33>43 95b24
+33r43 Configuration{31R9} 97r7 97r40
+34V24 Nodes_Connected{boolean}<25|10p13> 34>43 35>43 35>51 99b24 150l8 150t23
+34r43 Configuration{31R9} 99b41 102r52 103r45 112r80 113r80 146r71 147r71
+35i43 Node_A{positive} 100b41 119r68
+35i51 Node_B{positive} 100b49 120r68
+39R9 Topology_Trees<25R9> 39e77 41P24 41r59 42P24 42r59 154r59 165r58 493r89
+41V24 Nodes_in_Topology{positive}<25|9p13> 41>43 154b24 163l8 163t25
+41r43 Configuration{39R9} 154b43 159r25 160r28
+42V24 Nodes_Connected{boolean}<25|10p13> 42>43 43>43 43>51 165b24 193l8 193t23
+42r43 Configuration{39R9} 165b41 173r22 174r27
+43i43 Node_A{positive} 166b41 176r32 177r65
+43i51 Node_B{positive} 166b49 176r58 177r39
+47R9 Topology_Mesh<17R9> 47e77 49P24 49r59 50P24 50r59 197r59 201r59 489r89
+. 494r89
+49V24 Nodes_in_Topology{positive}<25|9p13> 49>43 197b24
+49r43 Configuration{47R9} 199r7 199r29
+50V24 Nodes_Connected{boolean}<25|10p13> 50>43 51>43 51>51 201b24 240l8 240t23
+50r43 Configuration{47R9} 201b41 204r51 205r39 213r49 213r79 229r33
+51i43 Node_A{positive} 202b41 218r62
+51i51 Node_B{positive} 202b49 219r62
+55R9 Topology_Torus<17R9> 55e78 57P24 57r59 58P24 58r59 244r59 248r59 490r89
+. 495r89 496r89
+57V24 Nodes_in_Topology{positive}<25|9p13> 57>43 244b24
+57r43 Configuration{55R9} 246r7 246r29
+58V24 Nodes_Connected{boolean}<25|10p13> 58>43 59>43 59>51 248b24 287l8 287t23
+58r43 Configuration{55R9} 248b41 251r51 252r39 260r49 260r79 276r33 278r50
+. 279r52
+59i43 Node_A{positive} 249b41 265r62
+59i51 Node_B{positive} 249b49 266r62
+63R9 Topology_Butterfly<13R9> 63e73 65P24 65r59 66P24 66r59 291r59 295r58
+. 498r89
+65V24 Nodes_in_Topology{positive}<25|9p13> 65>43 291b24
+65r43 Configuration{63R9} 293r8 293r45
+66V24 Nodes_Connected{boolean}<25|10p13> 66>43 67>43 67>51 295b24 349l8 349t23
+66r43 Configuration{63R9} 295b41 298r51 299r44 300r44 309r83 310r83
+67i43 Node_A{positive} 296b41 316r81
+67i51 Node_B{positive} 296b49 317r81
+71R9 Topology_Wrap_Around_Butterfly<13R9> 71e85 73P24 73r59 74P24 74r59 353r59
+. 357r59 499r89
+73V24 Nodes_in_Topology{positive}<25|9p13> 73>43 353b24
+73r43 Configuration{71R9} 355r7 355r39
+74V24 Nodes_Connected{boolean}<25|10p13> 74>43 75>43 75>51 357b24 411l8 411t23
+74r43 Configuration{71R9} 357b41 360r51 361r44 362r44 371r82 372r82 404r51
+. 405r59 407r66 409r66
+75i43 Node_A{positive} 358b41 378r81
+75i51 Node_B{positive} 358b49 379r81
+79R9 Topology_Star<9R9> 79e63 81P24 81r59 82P24 82r59 415r59 419r58 491r89
+81V24 Nodes_in_Topology{positive}<25|9p13> 81>43 415b24
+81r43 Configuration{79R9} 417r7
+82V24 Nodes_Connected{boolean}<25|10p13> 82>43 83>43 83>51 419b24
+82r43 Configuration{79R9}
+83i43 Node_A{positive} 422r7
+83i51 Node_B{positive} 422r26
+87R9 Topology_Fully_Connected<9R9> 87e74 89P24 89r59 90P24 90r59 426r59 430r58
+. 492r89
+89V24 Nodes_in_Topology{positive}<25|9p13> 89>43 426b24
+89r43 Configuration{87R9} 428r7
+90V24 Nodes_Connected{boolean}<25|10p13> 90>43 91>43 91>51 430b24
+90r43 Configuration{87R9}
+91i43 Node_A{positive}
+91i51 Node_B{positive}
+102I15 Corners{natural} 106r24 124r39
+103I15 Cycles{natural} 107r24 122r33 135r37
+105R12 CCC_Coordinates 108e17 110r60 112r32 119r29 120r29
+106i10 Corner_Nr{102I15} 112m52 145r26 145r49 149r49 149r117
+107i10 Cycle_Nr{103I15} 113m52 146r30 146r53 147r30 147r53 148r29 148r51
+. 149r85
+110V16 To_CCC_Coordinates{105R12} 110b16 110>36 117l11 117t29 119s48 120s48
+110i36 Node{positive} 112r66 113r66
+112r10 Coordinate{105R12} 116r17
+119r7 CCC_Node_A{105R12} 145r15 146r19 147r19 148r18 149r38 149r74
+120r7 CCC_Node_B{105R12} 145r38 146r42 147r42 148r40 149r106
+122A12 Bit_Arrays(boolean)<integer> 124r55 126r17 135r52 135r71 137r24
+124V16 Bit_Array{122A12} 124b16 124>27 133l11 133t20 149s27 149s95
+124i27 Corner_Nr{102I15} 130r28
+126a10 Bits{122A12} 129r21 130m13 132r17
+129i14 Bit{integer} 130r19 130r46
+135V16 Invert_Bit{122A12} 135b16 135>28 135>45 142l11 142t21 149s62
+135i28 Bit_Nr{103I15} 140r23 140r51
+135a45 Bits{122A12} 137r38
+137a10 Return_Bits{122A12} 140m10 140r38 141r17
+156i7 Nodes{positive} 160m10 160r19 162r14
+159i11 Level{integer} 160r52
+168i7 Node_Nr{positive} 175m16 175r27 176r48 177r55 180r38 192r30
+170V16 Construct_Tree{boolean} 170b16 170>32 170>43 180s22 189l11 189t25
+. 192s14
+170i32 Parent_Nr{positive} 176r20 177r27
+170i43 Depth{positive} 173r13 180r47
+174i17 i{integer}
+204I15 Nodes_in_Line{natural} 205r71 231r43 232r45
+205A12 Coordinates(204I15)<integer> 207r59 209r23 218r31 219r31 224r18 230r21
+207V16 To_Coordinates{205A12} 207b16 207>32 216l11 216t25 218s46 219s46
+207i32 Node_Nr{positive} 213r34
+209a10 Coordinate{205A12} 212r26 213m13 215r17
+212i14 Dim{integer} 213r25 213r71
+218a7 Coordinate_A{205A12} 225r13 231r22 231r71 232r98
+219a7 Coordinate_B{205A12} 225r34 231r96 232r24 232r73
+221i7 Matching_Coordinates{natural} 226m13 226r37 229r10
+224i11 Dim{integer} 225r27 225r48
+230i14 Dim{integer} 231r36 231r85 231r110 232r38 232r87 232r112
+251I15 Nodes_in_Line{natural} 252r71
+252A12 Coordinates(251I15)<integer> 254r59 256r23 265r31 266r31 271r18 277r21
+254V16 To_Coordinates{252A12} 254b16 254>32 263l11 263t25 265s46 266s46
+254i32 Node_Nr{positive} 260r34
+256a10 Coordinate{252A12} 259r26 260m13 262r17
+259i14 Dim{integer} 260r25 260r71
+265a7 Coordinate_A{252A12} 272r13 278r22 279r73
+266a7 Coordinate_B{252A12} 272r34 278r71 279r24
+268i7 Matching_Coordinates{natural} 273m13 273r37 276r10
+271i11 Dim{integer} 272r27 272r48
+277i14 Dim{integer} 278r36 278r85 279r38 279r87
+298I15 Lines{natural} 303r18 321r41
+299I15 Layers{natural} 304r18 342r44 343r52
+300I15 Bits{natural} 319r33 326r21 332r37
+302R12 Butterfly_Coordinates 305e17 307r66 309r32 316r30 317r30
+303i10 Line{298I15} 309m58 344r41 344r60 346r74 346r140 348r74 348r140
+304i10 Layer{299I15} 310m58 342r36 342r77 342r101 343r44 343r85 343r109 345r51
+. 345r71 346r106 347r51 347r71 348r106
+307V16 To_Butterfly_Coordinates{302R12} 307b16 307>42 314l11 314t35 316s55
+. 317s55
+307i42 Node{positive} 309r68 310r68
+309r10 Coordinate{302R12} 313r17
+316r7 Butterfly_A{302R12} 342r24 342r65 343r97 344r29 345r39 346r62 346r94
+. 347r59 348r128
+317r7 Butterfly_B{302R12} 342r89 343r32 343r73 344r48 345r59 346r128 347r39
+. 348r62 348r94
+319A12 Bit_Arrays(boolean)<integer> 321r55 323r22 332r55 332r74 334r24
+321V16 To_Bit_Arrays{319A12} 321b16 321>31 330l11 330t24 346s47 346s113 348s47
+. 348s113
+321i31 Line_Nr{298I15} 327r33
+323a10 Bit_Array{319A12} 327m13 329r17
+326i14 Bit{300I15} 327r24 327r49
+332V16 Invert_Bit{319A12} 332b16 332>28 332>43 339l11 339t21 346s82 348s82
+332i28 Bit_Nr{300I15} 337r23 337r51
+332a43 Bit_Array{319A12} 334r38
+334a10 Return_Bits{319A12} 337m10 337r38 338r17
+360I15 Lines{natural} 365r18 383r41
+361I15 Layers{natural} 366r18
+362I15 Bits{natural} 381r33 388r21 394r37
+364R12 Butterfly_Coordinates 367e17 369r66 371r32 378r30 379r30
+365i10 Line{360I15} 371m58 406r41 406r60 408r74 408r140 410r74 410r140
+366i10 Layer{361I15} 372m58 404r36 404r89 405r44 405r97 407r51 407r104 408r106
+. 409r51 409r104 410r106
+369V16 To_Butterfly_Coordinates{364R12} 369b16 369>42 376l11 376t35 378s55
+. 379s55
+369i42 Node{positive} 371r68 372r68
+371r10 Coordinate{364R12} 375r17
+378r7 Butterfly_A{364R12} 404r24 405r85 406r29 407r39 408r62 408r94 409r92
+. 410r128
+379r7 Butterfly_B{364R12} 404r77 405r32 406r48 407r92 408r128 409r39 410r62
+. 410r94
+381A12 Bit_Arrays(boolean)<integer> 383r55 385r22 394r55 394r74 396r24
+383V16 To_Bit_Arrays{381A12} 383b16 383>31 392l11 392t24 408s47 408s113 410s47
+. 410s113
+383i31 Line_Nr{360I15} 389r33
+385a10 Bit_Array{381A12} 389m13 391r17
+388i14 Bit{362I15} 389r24 389r49
+394V16 Invert_Bit{381A12} 394b16 394>28 394>43 401l11 401t21 408s82 410s82
+394i28 Bit_Nr{362I15} 399r23 399r51
+394a43 Bit_Array{381A12} 396r38
+396a10 Return_Bits{381A12} 399m10 399r38 400r17
+441I15 Nodes_Range{positive} 443r24 446r16 450r22
+443i7 Min{natural} 455m13 455r33 458r14
+446i11 i{441I15} 451r51
+448i13 Degree{natural} 452m19 452r29 455r38
+450i17 j{441I15} 451r54
+465I15 Nodes_Range{positive} 470r16 474r22
+467i7 Max{natural} 479m13 479r33 482r14
+470i11 i{465I15} 475r51
+472i13 Degree{natural} 476m19 476r29 479r38
+474i17 j{465I15} 475r54
+

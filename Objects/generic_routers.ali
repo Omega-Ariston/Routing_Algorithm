@@ -1,0 +1,187 @@
+V "GNAT Lib v2017"
+A -gnatA
+A -g
+A -gnatVa
+A -gnatVr
+A -gnatVp
+A -gnatVm
+A -gnatVi
+A -gnatVf
+A -gnatVe
+A -gnatVd
+A -gnatVc
+A -gnatVO
+A -gnatw.a
+A -gnatw.b
+A -gnatwc
+A -gnatw.c
+A -gnatwd
+A -gnatwf
+A -gnatwg
+A -gnatwh
+A -gnatw.h
+A -gnatwi
+A -gnatw.i
+A -gnatwj
+A -gnatwk
+A -gnatw.k
+A -gnatwl
+A -gnatw.l
+A -gnatwm
+A -gnatw.m
+A -gnatw.n
+A -gnatwo
+A -gnatw.o
+A -gnatwp
+A -gnatw.p
+A -gnatwq
+A -gnatwr
+A -gnatw.r
+A -gnatw.s
+A -gnatwt
+A -gnatw.t
+A -gnatwu
+A -gnatw.u
+A -gnatwv
+A -gnatw.v
+A -gnatww
+A -gnatw.w
+A -gnatwx
+A -gnatw.x
+A -gnatwy
+A -gnatwz
+A -gnat12
+A -gnatya
+A -gnatyA
+A -gnatyb
+A -gnatyB
+A -gnatyc
+A -gnatyC
+A -gnatye
+A -gnatyh
+A -gnatyf
+A -gnatyi
+A -gnatyk
+A -gnatyl
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnato
+A -gnatE
+A -g
+A -gnata
+A -mtune=generic
+A -march=pentium4
+P ZX
+
+RN
+RV NO_ABORT_STATEMENTS
+RV NO_DELAY
+RV NO_DISPATCHING_CALLS
+RV NO_ENTRY_CALLS_IN_ELABORATION_CODE
+RV NO_FIXED_POINT
+RV NO_IO
+RV NO_SELECT_STATEMENTS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_TASKING
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U generic_routers%b	generic_routers.adb	9e0f35f2 DE NE OO PK GE IS
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W topologies%s		topologies.adb		topologies.ali
+
+U generic_routers%s	generic_routers.ads	bd8852de BN DE EE NE OO PK GE IS
+W generic_router%s	generic_router.adb	generic_router.ali
+
+D ada.ads		20170516105950 76789da1 ada%s
+D a-charac.ads		20170516105954 2d3ec45b ada.characters%s
+D a-chlat1.ads		20170516105952 66457d31 ada.characters.latin_1%s
+D a-except.ads		20170516105952 291912d5 ada.exceptions%s
+D a-ioexce.ads		20170516105948 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20170516105952 119b8fb3 ada.streams%s
+D a-string.ads		20170516105952 90ac6797 ada.strings%s
+D a-strbou.ads		20170516105950 53ab54ae ada.strings.bounded%s
+D a-strbou.adb		20170516105952 adb4aa70 ada.strings.bounded%b
+D a-strmap.ads		20170516105952 e8bb714a ada.strings.maps%s
+D a-strsup.ads		20170516105950 a27dcb33 ada.strings.superbounded%s
+D a-tags.ads		20170516105954 d3a89129 ada.tags%s
+D a-textio.ads		20170516105954 386df5d4 ada.text_io%s
+D a-unccon.ads		20170516105954 31484697 ada.unchecked_conversion%s
+D generic_message_structures.ads  20171025065138 ad5d2814 generic_message_structures%s
+D generic_router.ads	20171025050034 ba2a77db generic_router%s
+D generic_router_links.ads  20171025031224 267d71e6 generic_router_links%s
+D generic_router_links.adb  20171025031224 2cc629d1 generic_router_links%b
+D generic_routers.ads	20171025031224 07a22505 generic_routers%s
+D generic_routers.adb	20171025031224 9498dc0a generic_routers%b
+D generic_routers_configuration.ads  20171025031224 5fb99a32 generic_routers_configuration%s
+D id_dispenser.ads	20171025031224 a411273f id_dispenser%s
+D id_dispenser.adb	20171025031224 d484d9fa id_dispenser%b
+D interfac.ads		20170516105950 5ab55268 interfaces%s
+D i-cstrea.ads		20170516105950 e53d8b8e interfaces.c_streams%s
+D routers_configuration_structures.ads  20171025031224 4685d3a5 routers_configuration_structures%s
+D system.ads		20170516105954 32a08138 system%s
+D s-crtl.ads		20170516105948 0ebbdb71 system.crtl%s
+D s-exctab.ads		20170516105954 54135002 system.exception_table%s
+D s-ficobl.ads		20170516105956 078245e4 system.file_control_block%s
+D s-parame.ads		20170516105954 7e2a0d7f system.parameters%s
+D s-soflin.ads		20170516105950 14e1eb6c system.soft_links%s
+D s-stache.ads		20170516105954 a37c21ec system.stack_checking%s
+D s-stalib.ads		20170516105954 09bd3940 system.standard_library%s
+D s-stoele.ads		20170516105956 2dc34a04 system.storage_elements%s
+D s-traent.ads		20170516105950 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20170516105952 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20170516105954 1b7d22d2 system.wch_con%s
+D topologies.ads	20171025031224 35583929 topologies%s
+X 1 ada.ads
+16K9*Ada 20e8 20|5r6 5r23
+X 13 a-textio.ads
+49K13*Text_IO 471e16 20|5w10 5r27
+263U14*Put_Line 20|17s10
+X 15 generic_message_structures.ads
+9K17 Routers_Configuration[21|11] 19|15r8[16|11[19|9]]
+X 16 generic_router.ads
+11K17 Message_Structures[15|11] 19|14r8[9]
+13k9*Generic_Router 43e19 19|5w6 9r31
+21T9 Router_Task 19|17r52[9]
+22P9 Router_Task_P(21T9[19|9])
+24K12 Router_Link[17|12] 20|33r9[19|9]
+27T14 Router_Task
+29Y13 Configure 20|46s38[19|9]
+34Y13 Shutdown 20|14s28[19|9]
+X 17 generic_router_links.ads
+20A9 Ids_To_Links(16|22P9[19|9])<21|15I9[15|9[16|11[19|9]]]> 20|38r18[16|24[19|9]]
+X 19 generic_routers.ads
+9K17 Router[16|13] 13r8
+11k9*Generic_Routers 9z17 25l5 25e20 20|8b14 53l5 53t20
+17a4*Router_Tasks(16|27T14[9]) 20|14r10 18r16 42m50 42r50 46r13
+18a4*Router_Active(boolean) 20|20m7 27r13
+20b4*Routers_Configured{boolean} 20|49m13
+22U14*Router_Shutdown 22>31 20|10b14 21l8 21t23 28s13
+22i31 Id{21|15I9[15|9[16|11[19|9]]]} 20|10b31 14r24 17r60 18r30 20r22
+23U14*Global_Shutdown 20|23b14 31l8 31t23
+X 20 generic_routers.adb
+26i11 Id{21|15I9[15|9[16|11[19|9]]]} 27r28 28r30
+36i8 Router_Id{21|15I9[15|9[16|11[19|9]]]} 41r16 41r109 46r27
+38a10 Links{17|20A9[16|24[19|9]]} 42m16 46r49
+40i14 Potential_Neighbour_Id{21|15I9[15|9[16|11[19|9]]]} 41r29 41r131 42r23
+. 42r64
+X 21 generic_routers_configuration.ads
+9r4 Command_Line_Parameters{26|13R9} 20|16r16[15|9[16|11[19|9]]] 48r19[15|9[16|11[19|9]]]
+13c4 Connection_Topology<39|7R9> 20|41r78[15|9[16|11[19|9]]]
+15I9 Router_Range<integer> 19|17r27[15|9[16|11[19|9]]] 18r27[15|9[16|11[19|9]]]
+. 22r36[15|9[16|11[19|9]]] 20|10r36[15|9[16|11[19|9]]] 17r40[15|9[16|11[19|9]]]
+. 26r17[15|9[16|11[19|9]]] 36r21[15|9[16|11[19|9]]] 40r40[15|9[16|11[19|9]]]
+X 26 routers_configuration_structures.ads
+22o7*Comms_Timeout{duration} 20|16r40 48r43
+X 39 topologies.ads
+5K9*Topologies 20|6w6 6r23 39|28e15
+7h9*Topology_Kind
+10y13*Nodes_Connected{boolean} 20|41R61
+

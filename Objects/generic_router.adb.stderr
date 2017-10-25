@@ -1,0 +1,3 @@
+generic_router.adb:9:04: warning: no accept for entry "Send_Message"
+generic_router.adb:9:04: warning: no accept for entry "Receive_Message"
+generic_router.adb:9:04: warning: no accept for entry "Shutdown"

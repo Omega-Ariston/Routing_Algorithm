@@ -1,0 +1,113 @@
+V "GNAT Lib v2017"
+A -gnatA
+A -g
+A -gnatVa
+A -gnatVr
+A -gnatVp
+A -gnatVm
+A -gnatVi
+A -gnatVf
+A -gnatVe
+A -gnatVd
+A -gnatVc
+A -gnatVO
+A -gnatw.a
+A -gnatw.b
+A -gnatwc
+A -gnatw.c
+A -gnatwd
+A -gnatwf
+A -gnatwg
+A -gnatwh
+A -gnatw.h
+A -gnatwi
+A -gnatw.i
+A -gnatwj
+A -gnatwk
+A -gnatw.k
+A -gnatwl
+A -gnatw.l
+A -gnatwm
+A -gnatw.m
+A -gnatw.n
+A -gnatwo
+A -gnatw.o
+A -gnatwp
+A -gnatw.p
+A -gnatwq
+A -gnatwr
+A -gnatw.r
+A -gnatw.s
+A -gnatwt
+A -gnatw.t
+A -gnatwu
+A -gnatw.u
+A -gnatwv
+A -gnatw.v
+A -gnatww
+A -gnatw.w
+A -gnatwx
+A -gnatw.x
+A -gnatwy
+A -gnatwz
+A -gnat12
+A -gnatya
+A -gnatyA
+A -gnatyb
+A -gnatyB
+A -gnatyc
+A -gnatyC
+A -gnatye
+A -gnatyh
+A -gnatyf
+A -gnatyi
+A -gnatyk
+A -gnatyl
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnato
+A -gnatE
+A -g
+A -gnata
+A -mtune=generic
+A -march=pentium4
+P ZX
+
+RN
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U generic_router_links%b  generic_router_links.adb  0abb5837 DE NE OO PK GE
+
+U generic_router_links%s  generic_router_links.ads  267d71e6 BN DE EE NE OO PK GE
+
+D generic_router_links.ads  20171025031224 267d71e6 generic_router_links%s
+D generic_router_links.adb  20171025031224 2cc629d1 generic_router_links%b
+D system.ads		20170516105954 32a08138 system%s
+X 1 generic_router_links.ads
+7E9 Router_Range 15r14 20r42 22r40 2|7r40 12r24 21r27
+8+9 Router_Task_P 10r21 16r14 20r64
+10*4 Null_Reference{8+9} 2|13r64 22r67
+12k9*Generic_Router_Links 7z9 8z9 10z4 24l5 24e25 2|5b14 33l5 33t25
+14R9*Router_Ports 17e14 19r64
+15*7 Id{7E9} 2|23m42
+16*7 Link{8+9} 2|23m59
+19A9*Connected_Router_Ports(14R9)<integer> 22r83 2|7r83 18r23
+20A9*Ids_To_Links(8+9)<7E9> 22r62 2|7r62
+22V13*To_Router_Ports{19A9} 22>30 22>54 2|7b13 31l8 31t23
+22*30 Task_Id{7E9} 2|7b30 13r13 22r16
+22a54 Links{20A9} 2|7b54 13r43 22r46 23r67
+X 2 generic_router_links.adb
+9i7 No_of_Links{natural} 14m13 14r28 18r52
+12*11 Router_Id{1|7E9} 13r24 13r50
+18a10 Channels{1|19A9} 19r38 19r56 23m16 24r32 29r17
+19i10 Channel_Ix{positive} 23r26 24r19 25m19 25r33
+21*14 Router_Id{1|7E9} 22r27 22r53 23r48 23r74
+
