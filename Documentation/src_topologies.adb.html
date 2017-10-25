@@ -1,0 +1,534 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+
+  <title>
+    File: topologies.adb
+  </title>
+  <link rel='stylesheet' href='support/docgen.css' type='text/css'/>
+  <link rel='stylesheet' href='support/tags.css' type='text/css'/>
+  <script src='support/docgen.js' type='text/javascript' charset='utf-8'></script>
+</head>
+<body onload="onloadDoc();">
+
+<div id='leftSide'>
+  <div id='leftSideInside'>
+  <div id='header'>
+    <h2 class="button">Documentation</h2>
+    <a href='toc.html'><div class="button2">Table of Contents</div></a>
+
+    <a href='tree.html'><div class="button2">Class Inheritance Tree</div></a>
+
+  </div>
+  </div>
+</div> <!-- leftSide -->
+
+<div class='subprograms'>
+  <div class='details'><ol><li id="l1"><pre><span class="comment">--</span> </pre></li>
+<li id="l2"><pre><span class="comment">--  Uwe R. Zimmer, Australia, September 2011</span> </pre></li>
+<li id="l3"><pre><span class="comment">--</span> </pre></li>
+<li id="l4"><pre> </pre></li>
+<li id="l5"><pre><span class="keyword">package</span> <span class="keyword">body</span> <span class="droplink">Topologies<ul><li><a href="topologies.ads.html#topologies.ads:5:9" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l5" title="To spec">To spec</a></li></ul></span> <span class="keyword">is</span> </pre></li>
+<li id="l6"><pre> </pre></li>
+<li id="l7"><pre>   <span class="comment">--  Basic topology parameters</span> </pre></li>
+<li id="l8"><pre> </pre></li>
+<li id="l9"><pre>   <span class="keyword">type</span> Topology_by_Size <span class="keyword">is</span> <span class="keyword">abstract</span> <span class="keyword">new</span> <span class="droplink">Topology_Kind<ul><li><a href="topologies.ads.html#topologies.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l7" title="To spec">To spec</a></li></ul></span> <span class="keyword">with</span> <span class="keyword">record</span> </pre></li>
+<li id="l10"><pre>      Size : Positive; </pre></li>
+<li id="l11"><pre>   <span class="keyword">end</span> <span class="keyword">record</span>; </pre></li>
+<li id="l12"><pre> </pre></li>
+<li id="l13"><pre>   <span class="keyword">type</span> Topology_by_Dimension <span class="keyword">is</span> <span class="keyword">abstract</span> <span class="keyword">new</span> <span class="droplink">Topology_Kind<ul><li><a href="topologies.ads.html#topologies.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l7" title="To spec">To spec</a></li></ul></span> <span class="keyword">with</span> <span class="keyword">record</span> </pre></li>
+<li id="l14"><pre>      Dimension : Positive; </pre></li>
+<li id="l15"><pre>   <span class="keyword">end</span> <span class="keyword">record</span>; </pre></li>
+<li id="l16"><pre> </pre></li>
+<li id="l17"><pre>   <span class="keyword">type</span> Topology_by_Dimension_and_Size <span class="keyword">is</span> <span class="keyword">abstract</span> <span class="keyword">new</span> <a href="src_topologies.adb.html#l13" title="defined at topologies.adb:13:9">Topology_by_Dimension</a> <span class="keyword">with</span> <span class="keyword">record</span> </pre></li>
+<li id="l18"><pre>      Size : Positive; </pre></li>
+<li id="l19"><pre>   <span class="keyword">end</span> <span class="keyword">record</span>; </pre></li>
+<li id="l20"><pre> </pre></li>
+<li id="l21"><pre>   <span class="keyword">type</span> Topology_by_Degree <span class="keyword">is</span> <span class="keyword">abstract</span> <span class="keyword">new</span> <span class="droplink">Topology_Kind<ul><li><a href="topologies.ads.html#topologies.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l7" title="To spec">To spec</a></li></ul></span> <span class="keyword">with</span> <span class="keyword">record</span> </pre></li>
+<li id="l22"><pre>      Degree : Positive; </pre></li>
+<li id="l23"><pre>   <span class="keyword">end</span> <span class="keyword">record</span>; </pre></li>
+<li id="l24"><pre> </pre></li>
+<li id="l25"><pre>   <span class="keyword">type</span> Topology_by_Degree_and_Depths <span class="keyword">is</span> <span class="keyword">abstract</span> <span class="keyword">new</span> <a href="src_topologies.adb.html#l21" title="defined at topologies.adb:21:9">Topology_by_Degree</a> <span class="keyword">with</span> <span class="keyword">record</span> </pre></li>
+<li id="l26"><pre>      Depths : Positive; </pre></li>
+<li id="l27"><pre>   <span class="keyword">end</span> <span class="keyword">record</span>; </pre></li>
+<li id="l28"><pre> </pre></li>
+<li id="l29"><pre>   <span class="comment">--  Cube_Connected_Cycles</span> </pre></li>
+<li id="l30"><pre> </pre></li>
+<li id="l31"><pre>   <span class="keyword">type</span> Topology_Cube_Connected_Cycles <span class="keyword">is</span> <span class="keyword">new</span> <a href="src_topologies.adb.html#l13" title="defined at topologies.adb:13:9">Topology_by_Dimension</a> <span class="keyword">with</span> <span class="keyword">null</span> <span class="keyword">record</span>; </pre></li>
+<li id="l32"><pre> </pre></li>
+<li id="l33"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l95" title="defined at topologies.adb:33:24">Nodes_in_Topology</a> (Configuration : <a href="src_topologies.adb.html#l31" title="defined at topologies.adb:31:9">Topology_Cube_Connected_Cycles</a>) <span class="keyword">return</span> Positive; </pre></li>
+<li id="l34"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l99" title="defined at topologies.adb:34:24">Nodes_Connected</a>   (<a href="src_topologies.adb.html#l99" title="defined at topologies.adb:34:43">Configuration</a> : <a href="src_topologies.adb.html#l31" title="defined at topologies.adb:31:9">Topology_Cube_Connected_Cycles</a>; </pre></li>
+<li id="l35"><pre>                                          Node_A, Node_B : Positive) <span class="keyword">return</span> Boolean; </pre></li>
+<li id="l36"><pre> </pre></li>
+<li id="l37"><pre>   <span class="comment">--  Trees</span> </pre></li>
+<li id="l38"><pre> </pre></li>
+<li id="l39"><pre>   <span class="keyword">type</span> Topology_Trees <span class="keyword">is</span> <span class="keyword">new</span> <a href="src_topologies.adb.html#l25" title="defined at topologies.adb:25:9">Topology_by_Degree_and_Depths</a> <span class="keyword">with</span> <span class="keyword">null</span> <span class="keyword">record</span>; </pre></li>
+<li id="l40"><pre> </pre></li>
+<li id="l41"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l154" title="defined at topologies.adb:41:24">Nodes_in_Topology</a> (<a href="src_topologies.adb.html#l154" title="defined at topologies.adb:41:43">Configuration</a> : <a href="src_topologies.adb.html#l39" title="defined at topologies.adb:39:9">Topology_Trees</a>) <span class="keyword">return</span> Positive; </pre></li>
+<li id="l42"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l165" title="defined at topologies.adb:42:24">Nodes_Connected</a>   (<a href="src_topologies.adb.html#l165" title="defined at topologies.adb:42:43">Configuration</a> : <a href="src_topologies.adb.html#l39" title="defined at topologies.adb:39:9">Topology_Trees</a>; </pre></li>
+<li id="l43"><pre>                                          Node_A, Node_B : Positive) <span class="keyword">return</span> Boolean; </pre></li>
+<li id="l44"><pre> </pre></li>
+<li id="l45"><pre>   <span class="comment">--  Mesh</span> </pre></li>
+<li id="l46"><pre> </pre></li>
+<li id="l47"><pre>   <span class="keyword">type</span> Topology_Mesh <span class="keyword">is</span> <span class="keyword">new</span> <a href="src_topologies.adb.html#l17" title="defined at topologies.adb:17:9">Topology_by_Dimension_and_Size</a> <span class="keyword">with</span> <span class="keyword">null</span> <span class="keyword">record</span>; </pre></li>
+<li id="l48"><pre> </pre></li>
+<li id="l49"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l197" title="defined at topologies.adb:49:24">Nodes_in_Topology</a> (Configuration : <a href="src_topologies.adb.html#l47" title="defined at topologies.adb:47:9">Topology_Mesh</a>) <span class="keyword">return</span> Positive; </pre></li>
+<li id="l50"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l201" title="defined at topologies.adb:50:24">Nodes_Connected</a>   (<a href="src_topologies.adb.html#l201" title="defined at topologies.adb:50:43">Configuration</a> : <a href="src_topologies.adb.html#l47" title="defined at topologies.adb:47:9">Topology_Mesh</a>; </pre></li>
+<li id="l51"><pre>                                          Node_A, Node_B : Positive) <span class="keyword">return</span> Boolean; </pre></li>
+<li id="l52"><pre> </pre></li>
+<li id="l53"><pre>   <span class="comment">--  Torus</span> </pre></li>
+<li id="l54"><pre> </pre></li>
+<li id="l55"><pre>   <span class="keyword">type</span> Topology_Torus <span class="keyword">is</span> <span class="keyword">new</span> <a href="src_topologies.adb.html#l17" title="defined at topologies.adb:17:9">Topology_by_Dimension_and_Size</a> <span class="keyword">with</span> <span class="keyword">null</span> <span class="keyword">record</span>; </pre></li>
+<li id="l56"><pre> </pre></li>
+<li id="l57"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l244" title="defined at topologies.adb:57:24">Nodes_in_Topology</a> (Configuration : <a href="src_topologies.adb.html#l55" title="defined at topologies.adb:55:9">Topology_Torus</a>) <span class="keyword">return</span> Positive; </pre></li>
+<li id="l58"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l248" title="defined at topologies.adb:58:24">Nodes_Connected</a>   (<a href="src_topologies.adb.html#l248" title="defined at topologies.adb:58:43">Configuration</a> : <a href="src_topologies.adb.html#l55" title="defined at topologies.adb:55:9">Topology_Torus</a>; </pre></li>
+<li id="l59"><pre>                                          Node_A, Node_B : Positive) <span class="keyword">return</span> Boolean; </pre></li>
+<li id="l60"><pre> </pre></li>
+<li id="l61"><pre>   <span class="comment">--  Butterfly</span> </pre></li>
+<li id="l62"><pre> </pre></li>
+<li id="l63"><pre>   <span class="keyword">type</span> Topology_Butterfly <span class="keyword">is</span> <span class="keyword">new</span> <a href="src_topologies.adb.html#l13" title="defined at topologies.adb:13:9">Topology_by_Dimension</a> <span class="keyword">with</span> <span class="keyword">null</span> <span class="keyword">record</span>; </pre></li>
+<li id="l64"><pre> </pre></li>
+<li id="l65"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l291" title="defined at topologies.adb:65:24">Nodes_in_Topology</a> (Configuration : <a href="src_topologies.adb.html#l63" title="defined at topologies.adb:63:9">Topology_Butterfly</a>) <span class="keyword">return</span> Positive; </pre></li>
+<li id="l66"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l295" title="defined at topologies.adb:66:24">Nodes_Connected</a>   (<a href="src_topologies.adb.html#l295" title="defined at topologies.adb:66:43">Configuration</a> : <a href="src_topologies.adb.html#l63" title="defined at topologies.adb:63:9">Topology_Butterfly</a>; </pre></li>
+<li id="l67"><pre>                                          Node_A, Node_B : Positive) <span class="keyword">return</span> Boolean; </pre></li>
+<li id="l68"><pre> </pre></li>
+<li id="l69"><pre>   <span class="comment">--  Wrap_Around_Butterfly</span> </pre></li>
+<li id="l70"><pre> </pre></li>
+<li id="l71"><pre>   <span class="keyword">type</span> Topology_Wrap_Around_Butterfly <span class="keyword">is</span> <span class="keyword">new</span> <a href="src_topologies.adb.html#l13" title="defined at topologies.adb:13:9">Topology_by_Dimension</a> <span class="keyword">with</span> <span class="keyword">null</span> <span class="keyword">record</span>; </pre></li>
+<li id="l72"><pre> </pre></li>
+<li id="l73"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l353" title="defined at topologies.adb:73:24">Nodes_in_Topology</a> (Configuration : <a href="src_topologies.adb.html#l71" title="defined at topologies.adb:71:9">Topology_Wrap_Around_Butterfly</a>) <span class="keyword">return</span> Positive; </pre></li>
+<li id="l74"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l357" title="defined at topologies.adb:74:24">Nodes_Connected</a>   (<a href="src_topologies.adb.html#l357" title="defined at topologies.adb:74:43">Configuration</a> : <a href="src_topologies.adb.html#l71" title="defined at topologies.adb:71:9">Topology_Wrap_Around_Butterfly</a>; </pre></li>
+<li id="l75"><pre>                                          Node_A, Node_B : Positive) <span class="keyword">return</span> Boolean; </pre></li>
+<li id="l76"><pre> </pre></li>
+<li id="l77"><pre>   <span class="comment">--  Star</span> </pre></li>
+<li id="l78"><pre> </pre></li>
+<li id="l79"><pre>   <span class="keyword">type</span> Topology_Star <span class="keyword">is</span> <span class="keyword">new</span> <a href="src_topologies.adb.html#l9" title="defined at topologies.adb:9:9">Topology_by_Size</a> <span class="keyword">with</span> <span class="keyword">null</span> <span class="keyword">record</span>; </pre></li>
+<li id="l80"><pre> </pre></li>
+<li id="l81"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l415" title="defined at topologies.adb:81:24">Nodes_in_Topology</a> (Configuration : <a href="src_topologies.adb.html#l79" title="defined at topologies.adb:79:9">Topology_Star</a>) <span class="keyword">return</span> Positive; </pre></li>
+<li id="l82"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l419" title="defined at topologies.adb:82:24">Nodes_Connected</a>   (Configuration : <a href="src_topologies.adb.html#l79" title="defined at topologies.adb:79:9">Topology_Star</a>; </pre></li>
+<li id="l83"><pre>                                          Node_A, Node_B : Positive) <span class="keyword">return</span> Boolean; </pre></li>
+<li id="l84"><pre> </pre></li>
+<li id="l85"><pre>   <span class="comment">--  Fully_Connected</span> </pre></li>
+<li id="l86"><pre> </pre></li>
+<li id="l87"><pre>   <span class="keyword">type</span> Topology_Fully_Connected <span class="keyword">is</span> <span class="keyword">new</span> <a href="src_topologies.adb.html#l9" title="defined at topologies.adb:9:9">Topology_by_Size</a> <span class="keyword">with</span> <span class="keyword">null</span> <span class="keyword">record</span>; </pre></li>
+<li id="l88"><pre> </pre></li>
+<li id="l89"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l426" title="defined at topologies.adb:89:24">Nodes_in_Topology</a> (Configuration : <a href="src_topologies.adb.html#l87" title="defined at topologies.adb:87:9">Topology_Fully_Connected</a>) <span class="keyword">return</span> Positive; </pre></li>
+<li id="l90"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l430" title="defined at topologies.adb:90:24">Nodes_Connected</a>   (Configuration : <a href="src_topologies.adb.html#l87" title="defined at topologies.adb:87:9">Topology_Fully_Connected</a>; </pre></li>
+<li id="l91"><pre>                                          Node_A, Node_B : Positive) <span class="keyword">return</span> Boolean; </pre></li>
+<li id="l92"><pre> </pre></li>
+<li id="l93"><pre>   <span class="comment">--  Cube_Connected_Cycles</span> </pre></li>
+<li id="l94"><pre> </pre></li>
+<li id="l95"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l33" title="defined at topologies.adb:33:24">Nodes_in_Topology</a> (<a href="src_topologies.adb.html#l33" title="defined at topologies.adb:33:43">Configuration</a> : <a href="src_topologies.adb.html#l31" title="defined at topologies.adb:31:9">Topology_Cube_Connected_Cycles</a>) <span class="keyword">return</span> Positive <span class="keyword">is</span> </pre></li>
+<li id="l96"><pre> </pre></li>
+<li id="l97"><pre>     (Configuration.Dimension * (2 ** (Configuration.Dimension))); </pre></li>
+<li id="l98"><pre> </pre></li>
+<li id="l99"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l34" title="defined at topologies.adb:34:24">Nodes_Connected</a> (<a href="src_topologies.adb.html#l34" title="defined at topologies.adb:34:43">Configuration</a>  : <a href="src_topologies.adb.html#l31" title="defined at topologies.adb:31:9">Topology_Cube_Connected_Cycles</a>; </pre></li>
+<li id="l100"><pre>                                        <a href="src_topologies.adb.html#l35" title="defined at topologies.adb:35:43">Node_A</a>, <a href="src_topologies.adb.html#l35" title="defined at topologies.adb:35:51">Node_B</a> : Positive) <span class="keyword">return</span> Boolean <span class="keyword">is</span> </pre></li>
+<li id="l101"><pre> </pre></li>
+<li id="l102"><pre>      <span class="keyword">subtype</span> Corners <span class="keyword">is</span> Natural <span class="keyword">range</span> 0 .. (2 ** (Configuration.Dimension)) - 1; </pre></li>
+<li id="l103"><pre>      <span class="keyword">subtype</span> Cycles  <span class="keyword">is</span> Natural <span class="keyword">range</span> 0 .. Configuration.Dimension - 1; </pre></li>
+<li id="l104"><pre> </pre></li>
+<li id="l105"><pre>      <span class="keyword">type</span> CCC_Coordinates <span class="keyword">is</span> <span class="keyword">record</span> </pre></li>
+<li id="l106"><pre>         Corner_Nr   : Corners; </pre></li>
+<li id="l107"><pre>         Cycle_Nr    : Cycles; </pre></li>
+<li id="l108"><pre>      <span class="keyword">end</span> <span class="keyword">record</span>; </pre></li>
+<li id="l109"><pre> </pre></li>
+<li id="l110"><pre>      <span class="keyword">function</span> To_CCC_Coordinates (Node : Positive) <span class="keyword">return</span> CCC_Coordinates <span class="keyword">is</span> </pre></li>
+<li id="l111"><pre> </pre></li>
+<li id="l112"><pre>         Coordinate : <span class="keyword">constant</span> CCC_Coordinates := (Corner_Nr =&gt; (Node - 1) /   Configuration.Dimension, </pre></li>
+<li id="l113"><pre>                                                   Cycle_Nr  =&gt; (Node - 1) <span class="keyword">mod</span> Configuration.Dimension); </pre></li>
+<li id="l114"><pre> </pre></li>
+<li id="l115"><pre>      <span class="keyword">begin</span> </pre></li>
+<li id="l116"><pre>         <span class="keyword">return</span> Coordinate; </pre></li>
+<li id="l117"><pre>      <span class="keyword">end</span> To_CCC_Coordinates; </pre></li>
+<li id="l118"><pre> </pre></li>
+<li id="l119"><pre>      CCC_Node_A : <span class="keyword">constant</span> CCC_Coordinates := To_CCC_Coordinates (<a href="src_topologies.adb.html#l35" title="defined at topologies.adb:35:43">Node_A</a>); </pre></li>
+<li id="l120"><pre>      CCC_Node_B : <span class="keyword">constant</span> CCC_Coordinates := To_CCC_Coordinates (<a href="src_topologies.adb.html#l35" title="defined at topologies.adb:35:51">Node_B</a>); </pre></li>
+<li id="l121"><pre> </pre></li>
+<li id="l122"><pre>      <span class="keyword">type</span> Bit_Arrays <span class="keyword">is</span> <span class="keyword">array</span> (Cycles) <span class="keyword">of</span> Boolean; </pre></li>
+<li id="l123"><pre> </pre></li>
+<li id="l124"><pre>      <span class="keyword">function</span> Bit_Array (Corner_Nr : Corners) <span class="keyword">return</span> Bit_Arrays <span class="keyword">is</span> </pre></li>
+<li id="l125"><pre> </pre></li>
+<li id="l126"><pre>         Bits : Bit_Arrays; </pre></li>
+<li id="l127"><pre> </pre></li>
+<li id="l128"><pre>      <span class="keyword">begin</span> </pre></li>
+<li id="l129"><pre>         <span class="keyword">for</span> Bit <span class="keyword">in</span> Bits&apos;Range <span class="keyword">loop</span> </pre></li>
+<li id="l130"><pre>            Bits (Bit) := (Corner_Nr / (2 ** Bit)) <span class="keyword">mod</span> 2 &gt; 0; </pre></li>
+<li id="l131"><pre>         <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l132"><pre>         <span class="keyword">return</span> Bits; </pre></li>
+<li id="l133"><pre>      <span class="keyword">end</span> Bit_Array; </pre></li>
+<li id="l134"><pre> </pre></li>
+<li id="l135"><pre>      <span class="keyword">function</span> Invert_Bit (Bit_Nr : Cycles; Bits : Bit_Arrays) <span class="keyword">return</span> Bit_Arrays <span class="keyword">is</span> </pre></li>
+<li id="l136"><pre> </pre></li>
+<li id="l137"><pre>         Return_Bits : Bit_Arrays := Bits; </pre></li>
+<li id="l138"><pre> </pre></li>
+<li id="l139"><pre>      <span class="keyword">begin</span> </pre></li>
+<li id="l140"><pre>         Return_Bits (Bit_Nr) := <span class="keyword">not</span> Return_Bits (Bit_Nr); </pre></li>
+<li id="l141"><pre>         <span class="keyword">return</span> Return_Bits; </pre></li>
+<li id="l142"><pre>      <span class="keyword">end</span> Invert_Bit; </pre></li>
+<li id="l143"><pre> </pre></li>
+<li id="l144"><pre>   <span class="keyword">begin</span> </pre></li>
+<li id="l145"><pre>      <span class="keyword">return</span> (CCC_Node_A.Corner_Nr = CCC_Node_B.Corner_Nr </pre></li>
+<li id="l146"><pre>        <span class="keyword">and</span> <span class="keyword">then</span> (CCC_Node_A.Cycle_Nr = (CCC_Node_B.Cycle_Nr + 1) <span class="keyword">mod</span> Configuration.Dimension </pre></li>
+<li id="l147"><pre>          <span class="keyword">or</span> <span class="keyword">else</span> CCC_Node_A.Cycle_Nr = (CCC_Node_B.Cycle_Nr - 1) <span class="keyword">mod</span> Configuration.Dimension)) </pre></li>
+<li id="l148"><pre>        <span class="keyword">or</span> <span class="keyword">else</span> (CCC_Node_A.Cycle_Nr = CCC_Node_B.Cycle_Nr </pre></li>
+<li id="l149"><pre>                 <span class="keyword">and</span> <span class="keyword">then</span> Bit_Array (CCC_Node_A.Corner_Nr) = Invert_Bit (CCC_Node_A.Cycle_Nr, Bit_Array (CCC_Node_B.Corner_Nr))); </pre></li>
+<li id="l150"><pre>   <span class="keyword">end</span> <span class="droplink">Nodes_Connected<ul><li><a href="src_topologies.adb.html#l34" title="To spec">To spec</a></li><li><a href="src_topologies.adb.html#l99" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l151"><pre> </pre></li>
+<li id="l152"><pre>   <span class="comment">--  Trees</span> </pre></li>
+<li id="l153"><pre> </pre></li>
+<li id="l154"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l41" title="defined at topologies.adb:41:24">Nodes_in_Topology</a> (<a href="src_topologies.adb.html#l41" title="defined at topologies.adb:41:43">Configuration</a> : <a href="src_topologies.adb.html#l39" title="defined at topologies.adb:39:9">Topology_Trees</a>) <span class="keyword">return</span> Positive <span class="keyword">is</span> </pre></li>
+<li id="l155"><pre> </pre></li>
+<li id="l156"><pre>      Nodes : Positive := 1; </pre></li>
+<li id="l157"><pre> </pre></li>
+<li id="l158"><pre>   <span class="keyword">begin</span> </pre></li>
+<li id="l159"><pre>      <span class="keyword">for</span> Level <span class="keyword">in</span> 1 .. Configuration.Depths - 1 <span class="keyword">loop</span> </pre></li>
+<li id="l160"><pre>         Nodes := Nodes + (Configuration.Degree ** Level); </pre></li>
+<li id="l161"><pre>      <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l162"><pre>      <span class="keyword">return</span> Nodes; </pre></li>
+<li id="l163"><pre>   <span class="keyword">end</span> <span class="droplink">Nodes_in_Topology<ul><li><a href="src_topologies.adb.html#l41" title="To spec">To spec</a></li><li><a href="src_topologies.adb.html#l154" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l164"><pre> </pre></li>
+<li id="l165"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l42" title="defined at topologies.adb:42:24">Nodes_Connected</a> (<a href="src_topologies.adb.html#l42" title="defined at topologies.adb:42:43">Configuration</a>  : <a href="src_topologies.adb.html#l39" title="defined at topologies.adb:39:9">Topology_Trees</a>; </pre></li>
+<li id="l166"><pre>                                        <a href="src_topologies.adb.html#l43" title="defined at topologies.adb:43:43">Node_A</a>, <a href="src_topologies.adb.html#l43" title="defined at topologies.adb:43:51">Node_B</a> : Positive) <span class="keyword">return</span> Boolean <span class="keyword">is</span> </pre></li>
+<li id="l167"><pre> </pre></li>
+<li id="l168"><pre>      Node_Nr : Positive := 1; </pre></li>
+<li id="l169"><pre> </pre></li>
+<li id="l170"><pre>      <span class="keyword">function</span> Construct_Tree (Parent_Nr, Depth : Positive) <span class="keyword">return</span> Boolean <span class="keyword">is</span> </pre></li>
+<li id="l171"><pre> </pre></li>
+<li id="l172"><pre>      <span class="keyword">begin</span> </pre></li>
+<li id="l173"><pre>         <span class="keyword">if</span> Depth &lt;= Configuration.Depths <span class="keyword">then</span> </pre></li>
+<li id="l174"><pre>            <span class="keyword">for</span> i <span class="keyword">in</span> 1 .. Configuration.Degree <span class="keyword">loop</span> </pre></li>
+<li id="l175"><pre>               Node_Nr := Node_Nr + 1; </pre></li>
+<li id="l176"><pre>               <span class="keyword">if</span> (Parent_Nr = <a href="src_topologies.adb.html#l43" title="defined at topologies.adb:43:43">Node_A</a> <span class="keyword">and</span> <span class="keyword">then</span> Node_Nr = <a href="src_topologies.adb.html#l43" title="defined at topologies.adb:43:51">Node_B</a>) </pre></li>
+<li id="l177"><pre>                 <span class="keyword">or</span> <span class="keyword">else</span> (Parent_Nr = <a href="src_topologies.adb.html#l43" title="defined at topologies.adb:43:51">Node_B</a> <span class="keyword">and</span> <span class="keyword">then</span> Node_Nr = <a href="src_topologies.adb.html#l43" title="defined at topologies.adb:43:43">Node_A</a>) <span class="keyword">then</span> </pre></li>
+<li id="l178"><pre>                  <span class="keyword">return</span> True; </pre></li>
+<li id="l179"><pre>               <span class="keyword">else</span> </pre></li>
+<li id="l180"><pre>                  <span class="keyword">if</span> Construct_Tree (Node_Nr, Depth + 1) <span class="keyword">then</span> </pre></li>
+<li id="l181"><pre>                     <span class="keyword">return</span> True; </pre></li>
+<li id="l182"><pre>                  <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l183"><pre>               <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l184"><pre>            <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l185"><pre>            <span class="keyword">return</span> False; </pre></li>
+<li id="l186"><pre>         <span class="keyword">else</span> </pre></li>
+<li id="l187"><pre>            <span class="keyword">return</span> False; </pre></li>
+<li id="l188"><pre>         <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l189"><pre>      <span class="keyword">end</span> Construct_Tree; </pre></li>
+<li id="l190"><pre> </pre></li>
+<li id="l191"><pre>   <span class="keyword">begin</span> </pre></li>
+<li id="l192"><pre>      <span class="keyword">return</span> Construct_Tree (Node_Nr, 2); </pre></li>
+<li id="l193"><pre>   <span class="keyword">end</span> <span class="droplink">Nodes_Connected<ul><li><a href="src_topologies.adb.html#l42" title="To spec">To spec</a></li><li><a href="src_topologies.adb.html#l165" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l194"><pre> </pre></li>
+<li id="l195"><pre>   <span class="comment">--  Mesh</span> </pre></li>
+<li id="l196"><pre> </pre></li>
+<li id="l197"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l49" title="defined at topologies.adb:49:24">Nodes_in_Topology</a> (<a href="src_topologies.adb.html#l49" title="defined at topologies.adb:49:43">Configuration</a> : <a href="src_topologies.adb.html#l47" title="defined at topologies.adb:47:9">Topology_Mesh</a>) <span class="keyword">return</span> Positive <span class="keyword">is</span> </pre></li>
+<li id="l198"><pre> </pre></li>
+<li id="l199"><pre>     (Configuration.Size ** Configuration.Dimension); </pre></li>
+<li id="l200"><pre> </pre></li>
+<li id="l201"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l50" title="defined at topologies.adb:50:24">Nodes_Connected</a> (<a href="src_topologies.adb.html#l50" title="defined at topologies.adb:50:43">Configuration</a>   : <a href="src_topologies.adb.html#l47" title="defined at topologies.adb:47:9">Topology_Mesh</a>; </pre></li>
+<li id="l202"><pre>                                        <a href="src_topologies.adb.html#l51" title="defined at topologies.adb:51:43">Node_A</a>, <a href="src_topologies.adb.html#l51" title="defined at topologies.adb:51:51">Node_B</a> : Positive) <span class="keyword">return</span> Boolean <span class="keyword">is</span> </pre></li>
+<li id="l203"><pre> </pre></li>
+<li id="l204"><pre>      <span class="keyword">subtype</span> Nodes_in_Line <span class="keyword">is</span> Natural <span class="keyword">range</span> 0 .. Configuration.Size - 1; </pre></li>
+<li id="l205"><pre>      <span class="keyword">type</span> Coordinates <span class="keyword">is</span> <span class="keyword">array</span> (0 .. Configuration.Dimension - 1) <span class="keyword">of</span> Nodes_in_Line; </pre></li>
+<li id="l206"><pre> </pre></li>
+<li id="l207"><pre>      <span class="keyword">function</span> To_Coordinates (Node_Nr : Positive) <span class="keyword">return</span> Coordinates <span class="keyword">is</span> </pre></li>
+<li id="l208"><pre> </pre></li>
+<li id="l209"><pre>         Coordinate : Coordinates; </pre></li>
+<li id="l210"><pre> </pre></li>
+<li id="l211"><pre>      <span class="keyword">begin</span> </pre></li>
+<li id="l212"><pre>         <span class="keyword">for</span> Dim <span class="keyword">in</span> 0 .. Coordinate&apos;Last <span class="keyword">loop</span> </pre></li>
+<li id="l213"><pre>            Coordinate (Dim) := (Node_Nr - 1) / Configuration.Size ** Dim <span class="keyword">mod</span> Configuration.Size; </pre></li>
+<li id="l214"><pre>         <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l215"><pre>         <span class="keyword">return</span> Coordinate; </pre></li>
+<li id="l216"><pre>      <span class="keyword">end</span> To_Coordinates; </pre></li>
+<li id="l217"><pre> </pre></li>
+<li id="l218"><pre>      Coordinate_A : <span class="keyword">constant</span> Coordinates := To_Coordinates (<a href="src_topologies.adb.html#l51" title="defined at topologies.adb:51:43">Node_A</a>); </pre></li>
+<li id="l219"><pre>      Coordinate_B : <span class="keyword">constant</span> Coordinates := To_Coordinates (<a href="src_topologies.adb.html#l51" title="defined at topologies.adb:51:51">Node_B</a>); </pre></li>
+<li id="l220"><pre> </pre></li>
+<li id="l221"><pre>      Matching_Coordinates : Natural := 0; </pre></li>
+<li id="l222"><pre> </pre></li>
+<li id="l223"><pre>   <span class="keyword">begin</span> </pre></li>
+<li id="l224"><pre>      <span class="keyword">for</span> Dim <span class="keyword">in</span> Coordinates&apos;Range <span class="keyword">loop</span> </pre></li>
+<li id="l225"><pre>         <span class="keyword">if</span> Coordinate_A (Dim) = Coordinate_B (Dim) <span class="keyword">then</span> </pre></li>
+<li id="l226"><pre>            Matching_Coordinates := Matching_Coordinates + 1; </pre></li>
+<li id="l227"><pre>         <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l228"><pre>      <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l229"><pre>      <span class="keyword">if</span> Matching_Coordinates = Configuration.Dimension - 1 <span class="keyword">then</span> </pre></li>
+<li id="l230"><pre>         <span class="keyword">for</span> Dim <span class="keyword">in</span> Coordinates&apos;Range <span class="keyword">loop</span> </pre></li>
+<li id="l231"><pre>            <span class="keyword">if</span>      (Coordinate_A (Dim) &lt; Nodes_in_Line&apos;Last <span class="keyword">and</span> <span class="keyword">then</span> Coordinate_A (Dim) + 1 = Coordinate_B (Dim)) </pre></li>
+<li id="l232"><pre>              <span class="keyword">or</span> <span class="keyword">else</span> (Coordinate_B (Dim) &lt; Nodes_in_Line&apos;Last <span class="keyword">and</span> <span class="keyword">then</span> Coordinate_B (Dim) + 1 = Coordinate_A (Dim)) <span class="keyword">then</span> </pre></li>
+<li id="l233"><pre>               <span class="keyword">return</span> True; </pre></li>
+<li id="l234"><pre>            <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l235"><pre>         <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l236"><pre>         <span class="keyword">return</span> False; </pre></li>
+<li id="l237"><pre>      <span class="keyword">else</span> </pre></li>
+<li id="l238"><pre>         <span class="keyword">return</span> False; </pre></li>
+<li id="l239"><pre>      <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l240"><pre>   <span class="keyword">end</span> <span class="droplink">Nodes_Connected<ul><li><a href="src_topologies.adb.html#l50" title="To spec">To spec</a></li><li><a href="src_topologies.adb.html#l201" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l241"><pre> </pre></li>
+<li id="l242"><pre>   <span class="comment">--  Torus</span> </pre></li>
+<li id="l243"><pre> </pre></li>
+<li id="l244"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l57" title="defined at topologies.adb:57:24">Nodes_in_Topology</a> (<a href="src_topologies.adb.html#l57" title="defined at topologies.adb:57:43">Configuration</a> : <a href="src_topologies.adb.html#l55" title="defined at topologies.adb:55:9">Topology_Torus</a>) <span class="keyword">return</span> Positive <span class="keyword">is</span> </pre></li>
+<li id="l245"><pre> </pre></li>
+<li id="l246"><pre>     (Configuration.Size ** Configuration.Dimension); </pre></li>
+<li id="l247"><pre> </pre></li>
+<li id="l248"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l58" title="defined at topologies.adb:58:24">Nodes_Connected</a> (<a href="src_topologies.adb.html#l58" title="defined at topologies.adb:58:43">Configuration</a>   : <a href="src_topologies.adb.html#l55" title="defined at topologies.adb:55:9">Topology_Torus</a>; </pre></li>
+<li id="l249"><pre>                                        <a href="src_topologies.adb.html#l59" title="defined at topologies.adb:59:43">Node_A</a>, <a href="src_topologies.adb.html#l59" title="defined at topologies.adb:59:51">Node_B</a> : Positive) <span class="keyword">return</span> Boolean <span class="keyword">is</span> </pre></li>
+<li id="l250"><pre> </pre></li>
+<li id="l251"><pre>      <span class="keyword">subtype</span> Nodes_in_Line <span class="keyword">is</span> Natural <span class="keyword">range</span> 0 .. Configuration.Size - 1; </pre></li>
+<li id="l252"><pre>      <span class="keyword">type</span> Coordinates <span class="keyword">is</span> <span class="keyword">array</span> (0 .. Configuration.Dimension - 1) <span class="keyword">of</span> Nodes_in_Line; </pre></li>
+<li id="l253"><pre> </pre></li>
+<li id="l254"><pre>      <span class="keyword">function</span> To_Coordinates (Node_Nr : Positive) <span class="keyword">return</span> Coordinates <span class="keyword">is</span> </pre></li>
+<li id="l255"><pre> </pre></li>
+<li id="l256"><pre>         Coordinate : Coordinates; </pre></li>
+<li id="l257"><pre> </pre></li>
+<li id="l258"><pre>      <span class="keyword">begin</span> </pre></li>
+<li id="l259"><pre>         <span class="keyword">for</span> Dim <span class="keyword">in</span> 0 .. Coordinate&apos;Last <span class="keyword">loop</span> </pre></li>
+<li id="l260"><pre>            Coordinate (Dim) := (Node_Nr - 1) / Configuration.Size ** Dim <span class="keyword">mod</span> Configuration.Size; </pre></li>
+<li id="l261"><pre>         <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l262"><pre>         <span class="keyword">return</span> Coordinate; </pre></li>
+<li id="l263"><pre>      <span class="keyword">end</span> To_Coordinates; </pre></li>
+<li id="l264"><pre> </pre></li>
+<li id="l265"><pre>      Coordinate_A : <span class="keyword">constant</span> Coordinates := To_Coordinates (<a href="src_topologies.adb.html#l59" title="defined at topologies.adb:59:43">Node_A</a>); </pre></li>
+<li id="l266"><pre>      Coordinate_B : <span class="keyword">constant</span> Coordinates := To_Coordinates (<a href="src_topologies.adb.html#l59" title="defined at topologies.adb:59:51">Node_B</a>); </pre></li>
+<li id="l267"><pre> </pre></li>
+<li id="l268"><pre>      Matching_Coordinates : Natural := 0; </pre></li>
+<li id="l269"><pre> </pre></li>
+<li id="l270"><pre>   <span class="keyword">begin</span> </pre></li>
+<li id="l271"><pre>      <span class="keyword">for</span> Dim <span class="keyword">in</span> Coordinates&apos;Range <span class="keyword">loop</span> </pre></li>
+<li id="l272"><pre>         <span class="keyword">if</span> Coordinate_A (Dim) = Coordinate_B (Dim) <span class="keyword">then</span> </pre></li>
+<li id="l273"><pre>            Matching_Coordinates := Matching_Coordinates + 1; </pre></li>
+<li id="l274"><pre>         <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l275"><pre>      <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l276"><pre>      <span class="keyword">if</span> Matching_Coordinates = Configuration.Dimension - 1 <span class="keyword">then</span> </pre></li>
+<li id="l277"><pre>         <span class="keyword">for</span> Dim <span class="keyword">in</span> Coordinates&apos;Range <span class="keyword">loop</span> </pre></li>
+<li id="l278"><pre>            <span class="keyword">if</span>      (Coordinate_A (Dim) + 1) <span class="keyword">mod</span> Configuration.Size = Coordinate_B (Dim) </pre></li>
+<li id="l279"><pre>              <span class="keyword">or</span> <span class="keyword">else</span> (Coordinate_B (Dim) + 1) <span class="keyword">mod</span> Configuration.Size = Coordinate_A (Dim) <span class="keyword">then</span> </pre></li>
+<li id="l280"><pre>               <span class="keyword">return</span> True; </pre></li>
+<li id="l281"><pre>            <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l282"><pre>         <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l283"><pre>         <span class="keyword">return</span> False; </pre></li>
+<li id="l284"><pre>      <span class="keyword">else</span> </pre></li>
+<li id="l285"><pre>         <span class="keyword">return</span> False; </pre></li>
+<li id="l286"><pre>      <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l287"><pre>   <span class="keyword">end</span> <span class="droplink">Nodes_Connected<ul><li><a href="src_topologies.adb.html#l58" title="To spec">To spec</a></li><li><a href="src_topologies.adb.html#l248" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l288"><pre> </pre></li>
+<li id="l289"><pre>   <span class="comment">--  Butterfly</span> </pre></li>
+<li id="l290"><pre> </pre></li>
+<li id="l291"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l65" title="defined at topologies.adb:65:24">Nodes_in_Topology</a> (<a href="src_topologies.adb.html#l65" title="defined at topologies.adb:65:43">Configuration</a> : <a href="src_topologies.adb.html#l63" title="defined at topologies.adb:63:9">Topology_Butterfly</a>) <span class="keyword">return</span> Positive <span class="keyword">is</span> </pre></li>
+<li id="l292"><pre> </pre></li>
+<li id="l293"><pre>     ((Configuration.Dimension + 1) * (2 ** Configuration.Dimension)); </pre></li>
+<li id="l294"><pre> </pre></li>
+<li id="l295"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l66" title="defined at topologies.adb:66:24">Nodes_Connected</a> (<a href="src_topologies.adb.html#l66" title="defined at topologies.adb:66:43">Configuration</a>  : <a href="src_topologies.adb.html#l63" title="defined at topologies.adb:63:9">Topology_Butterfly</a>; </pre></li>
+<li id="l296"><pre>                                        <a href="src_topologies.adb.html#l67" title="defined at topologies.adb:67:43">Node_A</a>, <a href="src_topologies.adb.html#l67" title="defined at topologies.adb:67:51">Node_B</a> : Positive) <span class="keyword">return</span> Boolean <span class="keyword">is</span> </pre></li>
+<li id="l297"><pre> </pre></li>
+<li id="l298"><pre>      <span class="keyword">subtype</span> Lines  <span class="keyword">is</span> Natural <span class="keyword">range</span> 0 .. (2 ** (Configuration.Dimension)) - 1; </pre></li>
+<li id="l299"><pre>      <span class="keyword">subtype</span> Layers <span class="keyword">is</span> Natural <span class="keyword">range</span> 0 .. Configuration.Dimension; </pre></li>
+<li id="l300"><pre>      <span class="keyword">subtype</span> Bits   <span class="keyword">is</span> Natural <span class="keyword">range</span> 0 .. Configuration.Dimension - 1; </pre></li>
+<li id="l301"><pre> </pre></li>
+<li id="l302"><pre>      <span class="keyword">type</span> Butterfly_Coordinates <span class="keyword">is</span> <span class="keyword">record</span> </pre></li>
+<li id="l303"><pre>         Line  : Lines; </pre></li>
+<li id="l304"><pre>         Layer : Layers; </pre></li>
+<li id="l305"><pre>      <span class="keyword">end</span> <span class="keyword">record</span>; </pre></li>
+<li id="l306"><pre> </pre></li>
+<li id="l307"><pre>      <span class="keyword">function</span> To_Butterfly_Coordinates (Node : Positive) <span class="keyword">return</span> Butterfly_Coordinates <span class="keyword">is</span> </pre></li>
+<li id="l308"><pre> </pre></li>
+<li id="l309"><pre>         Coordinate : <span class="keyword">constant</span> Butterfly_Coordinates := (Line  =&gt; (Node - 1) /   (Configuration.Dimension + 1), </pre></li>
+<li id="l310"><pre>                                                         Layer =&gt; (Node - 1) <span class="keyword">mod</span> (Configuration.Dimension + 1)); </pre></li>
+<li id="l311"><pre> </pre></li>
+<li id="l312"><pre>      <span class="keyword">begin</span> </pre></li>
+<li id="l313"><pre>         <span class="keyword">return</span> Coordinate; </pre></li>
+<li id="l314"><pre>      <span class="keyword">end</span> To_Butterfly_Coordinates; </pre></li>
+<li id="l315"><pre> </pre></li>
+<li id="l316"><pre>      Butterfly_A : <span class="keyword">constant</span> Butterfly_Coordinates := To_Butterfly_Coordinates (<a href="src_topologies.adb.html#l67" title="defined at topologies.adb:67:43">Node_A</a>); </pre></li>
+<li id="l317"><pre>      Butterfly_B : <span class="keyword">constant</span> Butterfly_Coordinates := To_Butterfly_Coordinates (<a href="src_topologies.adb.html#l67" title="defined at topologies.adb:67:51">Node_B</a>); </pre></li>
+<li id="l318"><pre> </pre></li>
+<li id="l319"><pre>      <span class="keyword">type</span> Bit_Arrays <span class="keyword">is</span> <span class="keyword">array</span> (Bits) <span class="keyword">of</span> Boolean; </pre></li>
+<li id="l320"><pre> </pre></li>
+<li id="l321"><pre>      <span class="keyword">function</span> To_Bit_Arrays (Line_Nr : Lines) <span class="keyword">return</span> Bit_Arrays <span class="keyword">is</span> </pre></li>
+<li id="l322"><pre> </pre></li>
+<li id="l323"><pre>         Bit_Array : Bit_Arrays; </pre></li>
+<li id="l324"><pre> </pre></li>
+<li id="l325"><pre>      <span class="keyword">begin</span> </pre></li>
+<li id="l326"><pre>         <span class="keyword">for</span> Bit <span class="keyword">in</span> Bits&apos;Range <span class="keyword">loop</span> </pre></li>
+<li id="l327"><pre>            Bit_Array (Bit) := (Line_Nr / (2 ** Bit)) <span class="keyword">mod</span> 2 &gt; 0; </pre></li>
+<li id="l328"><pre>         <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l329"><pre>         <span class="keyword">return</span> Bit_Array; </pre></li>
+<li id="l330"><pre>      <span class="keyword">end</span> To_Bit_Arrays; </pre></li>
+<li id="l331"><pre> </pre></li>
+<li id="l332"><pre>      <span class="keyword">function</span> Invert_Bit (Bit_Nr : Bits; Bit_Array : Bit_Arrays) <span class="keyword">return</span> Bit_Arrays <span class="keyword">is</span> </pre></li>
+<li id="l333"><pre> </pre></li>
+<li id="l334"><pre>         Return_Bits : Bit_Arrays := Bit_Array; </pre></li>
+<li id="l335"><pre> </pre></li>
+<li id="l336"><pre>      <span class="keyword">begin</span> </pre></li>
+<li id="l337"><pre>         Return_Bits (Bit_Nr) := <span class="keyword">not</span> Return_Bits (Bit_Nr); </pre></li>
+<li id="l338"><pre>         <span class="keyword">return</span> Return_Bits; </pre></li>
+<li id="l339"><pre>      <span class="keyword">end</span> Invert_Bit; </pre></li>
+<li id="l340"><pre> </pre></li>
+<li id="l341"><pre>   <span class="keyword">begin</span> </pre></li>
+<li id="l342"><pre>      <span class="keyword">return</span>         ((Butterfly_A.Layer &lt; Layers&apos;Last <span class="keyword">and</span> <span class="keyword">then</span> Butterfly_A.Layer + 1 = Butterfly_B.Layer) </pre></li>
+<li id="l343"><pre>                      <span class="keyword">or</span> <span class="keyword">else</span> (Butterfly_B.Layer &lt; Layers&apos;Last <span class="keyword">and</span> <span class="keyword">then</span> Butterfly_B.Layer + 1 = Butterfly_A.Layer)) </pre></li>
+<li id="l344"><pre>        <span class="keyword">and</span> <span class="keyword">then</span>           (Butterfly_A.Line = Butterfly_B.Line </pre></li>
+<li id="l345"><pre>                            <span class="keyword">or</span> <span class="keyword">else</span> ((Butterfly_A.Layer &lt; Butterfly_B.Layer) </pre></li>
+<li id="l346"><pre>                                     <span class="keyword">and</span> <span class="keyword">then</span> To_Bit_Arrays (Butterfly_A.Line) = Invert_Bit (Butterfly_A.Layer, To_Bit_Arrays (Butterfly_B.Line))) </pre></li>
+<li id="l347"><pre>                            <span class="keyword">or</span> <span class="keyword">else</span> ((Butterfly_B.Layer &lt; Butterfly_A.Layer) </pre></li>
+<li id="l348"><pre>                                     <span class="keyword">and</span> <span class="keyword">then</span> To_Bit_Arrays (Butterfly_B.Line) = Invert_Bit (Butterfly_B.Layer, To_Bit_Arrays (Butterfly_A.Line)))); </pre></li>
+<li id="l349"><pre>   <span class="keyword">end</span> <span class="droplink">Nodes_Connected<ul><li><a href="src_topologies.adb.html#l66" title="To spec">To spec</a></li><li><a href="src_topologies.adb.html#l295" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l350"><pre> </pre></li>
+<li id="l351"><pre>   <span class="comment">--  Wrap_Around_Butterfly</span> </pre></li>
+<li id="l352"><pre> </pre></li>
+<li id="l353"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l73" title="defined at topologies.adb:73:24">Nodes_in_Topology</a> (<a href="src_topologies.adb.html#l73" title="defined at topologies.adb:73:43">Configuration</a> : <a href="src_topologies.adb.html#l71" title="defined at topologies.adb:71:9">Topology_Wrap_Around_Butterfly</a>) <span class="keyword">return</span> Positive <span class="keyword">is</span> </pre></li>
+<li id="l354"><pre> </pre></li>
+<li id="l355"><pre>     (Configuration.Dimension * (2 ** Configuration.Dimension)); </pre></li>
+<li id="l356"><pre> </pre></li>
+<li id="l357"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l74" title="defined at topologies.adb:74:24">Nodes_Connected</a> (<a href="src_topologies.adb.html#l74" title="defined at topologies.adb:74:43">Configuration</a>   : <a href="src_topologies.adb.html#l71" title="defined at topologies.adb:71:9">Topology_Wrap_Around_Butterfly</a>; </pre></li>
+<li id="l358"><pre>                                        <a href="src_topologies.adb.html#l75" title="defined at topologies.adb:75:43">Node_A</a>, <a href="src_topologies.adb.html#l75" title="defined at topologies.adb:75:51">Node_B</a> : Positive) <span class="keyword">return</span> Boolean <span class="keyword">is</span> </pre></li>
+<li id="l359"><pre> </pre></li>
+<li id="l360"><pre>      <span class="keyword">subtype</span> Lines  <span class="keyword">is</span> Natural <span class="keyword">range</span> 0 .. (2 ** (Configuration.Dimension)) - 1; </pre></li>
+<li id="l361"><pre>      <span class="keyword">subtype</span> Layers <span class="keyword">is</span> Natural <span class="keyword">range</span> 0 .. Configuration.Dimension - 1; </pre></li>
+<li id="l362"><pre>      <span class="keyword">subtype</span> Bits   <span class="keyword">is</span> Natural <span class="keyword">range</span> 0 .. Configuration.Dimension - 1; </pre></li>
+<li id="l363"><pre> </pre></li>
+<li id="l364"><pre>      <span class="keyword">type</span> Butterfly_Coordinates <span class="keyword">is</span> <span class="keyword">record</span> </pre></li>
+<li id="l365"><pre>         Line  : Lines; </pre></li>
+<li id="l366"><pre>         Layer : Layers; </pre></li>
+<li id="l367"><pre>      <span class="keyword">end</span> <span class="keyword">record</span>; </pre></li>
+<li id="l368"><pre> </pre></li>
+<li id="l369"><pre>      <span class="keyword">function</span> To_Butterfly_Coordinates (Node : Positive) <span class="keyword">return</span> Butterfly_Coordinates <span class="keyword">is</span> </pre></li>
+<li id="l370"><pre> </pre></li>
+<li id="l371"><pre>         Coordinate : <span class="keyword">constant</span> Butterfly_Coordinates := (Line  =&gt; (Node - 1) /   Configuration.Dimension, </pre></li>
+<li id="l372"><pre>                                                         Layer =&gt; (Node - 1) <span class="keyword">mod</span> Configuration.Dimension); </pre></li>
+<li id="l373"><pre> </pre></li>
+<li id="l374"><pre>      <span class="keyword">begin</span> </pre></li>
+<li id="l375"><pre>         <span class="keyword">return</span> Coordinate; </pre></li>
+<li id="l376"><pre>      <span class="keyword">end</span> To_Butterfly_Coordinates; </pre></li>
+<li id="l377"><pre> </pre></li>
+<li id="l378"><pre>      Butterfly_A : <span class="keyword">constant</span> Butterfly_Coordinates := To_Butterfly_Coordinates (<a href="src_topologies.adb.html#l75" title="defined at topologies.adb:75:43">Node_A</a>); </pre></li>
+<li id="l379"><pre>      Butterfly_B : <span class="keyword">constant</span> Butterfly_Coordinates := To_Butterfly_Coordinates (<a href="src_topologies.adb.html#l75" title="defined at topologies.adb:75:51">Node_B</a>); </pre></li>
+<li id="l380"><pre> </pre></li>
+<li id="l381"><pre>      <span class="keyword">type</span> Bit_Arrays <span class="keyword">is</span> <span class="keyword">array</span> (Bits) <span class="keyword">of</span> Boolean; </pre></li>
+<li id="l382"><pre> </pre></li>
+<li id="l383"><pre>      <span class="keyword">function</span> To_Bit_Arrays (Line_Nr : Lines) <span class="keyword">return</span> Bit_Arrays <span class="keyword">is</span> </pre></li>
+<li id="l384"><pre> </pre></li>
+<li id="l385"><pre>         Bit_Array : Bit_Arrays; </pre></li>
+<li id="l386"><pre> </pre></li>
+<li id="l387"><pre>      <span class="keyword">begin</span> </pre></li>
+<li id="l388"><pre>         <span class="keyword">for</span> Bit <span class="keyword">in</span> Bits&apos;Range <span class="keyword">loop</span> </pre></li>
+<li id="l389"><pre>            Bit_Array (Bit) := (Line_Nr / (2 ** Bit)) <span class="keyword">mod</span> 2 &gt; 0; </pre></li>
+<li id="l390"><pre>         <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l391"><pre>         <span class="keyword">return</span> Bit_Array; </pre></li>
+<li id="l392"><pre>      <span class="keyword">end</span> To_Bit_Arrays; </pre></li>
+<li id="l393"><pre> </pre></li>
+<li id="l394"><pre>      <span class="keyword">function</span> Invert_Bit (Bit_Nr : Bits; Bit_Array : Bit_Arrays) <span class="keyword">return</span> Bit_Arrays <span class="keyword">is</span> </pre></li>
+<li id="l395"><pre> </pre></li>
+<li id="l396"><pre>         Return_Bits : Bit_Arrays := Bit_Array; </pre></li>
+<li id="l397"><pre> </pre></li>
+<li id="l398"><pre>      <span class="keyword">begin</span> </pre></li>
+<li id="l399"><pre>         Return_Bits (Bit_Nr) := <span class="keyword">not</span> Return_Bits (Bit_Nr); </pre></li>
+<li id="l400"><pre>         <span class="keyword">return</span> Return_Bits; </pre></li>
+<li id="l401"><pre>      <span class="keyword">end</span> Invert_Bit; </pre></li>
+<li id="l402"><pre> </pre></li>
+<li id="l403"><pre>   <span class="keyword">begin</span> </pre></li>
+<li id="l404"><pre>      <span class="keyword">return</span>         ((Butterfly_A.Layer + 1) <span class="keyword">mod</span> Configuration.Dimension = Butterfly_B.Layer </pre></li>
+<li id="l405"><pre>                      <span class="keyword">or</span> <span class="keyword">else</span> (Butterfly_B.Layer + 1) <span class="keyword">mod</span> Configuration.Dimension = Butterfly_A.Layer) </pre></li>
+<li id="l406"><pre>        <span class="keyword">and</span> <span class="keyword">then</span>           (Butterfly_A.Line = Butterfly_B.Line </pre></li>
+<li id="l407"><pre>                            <span class="keyword">or</span> <span class="keyword">else</span> ((Butterfly_A.Layer + 1) <span class="keyword">mod</span> Configuration.Dimension = Butterfly_B.Layer </pre></li>
+<li id="l408"><pre>                                     <span class="keyword">and</span> <span class="keyword">then</span> To_Bit_Arrays (Butterfly_A.Line) = Invert_Bit (Butterfly_A.Layer, To_Bit_Arrays (Butterfly_B.Line))) </pre></li>
+<li id="l409"><pre>                            <span class="keyword">or</span> <span class="keyword">else</span> ((Butterfly_B.Layer + 1) <span class="keyword">mod</span> Configuration.Dimension = Butterfly_A.Layer </pre></li>
+<li id="l410"><pre>                                     <span class="keyword">and</span> <span class="keyword">then</span> To_Bit_Arrays (Butterfly_B.Line) = Invert_Bit (Butterfly_B.Layer, To_Bit_Arrays (Butterfly_A.Line)))); </pre></li>
+<li id="l411"><pre>   <span class="keyword">end</span> <span class="droplink">Nodes_Connected<ul><li><a href="src_topologies.adb.html#l74" title="To spec">To spec</a></li><li><a href="src_topologies.adb.html#l357" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l412"><pre> </pre></li>
+<li id="l413"><pre>   <span class="comment">--  Star</span> </pre></li>
+<li id="l414"><pre> </pre></li>
+<li id="l415"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l81" title="defined at topologies.adb:81:24">Nodes_in_Topology</a> (<a href="src_topologies.adb.html#l81" title="defined at topologies.adb:81:43">Configuration</a> : <a href="src_topologies.adb.html#l79" title="defined at topologies.adb:79:9">Topology_Star</a>) <span class="keyword">return</span> Positive <span class="keyword">is</span> </pre></li>
+<li id="l416"><pre> </pre></li>
+<li id="l417"><pre>     (Configuration.Size); </pre></li>
+<li id="l418"><pre> </pre></li>
+<li id="l419"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l82" title="defined at topologies.adb:82:24">Nodes_Connected</a> (<a href="src_topologies.adb.html#l81" title="defined at topologies.adb:81:43">Configuration</a>  : <a href="src_topologies.adb.html#l79" title="defined at topologies.adb:79:9">Topology_Star</a>; </pre></li>
+<li id="l420"><pre>                                        <a href="src_topologies.adb.html#l83" title="defined at topologies.adb:83:43">Node_A</a>, <a href="src_topologies.adb.html#l83" title="defined at topologies.adb:83:51">Node_B</a> : Positive) <span class="keyword">return</span> Boolean <span class="keyword">is</span> </pre></li>
+<li id="l421"><pre> </pre></li>
+<li id="l422"><pre>     (<a href="src_topologies.adb.html#l83" title="defined at topologies.adb:83:43">Node_A</a> = 1 <span class="keyword">or</span> <span class="keyword">else</span> <a href="src_topologies.adb.html#l83" title="defined at topologies.adb:83:51">Node_B</a> = 1); </pre></li>
+<li id="l423"><pre> </pre></li>
+<li id="l424"><pre>   <span class="comment">--  Fully connected</span> </pre></li>
+<li id="l425"><pre> </pre></li>
+<li id="l426"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l89" title="defined at topologies.adb:89:24">Nodes_in_Topology</a> (<a href="src_topologies.adb.html#l89" title="defined at topologies.adb:89:43">Configuration</a> : <a href="src_topologies.adb.html#l87" title="defined at topologies.adb:87:9">Topology_Fully_Connected</a>) <span class="keyword">return</span> Positive <span class="keyword">is</span> </pre></li>
+<li id="l427"><pre> </pre></li>
+<li id="l428"><pre>     (Configuration.Size); </pre></li>
+<li id="l429"><pre> </pre></li>
+<li id="l430"><pre>   <span class="keyword">overriding</span> <span class="keyword">function</span> <a href="src_topologies.adb.html#l90" title="defined at topologies.adb:90:24">Nodes_Connected</a> (<a href="src_topologies.adb.html#l89" title="defined at topologies.adb:89:43">Configuration</a>  : <a href="src_topologies.adb.html#l87" title="defined at topologies.adb:87:9">Topology_Fully_Connected</a>; </pre></li>
+<li id="l431"><pre>                                        <a href="src_topologies.adb.html#l83" title="defined at topologies.adb:83:43">Node_A</a>, <a href="src_topologies.adb.html#l83" title="defined at topologies.adb:83:51">Node_B</a> : Positive) <span class="keyword">return</span> Boolean <span class="keyword">is</span> </pre></li>
+<li id="l432"><pre> </pre></li>
+<li id="l433"><pre>     (True); </pre></li>
+<li id="l434"><pre> </pre></li>
+<li id="l435"><pre>   <span class="comment">--</span> </pre></li>
+<li id="l436"><pre>   <span class="comment">--  Degrees</span> </pre></li>
+<li id="l437"><pre>   <span class="comment">--</span> </pre></li>
+<li id="l438"><pre> </pre></li>
+<li id="l439"><pre>   <span class="keyword">function</span> <span class="droplink">Min_Degree<ul><li><a href="topologies.ads.html#topologies.ads:13:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l13" title="To spec">To spec</a></li></ul></span> (<span class="droplink">Configuration<ul><li><a href="topologies.ads.html#topologies.ads:13:32" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l13" title="To spec">To spec</a></li></ul></span> : <span class="droplink">Topology_Kind<ul><li><a href="topologies.ads.html#topologies.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l7" title="To spec">To spec</a></li></ul></span>&apos;Class) <span class="keyword">return</span> Natural <span class="keyword">is</span> </pre></li>
+<li id="l440"><pre> </pre></li>
+<li id="l441"><pre>      <span class="keyword">subtype</span> Nodes_Range <span class="keyword">is</span> Positive <span class="keyword">range</span> 1 .. <span class="droplink">Nodes_in_Topology<ul><li><a href="topologies.ads.html#topologies.ads:9:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l9" title="To spec">To spec</a></li></ul></span> (<span class="droplink">Configuration<ul><li><a href="topologies.ads.html#topologies.ads:13:32" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l13" title="To spec">To spec</a></li></ul></span>); </pre></li>
+<li id="l442"><pre> </pre></li>
+<li id="l443"><pre>      Min : Natural := <a href="src_topologies.adb.html#l441" title="defined at topologies.adb:441:15">Nodes_Range</a>&apos;Last; </pre></li>
+<li id="l444"><pre> </pre></li>
+<li id="l445"><pre>   <span class="keyword">begin</span> </pre></li>
+<li id="l446"><pre>      <span class="keyword">for</span> i <span class="keyword">in</span> <a href="src_topologies.adb.html#l441" title="defined at topologies.adb:441:15">Nodes_Range</a> <span class="keyword">loop</span> </pre></li>
+<li id="l447"><pre>         <span class="keyword">declare</span> </pre></li>
+<li id="l448"><pre>            Degree : Natural := 0; </pre></li>
+<li id="l449"><pre>         <span class="keyword">begin</span> </pre></li>
+<li id="l450"><pre>            <span class="keyword">for</span> j <span class="keyword">in</span> <a href="src_topologies.adb.html#l441" title="defined at topologies.adb:441:15">Nodes_Range</a> <span class="keyword">loop</span> </pre></li>
+<li id="l451"><pre>               <span class="keyword">if</span> <span class="droplink">Nodes_Connected<ul><li><a href="topologies.ads.html#topologies.ads:10:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l10" title="To spec">To spec</a></li></ul></span> (<span class="droplink">Configuration<ul><li><a href="topologies.ads.html#topologies.ads:13:32" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l13" title="To spec">To spec</a></li></ul></span>, i, j) <span class="keyword">then</span> </pre></li>
+<li id="l452"><pre>                  Degree := Degree + 1; </pre></li>
+<li id="l453"><pre>               <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l454"><pre>            <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l455"><pre>            <a href="src_topologies.adb.html#l443" title="defined at topologies.adb:443:7">Min</a> := Natural&apos;<a href="src_topologies.adb.html#l443" title="defined at topologies.adb:443:7">Min</a> (<a href="src_topologies.adb.html#l443" title="defined at topologies.adb:443:7">Min</a>, Degree); </pre></li>
+<li id="l456"><pre>         <span class="keyword">end</span>; </pre></li>
+<li id="l457"><pre>      <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l458"><pre>      <span class="keyword">return</span> <a href="src_topologies.adb.html#l443" title="defined at topologies.adb:443:7">Min</a>; </pre></li>
+<li id="l459"><pre>   <span class="keyword">end</span> <span class="droplink">Min_Degree<ul><li><a href="topologies.ads.html#topologies.ads:13:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l13" title="To spec">To spec</a></li><li><a href="src_topologies.adb.html#l439" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l460"><pre> </pre></li>
+<li id="l461"><pre>   <span class="comment">--</span> </pre></li>
+<li id="l462"><pre> </pre></li>
+<li id="l463"><pre>   <span class="keyword">function</span> <span class="droplink">Max_Degree<ul><li><a href="topologies.ads.html#topologies.ads:14:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l14" title="To spec">To spec</a></li></ul></span> (<span class="droplink">Configuration<ul><li><a href="topologies.ads.html#topologies.ads:14:32" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l14" title="To spec">To spec</a></li></ul></span> : <span class="droplink">Topology_Kind<ul><li><a href="topologies.ads.html#topologies.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l7" title="To spec">To spec</a></li></ul></span>&apos;Class) <span class="keyword">return</span> Natural <span class="keyword">is</span> </pre></li>
+<li id="l464"><pre> </pre></li>
+<li id="l465"><pre>      <span class="keyword">subtype</span> Nodes_Range <span class="keyword">is</span> Positive <span class="keyword">range</span> 1 .. <span class="droplink">Nodes_in_Topology<ul><li><a href="topologies.ads.html#topologies.ads:9:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l9" title="To spec">To spec</a></li></ul></span> (<span class="droplink">Configuration<ul><li><a href="topologies.ads.html#topologies.ads:14:32" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l14" title="To spec">To spec</a></li></ul></span>); </pre></li>
+<li id="l466"><pre> </pre></li>
+<li id="l467"><pre>      Max : Natural := 0; </pre></li>
+<li id="l468"><pre> </pre></li>
+<li id="l469"><pre>   <span class="keyword">begin</span> </pre></li>
+<li id="l470"><pre>      <span class="keyword">for</span> i <span class="keyword">in</span> <a href="src_topologies.adb.html#l465" title="defined at topologies.adb:465:15">Nodes_Range</a> <span class="keyword">loop</span> </pre></li>
+<li id="l471"><pre>         <span class="keyword">declare</span> </pre></li>
+<li id="l472"><pre>            Degree : Natural := 0; </pre></li>
+<li id="l473"><pre>         <span class="keyword">begin</span> </pre></li>
+<li id="l474"><pre>            <span class="keyword">for</span> j <span class="keyword">in</span> <a href="src_topologies.adb.html#l465" title="defined at topologies.adb:465:15">Nodes_Range</a> <span class="keyword">loop</span> </pre></li>
+<li id="l475"><pre>               <span class="keyword">if</span> <span class="droplink">Nodes_Connected<ul><li><a href="topologies.ads.html#topologies.ads:10:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l10" title="To spec">To spec</a></li></ul></span> (<span class="droplink">Configuration<ul><li><a href="topologies.ads.html#topologies.ads:14:32" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l14" title="To spec">To spec</a></li></ul></span>, i, j) <span class="keyword">then</span> </pre></li>
+<li id="l476"><pre>                  Degree := Degree + 1; </pre></li>
+<li id="l477"><pre>               <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l478"><pre>            <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l479"><pre>            <a href="src_topologies.adb.html#l467" title="defined at topologies.adb:467:7">Max</a> := Natural&apos;<a href="src_topologies.adb.html#l467" title="defined at topologies.adb:467:7">Max</a> (<a href="src_topologies.adb.html#l467" title="defined at topologies.adb:467:7">Max</a>, Degree); </pre></li>
+<li id="l480"><pre>         <span class="keyword">end</span>; </pre></li>
+<li id="l481"><pre>      <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l482"><pre>      <span class="keyword">return</span> <a href="src_topologies.adb.html#l467" title="defined at topologies.adb:467:7">Max</a>; </pre></li>
+<li id="l483"><pre>   <span class="keyword">end</span> <span class="droplink">Max_Degree<ul><li><a href="topologies.ads.html#topologies.ads:14:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l14" title="To spec">To spec</a></li><li><a href="src_topologies.adb.html#l463" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l484"><pre> </pre></li>
+<li id="l485"><pre>   <span class="comment">--</span> </pre></li>
+<li id="l486"><pre>   <span class="comment">--  Constructors</span> </pre></li>
+<li id="l487"><pre>   <span class="comment">--</span> </pre></li>
+<li id="l488"><pre> </pre></li>
+<li id="l489"><pre>   <span class="keyword">function</span> <span class="droplink">Line<ul><li><a href="topologies.ads.html#topologies.ads:16:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l16" title="To spec">To spec</a></li></ul></span> (Size : Positive)                       <span class="keyword">return</span> <span class="droplink">Topology_Kind<ul><li><a href="topologies.ads.html#topologies.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l7" title="To spec">To spec</a></li></ul></span>&apos;Class <span class="keyword">is</span> (<a href="src_topologies.adb.html#l47" title="defined at topologies.adb:47:9">Topology_Mesh</a>&apos;(Dimension =&gt; 1, Size =&gt; <span class="droplink">Size<ul><li><a href="topologies.ads.html#topologies.ads:16:36" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l16" title="To spec">To spec</a></li></ul></span>)); </pre></li>
+<li id="l490"><pre>   <span class="keyword">function</span> <span class="droplink">Ring<ul><li><a href="topologies.ads.html#topologies.ads:17:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l17" title="To spec">To spec</a></li></ul></span> (Size : Positive)                       <span class="keyword">return</span> <span class="droplink">Topology_Kind<ul><li><a href="topologies.ads.html#topologies.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l7" title="To spec">To spec</a></li></ul></span>&apos;Class <span class="keyword">is</span> (<a href="src_topologies.adb.html#l55" title="defined at topologies.adb:55:9">Topology_Torus</a>&apos;(Dimension =&gt; 1, Size =&gt; <span class="droplink">Size<ul><li><a href="topologies.ads.html#topologies.ads:17:36" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l17" title="To spec">To spec</a></li></ul></span>)); </pre></li>
+<li id="l491"><pre>   <span class="keyword">function</span> <span class="droplink">Star<ul><li><a href="topologies.ads.html#topologies.ads:18:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l18" title="To spec">To spec</a></li></ul></span> (Size : Positive)                       <span class="keyword">return</span> <span class="droplink">Topology_Kind<ul><li><a href="topologies.ads.html#topologies.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l7" title="To spec">To spec</a></li></ul></span>&apos;Class <span class="keyword">is</span> (<a href="src_topologies.adb.html#l79" title="defined at topologies.adb:79:9">Topology_Star</a>&apos;(Size =&gt; <span class="droplink">Size<ul><li><a href="topologies.ads.html#topologies.ads:18:36" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l18" title="To spec">To spec</a></li></ul></span>)); </pre></li>
+<li id="l492"><pre>   <span class="keyword">function</span> <span class="droplink">Fully_Connected<ul><li><a href="topologies.ads.html#topologies.ads:19:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l19" title="To spec">To spec</a></li></ul></span> (Size : Positive)            <span class="keyword">return</span> <span class="droplink">Topology_Kind<ul><li><a href="topologies.ads.html#topologies.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l7" title="To spec">To spec</a></li></ul></span>&apos;Class <span class="keyword">is</span> (<a href="src_topologies.adb.html#l87" title="defined at topologies.adb:87:9">Topology_Fully_Connected</a>&apos;(Size =&gt; <span class="droplink">Size<ul><li><a href="topologies.ads.html#topologies.ads:19:36" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l19" title="To spec">To spec</a></li></ul></span>)); </pre></li>
+<li id="l493"><pre>   <span class="keyword">function</span> <span class="droplink">Trees<ul><li><a href="topologies.ads.html#topologies.ads:20:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l20" title="To spec">To spec</a></li></ul></span> (Degree, Depths : Positive)            <span class="keyword">return</span> <span class="droplink">Topology_Kind<ul><li><a href="topologies.ads.html#topologies.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l7" title="To spec">To spec</a></li></ul></span>&apos;Class <span class="keyword">is</span> (<a href="src_topologies.adb.html#l39" title="defined at topologies.adb:39:9">Topology_Trees</a>&apos;(Degree =&gt; <span class="droplink">Degree<ul><li><a href="topologies.ads.html#topologies.ads:20:36" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l20" title="To spec">To spec</a></li></ul></span>, Depths =&gt; <span class="droplink">Depths<ul><li><a href="topologies.ads.html#topologies.ads:20:44" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l20" title="To spec">To spec</a></li></ul></span>)); </pre></li>
+<li id="l494"><pre>   <span class="keyword">function</span> <span class="droplink">Mesh<ul><li><a href="topologies.ads.html#topologies.ads:21:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l21" title="To spec">To spec</a></li></ul></span> (Dimension, Size : Positive)            <span class="keyword">return</span> <span class="droplink">Topology_Kind<ul><li><a href="topologies.ads.html#topologies.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l7" title="To spec">To spec</a></li></ul></span>&apos;Class <span class="keyword">is</span> (<a href="src_topologies.adb.html#l47" title="defined at topologies.adb:47:9">Topology_Mesh</a>&apos;(Dimension =&gt; <span class="droplink">Dimension<ul><li><a href="topologies.ads.html#topologies.ads:21:36" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l21" title="To spec">To spec</a></li></ul></span>, Size =&gt; <span class="droplink">Size<ul><li><a href="topologies.ads.html#topologies.ads:21:47" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l21" title="To spec">To spec</a></li></ul></span>)); </pre></li>
+<li id="l495"><pre>   <span class="keyword">function</span> <span class="droplink">Torus<ul><li><a href="topologies.ads.html#topologies.ads:22:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l22" title="To spec">To spec</a></li></ul></span> (Dimension, Size : Positive)           <span class="keyword">return</span> <span class="droplink">Topology_Kind<ul><li><a href="topologies.ads.html#topologies.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l7" title="To spec">To spec</a></li></ul></span>&apos;Class <span class="keyword">is</span> (<a href="src_topologies.adb.html#l55" title="defined at topologies.adb:55:9">Topology_Torus</a>&apos;(Dimension =&gt; <span class="droplink">Dimension<ul><li><a href="topologies.ads.html#topologies.ads:22:36" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l22" title="To spec">To spec</a></li></ul></span>, Size =&gt; <span class="droplink">Size<ul><li><a href="topologies.ads.html#topologies.ads:22:47" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l22" title="To spec">To spec</a></li></ul></span>)); </pre></li>
+<li id="l496"><pre>   <span class="keyword">function</span> <span class="droplink">Hypercube<ul><li><a href="topologies.ads.html#topologies.ads:23:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l23" title="To spec">To spec</a></li></ul></span> (Dimension : Positive)             <span class="keyword">return</span> <span class="droplink">Topology_Kind<ul><li><a href="topologies.ads.html#topologies.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l7" title="To spec">To spec</a></li></ul></span>&apos;Class <span class="keyword">is</span> (<a href="src_topologies.adb.html#l55" title="defined at topologies.adb:55:9">Topology_Torus</a>&apos;(Dimension =&gt; <span class="droplink">Dimension<ul><li><a href="topologies.ads.html#topologies.ads:23:36" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l23" title="To spec">To spec</a></li></ul></span>, Size =&gt; 2)); </pre></li>
+<li id="l497"><pre>   <span class="keyword">function</span> <span class="droplink">Cube_Connected_Cycles<ul><li><a href="topologies.ads.html#topologies.ads:24:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l24" title="To spec">To spec</a></li></ul></span> (Dimension : Positive) <span class="keyword">return</span> <span class="droplink">Topology_Kind<ul><li><a href="topologies.ads.html#topologies.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l7" title="To spec">To spec</a></li></ul></span>&apos;Class <span class="keyword">is</span> (<a href="src_topologies.adb.html#l31" title="defined at topologies.adb:31:9">Topology_Cube_Connected_Cycles</a>&apos;(Dimension =&gt; <span class="droplink">Dimension<ul><li><a href="topologies.ads.html#topologies.ads:24:36" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l24" title="To spec">To spec</a></li></ul></span>)); </pre></li>
+<li id="l498"><pre>   <span class="keyword">function</span> <span class="droplink">Butterfly<ul><li><a href="topologies.ads.html#topologies.ads:25:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l25" title="To spec">To spec</a></li></ul></span> (Dimension : Positive)             <span class="keyword">return</span> <span class="droplink">Topology_Kind<ul><li><a href="topologies.ads.html#topologies.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l7" title="To spec">To spec</a></li></ul></span>&apos;Class <span class="keyword">is</span> (<a href="src_topologies.adb.html#l63" title="defined at topologies.adb:63:9">Topology_Butterfly</a>&apos;(Dimension =&gt; <span class="droplink">Dimension<ul><li><a href="topologies.ads.html#topologies.ads:25:36" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l25" title="To spec">To spec</a></li></ul></span>)); </pre></li>
+<li id="l499"><pre>   <span class="keyword">function</span> <span class="droplink">Wrap_Around_Butterfly<ul><li><a href="topologies.ads.html#topologies.ads:26:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l26" title="To spec">To spec</a></li></ul></span> (Dimension : Positive) <span class="keyword">return</span> <span class="droplink">Topology_Kind<ul><li><a href="topologies.ads.html#topologies.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l7" title="To spec">To spec</a></li></ul></span>&apos;Class <span class="keyword">is</span> (<a href="src_topologies.adb.html#l71" title="defined at topologies.adb:71:9">Topology_Wrap_Around_Butterfly</a>&apos;(Dimension =&gt; <span class="droplink">Dimension<ul><li><a href="topologies.ads.html#topologies.ads:26:36" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l26" title="To spec">To spec</a></li></ul></span>)); </pre></li>
+<li id="l500"><pre> </pre></li>
+<li id="l501"><pre><span class="keyword">end</span> <span class="droplink">Topologies<ul><li><a href="topologies.ads.html#topologies.ads:5:9" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l5" title="To spec">To spec</a></li><li><a href="src_topologies.adb.html#l5" title="To body">To body</a></li></ul></span>; </pre></li>
+</ol></div>
+</div>
+
+</body>
+</html>

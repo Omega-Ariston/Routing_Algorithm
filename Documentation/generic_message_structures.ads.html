@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+
+  <title>
+    Package: Generic_Message_Structures (generic)
+  </title>
+  <link rel='stylesheet' href='support/docgen.css' type='text/css'/>
+  <link rel='stylesheet' href='support/tags.css' type='text/css'/>
+  <script src='support/docgen.js' type='text/javascript' charset='utf-8'></script>
+</head>
+<body onload="onloadDoc();">
+
+<div id='leftSide'>
+  <div id='leftSideInside'>
+  <div id='header'>
+    <h2 class="button">Documentation</h2>
+    <a href='toc.html'><div class="button2">Table of Contents</div></a>
+
+    <a href='tree.html'><div class="button2">Class Inheritance Tree</div></a>
+
+  </div>
+
+  <div id='navigation'>
+    <h2 class="button">Navigation</h2>
+    <a href='#Description'><div class="button2">Description</div></a>
+    <a href='#Packages'><div class="button2">Packages</div></a>
+    <a href='#Types'><div class="button2">Types</div></a>
+  </div><!-- navigation -->
+  </div>
+</div> <!-- leftSide -->
+
+<div class='default' id='rightSide'>
+ <div id='rightSideInside'>
+ <div id='Index'>
+  <h2>Index</h2>
+  <script type="text/javascript">
+    var names = new Array (
+new Array ('Routers_<wbr/>Configuration', 'generic_message_structures.ads:9:17', 'package-spec'),
+new Array ('Message_<wbr/>Strings', 'generic_message_structures.ads:15:12', 'package-spec'),
+new Array ('The_<wbr/>Core_<wbr/>Message', 'generic_message_structures.ads:18:12', 'type-spec'),
+new Array ('Messages_<wbr/>Client', 'generic_message_structures.ads:20:9', 'type-spec'),
+new Array ('Messages_<wbr/>Mailbox', 'generic_message_structures.ads:25:9', 'type-spec'),
+      new Array ('dummy', '', ''));
+    printIndexList (names);
+  </script>
+  <noscript>
+    <ul>
+      <li class='package-spec'><a href="#generic_message_structures.ads:9:17">Routers_<wbr/>Configuration</a></li>
+      <li class='package-spec'><a href="#generic_message_structures.ads:15:12">Message_<wbr/>Strings</a></li>
+      <li class='type-spec'><a href="#generic_message_structures.ads:18:12">The_<wbr/>Core_<wbr/>Message</a></li>
+      <li class='type-spec'><a href="#generic_message_structures.ads:20:9">Messages_<wbr/>Client</a></li>
+      <li class='type-spec'><a href="#generic_message_structures.ads:25:9">Messages_<wbr/>Mailbox</a></li>
+    </ul>
+  </noscript>
+ </div>
+ </div>
+</div>
+
+<div class='default' id='documentation'>
+  <div class='title'>
+    Package:
+<span class="droplink"><i>Generic_Message_Structures (generic)</i><ul>
+  <li><a href="src_generic_message_structures.ads.html">Goto spec source</a></li>
+</ul></span>
+  </div>
+  <div class='subprograms'>
+    <h1><a name='Description' id='Description'></a>Description</h1>
+    <div class="class">
+    <div class='details'><pre><span class="keyword">generic</span>
+   <span class="keyword">with</span> <span class="keyword">package</span> <span class="name"><a name="generic_message_structures.ads:9:17"></a>Routers_Configuration</span> <span class="keyword">is</span></pre></div>
+    <div class='comment'>
+Framework: Uwe R. Zimmer, Australia, 2015
+
+</div>
+    </div>
+  </div>
+
+  <div class='subprograms'>
+    <h1><a name='Packages' id='Packages'></a>Packages</h1>
+    <div class="class">
+      <h3>
+        <a name='generic_message_structures.ads:9:17' id='generic_message_structures.ads:9:17'></a>
+        Routers_Configuration
+        <span class='type'>(new <a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:11:9" title="defined at generic_routers_configuration.ads:11:9">Generic_Routers_Configuration</a>)</span>
+      </h3>
+        <div class='details'><pre><span class="keyword">package</span> <span class="name_emphasis">Routers_Configuration</span> <span class="keyword">is</span> <span class="keyword">new</span> <a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:11:9" title="defined at generic_routers_configuration.ads:11:9">Generic_Routers_Configuration</a> (<>);</pre></div>
+    </div>
+    <div class="class">
+      <h3>
+        <a name='generic_message_structures.ads:15:12' id='generic_message_structures.ads:15:12'></a>
+        Message_Strings
+        <span class='type'>(new Ada.Strings.Bounded.Generic_Bounded_Length)</span>
+      </h3>
+        <div class='details'><pre><span class="keyword">package</span> <span class="name_emphasis">Message_Strings</span> <span class="keyword">is</span> <span class="keyword">new</span> Generic_Bounded_Length (Max => 80);</pre></div>
+    </div>
+  </div>
+
+
+
+  <div class='subprograms'>
+    <h1><a name='Types' id='Types'></a>Types</h1>
+    <div class="class">
+      <h3>
+        <a name='generic_message_structures.ads:18:12' id='generic_message_structures.ads:18:12'></a>
+<span class="droplink">The_Core_Message<ul>
+  <li><a href="src_generic_message_structures.ads.html#l18">Goto declaration in source</a></li>
+</ul></span>
+      </h3>
+      <div class='details'><pre><span class="keyword">subtype</span> <span class="name_emphasis">The_Core_Message</span> <span class="keyword">is</span> Bounded_String;</pre></div>
+      <div class='profile'>
+          <h4>References:</h4>
+          <div><i><a href="src_generic_message_structures.ads.html#l18" title="generic_message_structures.ads:18:12">generic_message_structures.ads:18:12</a> (declaration)</i></div>
+          <div><i><a href="src_generic_message_structures.ads.html#l22" title="generic_message_structures.ads:22:21">generic_message_structures.ads:22:21</a> (reference)</i></div>
+          <div><i><a href="src_generic_message_structures.ads.html#l27" title="generic_message_structures.ads:27:21">generic_message_structures.ads:27:21</a> (reference)</i></div>
+      </div>
+    </div>
+    <div class="class">
+      <h3>
+        <a name='generic_message_structures.ads:20:9' id='generic_message_structures.ads:20:9'></a>
+<span class="droplink">Messages_Client<ul>
+  <li><a href="src_generic_message_structures.ads.html#l20">Goto declaration in source</a></li>
+</ul></span>
+      </h3>
+      <div class='details'><pre><span class="keyword">type</span> <span class="name_emphasis">Messages_Client</span> <span class="keyword">is</span> <span class="keyword">record</span>
+      Destination : <a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="defined at generic_routers_configuration.ads:15:9">Router_Range</a>;
+      The_Message : <a href="generic_message_structures.ads.html#generic_message_structures.ads:18:12" title="defined at generic_message_structures.ads:18:12">The_Core_Message</a>;
+   <span class="keyword">end</span> <span class="keyword">record</span>;</pre></div>
+      <div class='profile'>
+          <h4>References:</h4>
+          <div><i><a href="src_generic_message_structures.ads.html#l20" title="generic_message_structures.ads:20:9">generic_message_structures.ads:20:9</a> (declaration)</i></div>
+          <div><i><a href="src_generic_router.ads.html#l31" title="generic_router.ads:31:44">generic_router.ads:31:44</a> (reference)</i></div>
+      </div>
+    </div>
+    <div class="class">
+      <h3>
+        <a name='generic_message_structures.ads:25:9' id='generic_message_structures.ads:25:9'></a>
+<span class="droplink">Messages_Mailbox<ul>
+  <li><a href="src_generic_message_structures.ads.html#l25">Goto declaration in source</a></li>
+</ul></span>
+      </h3>
+      <div class='details'><pre><span class="keyword">type</span> <span class="name_emphasis">Messages_Mailbox</span> <span class="keyword">is</span> <span class="keyword">record</span>
+      Sender      : <a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="defined at generic_routers_configuration.ads:15:9">Router_Range</a>     := <a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="defined at generic_routers_configuration.ads:15:9">Router_Range</a>'Invalid_Value;
+      The_Message : <a href="generic_message_structures.ads.html#generic_message_structures.ads:18:12" title="defined at generic_message_structures.ads:18:12">The_Core_Message</a> := Message_Strings.To_Bounded_String (<span class="string">""</span>);
+      Hop_Counter : Natural          := 0;
+   <span class="keyword">end</span> <span class="keyword">record</span>;</pre></div>
+      <div class='profile'>
+          <h4>References:</h4>
+          <div><i><a href="src_generic_message_structures.ads.html#l25" title="generic_message_structures.ads:25:9">generic_message_structures.ads:25:9</a> (declaration)</i></div>
+          <div><i><a href="src_generic_router.ads.html#l32" title="generic_router.ads:32:44">generic_router.ads:32:44</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l241" title="test_routers.adb:241:37">test_routers.adb:241:37</a> (reference)</i></div>
+      </div>
+    </div>
+  </div>
+
+
+</div> <!-- documentation -->
+
+</body>
+</html>

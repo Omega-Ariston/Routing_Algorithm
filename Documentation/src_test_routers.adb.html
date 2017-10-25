@@ -1,0 +1,381 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+
+  <title>
+    File: test_routers.adb
+  </title>
+  <link rel='stylesheet' href='support/docgen.css' type='text/css'/>
+  <link rel='stylesheet' href='support/tags.css' type='text/css'/>
+  <script src='support/docgen.js' type='text/javascript' charset='utf-8'></script>
+</head>
+<body onload="onloadDoc();">
+
+<div id='leftSide'>
+  <div id='leftSideInside'>
+  <div id='header'>
+    <h2 class="button">Documentation</h2>
+    <a href='toc.html'><div class="button2">Table of Contents</div></a>
+
+    <a href='tree.html'><div class="button2">Class Inheritance Tree</div></a>
+
+  </div>
+  </div>
+</div> <!-- leftSide -->
+
+<div class='subprograms'>
+  <div class='details'><ol><li id="l1"><pre><span class="comment">--</span> </pre></li>
+<li id="l2"><pre><span class="comment">--  Uwe R. Zimmer, Australia, September 2016</span> </pre></li>
+<li id="l3"><pre><span class="comment">--</span> </pre></li>
+<li id="l4"><pre> </pre></li>
+<li id="l5"><pre><span class="keyword">with</span> Ada.Float_Text_IO;                <span class="keyword">use</span> Ada.Float_Text_IO; </pre></li>
+<li id="l6"><pre><span class="keyword">with</span> Ada.Integer_Text_IO;              <span class="keyword">use</span> Ada.Integer_Text_IO; </pre></li>
+<li id="l7"><pre><span class="keyword">with</span> Ada.Numerics.Discrete_Random;     <span class="keyword">use</span> Ada.Numerics; </pre></li>
+<li id="l8"><pre><span class="keyword">with</span> Ada.Text_IO;                      <span class="keyword">use</span> Ada.Text_IO; </pre></li>
+<li id="l9"><pre><span class="keyword">with</span> <span class="droplink">Generic_Message_Structures<ul><li><a href="generic_message_structures.ads.html#generic_message_structures.ads:11:9" title="To API doc">To API doc</a></li><li><a href="src_generic_message_structures.ads.html#l11" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l10"><pre><span class="keyword">with</span> <span class="droplink">Generic_Router<ul><li><a href="generic_router.ads.html#generic_router.ads:13:9" title="To API doc">To API doc</a></li><li><a href="src_generic_router.ads.html#l13" title="To spec">To spec</a></li><li><a href="src_generic_router.adb.html#l7" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l11"><pre><span class="keyword">with</span> <span class="droplink">Generic_Routers<ul><li><a href="generic_routers.ads.html#generic_routers.ads:11:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers.ads.html#l11" title="To spec">To spec</a></li><li><a href="src_generic_routers.adb.html#l8" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l12"><pre><span class="keyword">with</span> <span class="droplink">Generic_Routers_Configuration<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:11:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l11" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l13"><pre><span class="keyword">with</span> GNAT.Command_Line;                <span class="keyword">use</span> GNAT.Command_Line; </pre></li>
+<li id="l14"><pre><span class="keyword">with</span> <span class="droplink">Routers_Configuration_Structures<ul><li><a href="routers_configuration_structures.ads.html#routers_configuration_structures.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_routers_configuration_structures.ads.html#l7" title="To spec">To spec</a></li><li><a href="src_routers_configuration_structures.adb.html#l5" title="To body">To body</a></li></ul></span>; <span class="keyword">use</span> <span class="droplink">Routers_Configuration_Structures<ul><li><a href="routers_configuration_structures.ads.html#routers_configuration_structures.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_routers_configuration_structures.ads.html#l7" title="To spec">To spec</a></li><li><a href="src_routers_configuration_structures.adb.html#l5" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l15"><pre><span class="keyword">with</span> <span class="droplink">Topologies<ul><li><a href="topologies.ads.html#topologies.ads:5:9" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l5" title="To spec">To spec</a></li><li><a href="src_topologies.adb.html#l5" title="To body">To body</a></li></ul></span>;                       <span class="keyword">use</span> <span class="droplink">Topologies<ul><li><a href="topologies.ads.html#topologies.ads:5:9" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l5" title="To spec">To spec</a></li><li><a href="src_topologies.adb.html#l5" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l16"><pre> </pre></li>
+<li id="l17"><pre><span class="keyword">procedure</span> Test_Routers <span class="keyword">is</span> </pre></li>
+<li id="l18"><pre> </pre></li>
+<li id="l19"><pre>   Command_Line_Parameters : <span class="droplink">Command_Line_Options<ul><li><a href="routers_configuration_structures.ads.html#routers_configuration_structures.ads:13:9" title="To API doc">To API doc</a></li><li><a href="src_routers_configuration_structures.ads.html#l13" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l20"><pre>   Options_Ok              : Boolean               := True; </pre></li>
+<li id="l21"><pre> </pre></li>
+<li id="l22"><pre>   <span class="keyword">procedure</span> Print_Options <span class="keyword">is</span> </pre></li>
+<li id="l23"><pre> </pre></li>
+<li id="l24"><pre>   <span class="keyword">begin</span> </pre></li>
+<li id="l25"><pre>      New_Line; Put (<span class="string">&quot;accepted options:&quot;</span>); </pre></li>
+<li id="l26"><pre>      New_Line; Put (<span class="string">&quot;   [-t {Topology            : String   }] -&gt; &quot;</span>); Put (<span class="droplink">Preconfigured_Topologies<ul><li><a href="routers_configuration_structures.ads.html#routers_configuration_structures.ads:9:9" title="To API doc">To API doc</a></li><li><a href="src_routers_configuration_structures.ads.html#l9" title="To spec">To spec</a></li></ul></span>&apos;Image (Command_Line_Parameters.Selected_Topology)); </pre></li>
+<li id="l27"><pre>      New_Line; Put (<span class="string">&quot;      by Size            : Line, Ring, Star, Fully_Connected&quot;</span>); </pre></li>
+<li id="l28"><pre>      New_Line; Put (<span class="string">&quot;      by Degree, Depths  : Tree&quot;</span>); </pre></li>
+<li id="l29"><pre>      New_Line; Put (<span class="string">&quot;      by Dimension, Size : Mesh, Torus&quot;</span>); </pre></li>
+<li id="l30"><pre>      New_Line; Put (<span class="string">&quot;      by Dimension       : Hypercube, Cube_Connected_Cycles,&quot;</span>); </pre></li>
+<li id="l31"><pre>      New_Line; Put (<span class="string">&quot;                           Butterfly, Wrap_Around_Butterfly&quot;</span>); </pre></li>
+<li id="l32"><pre>      New_Line; Put (<span class="string">&quot;   [-s {Size                : Positive }] -&gt; &quot;</span>); Put (Command_Line_Parameters.Size, 3); </pre></li>
+<li id="l33"><pre>      New_Line; Put (<span class="string">&quot;   [-g {Degree              : Positive }] -&gt; &quot;</span>); Put (Command_Line_Parameters.Degree, 3); </pre></li>
+<li id="l34"><pre>      New_Line; Put (<span class="string">&quot;   [-p {Depths              : Positive }] -&gt; &quot;</span>); Put (Command_Line_Parameters.Depths, 3); </pre></li>
+<li id="l35"><pre>      New_Line; Put (<span class="string">&quot;   [-d {Dimension           : Positive }] -&gt; &quot;</span>); Put (Command_Line_Parameters.Dimension, 3); </pre></li>
+<li id="l36"><pre>      New_Line; Put (<span class="string">&quot;   [-c {Print connections   : Boolean  }] -&gt; &quot;</span>); Put (Boolean&apos;Image (Command_Line_Parameters.Print_Connections)); </pre></li>
+<li id="l37"><pre>      New_Line; Put (<span class="string">&quot;   [-i {Print distances     : Boolean  }] -&gt; &quot;</span>); Put (Boolean&apos;Image (Command_Line_Parameters.Print_Distances)); </pre></li>
+<li id="l38"><pre>      New_Line; Put (<span class="string">&quot;   [-w {Routers settle time : Seconds  }] -&gt; &quot;</span>); Put (Float (Command_Line_Parameters.Routers_Settle_Time), 2, 2, 0); </pre></li>
+<li id="l39"><pre>      New_Line; Put (<span class="string">&quot;   [-o {Comms timeout       : Seconds  }] -&gt; &quot;</span>); Put (Float (Command_Line_Parameters.Comms_Timeout), 2, 2, 0); </pre></li>
+<li id="l40"><pre>      New_Line; Put (<span class="string">&quot;   [-m {Test mode           : String   }] -&gt; &quot;</span>); Put (<span class="droplink">Test_Modes<ul><li><a href="routers_configuration_structures.ads.html#routers_configuration_structures.ads:11:9" title="To API doc">To API doc</a></li><li><a href="src_routers_configuration_structures.ads.html#l11" title="To spec">To spec</a></li></ul></span>&apos;Image (Command_Line_Parameters.Test_Mode)); </pre></li>
+<li id="l41"><pre>      New_Line; Put (<span class="string">&quot;      Available modes: One_to_All, All_to_One&quot;</span>); </pre></li>
+<li id="l42"><pre>      New_Line; Put (<span class="string">&quot;   [-x {Dropouts            : Natural  }] -&gt; &quot;</span>); Put (Command_Line_Parameters.Dropouts, 3); </pre></li>
+<li id="l43"><pre>      New_Line; </pre></li>
+<li id="l44"><pre>      New_Line; </pre></li>
+<li id="l45"><pre>   <span class="keyword">end</span> <span class="droplink">Print_Options<ul><li><a href="src_test_routers.adb.html#l22" title="To spec">To spec</a></li><li><a href="src_test_routers.adb.html#l22" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l46"><pre> </pre></li>
+<li id="l47"><pre><span class="keyword">begin</span> </pre></li>
+<li id="l48"><pre>   Initialize_Option_Scan; </pre></li>
+<li id="l49"><pre>   <span class="keyword">loop</span> </pre></li>
+<li id="l50"><pre>      <span class="keyword">declare</span> </pre></li>
+<li id="l51"><pre>         Option : <span class="keyword">constant</span> Character := Getopt (<span class="string">&quot;t: s: g: p: d: c: i: w: o: m: x:&quot;</span>); </pre></li>
+<li id="l52"><pre>      <span class="keyword">begin</span> </pre></li>
+<li id="l53"><pre>         <span class="keyword">case</span> Option <span class="keyword">is</span> </pre></li>
+<li id="l54"><pre>            <span class="keyword">when</span> ASCII.NUL =&gt; <span class="keyword">exit</span>; </pre></li>
+<li id="l55"><pre>            <span class="keyword">when</span> <span class="string">&apos;t&apos;</span> =&gt; Command_Line_Parameters.Selected_Topology   := <span class="droplink">Preconfigured_Topologies<ul><li><a href="routers_configuration_structures.ads.html#routers_configuration_structures.ads:9:9" title="To API doc">To API doc</a></li><li><a href="src_routers_configuration_structures.ads.html#l9" title="To spec">To spec</a></li></ul></span>&apos;Value (Parameter); </pre></li>
+<li id="l56"><pre>            <span class="keyword">when</span> <span class="string">&apos;s&apos;</span> =&gt; Command_Line_Parameters.Size                := Positive&apos;Value (Parameter); </pre></li>
+<li id="l57"><pre>            <span class="keyword">when</span> <span class="string">&apos;g&apos;</span> =&gt; Command_Line_Parameters.Degree              := Positive&apos;Value (Parameter); </pre></li>
+<li id="l58"><pre>            <span class="keyword">when</span> <span class="string">&apos;p&apos;</span> =&gt; Command_Line_Parameters.Depths              := Positive&apos;Value (Parameter); </pre></li>
+<li id="l59"><pre>            <span class="keyword">when</span> <span class="string">&apos;d&apos;</span> =&gt; Command_Line_Parameters.Dimension           := Positive&apos;Value (Parameter); </pre></li>
+<li id="l60"><pre>            <span class="keyword">when</span> <span class="string">&apos;c&apos;</span> =&gt; Command_Line_Parameters.Print_Connections   := Boolean&apos;Value (Parameter); </pre></li>
+<li id="l61"><pre>            <span class="keyword">when</span> <span class="string">&apos;i&apos;</span> =&gt; Command_Line_Parameters.Print_Distances     := Boolean&apos;Value (Parameter); </pre></li>
+<li id="l62"><pre>            <span class="keyword">when</span> <span class="string">&apos;w&apos;</span> =&gt; Command_Line_Parameters.Routers_Settle_Time := Duration&apos;Value (Parameter); </pre></li>
+<li id="l63"><pre>            <span class="keyword">when</span> <span class="string">&apos;o&apos;</span> =&gt; Command_Line_Parameters.Comms_Timeout       := Duration&apos;Value (Parameter); </pre></li>
+<li id="l64"><pre>            <span class="keyword">when</span> <span class="string">&apos;m&apos;</span> =&gt; Command_Line_Parameters.Test_Mode           := <span class="droplink">Test_Modes<ul><li><a href="routers_configuration_structures.ads.html#routers_configuration_structures.ads:11:9" title="To API doc">To API doc</a></li><li><a href="src_routers_configuration_structures.ads.html#l11" title="To spec">To spec</a></li></ul></span>&apos;Value (Parameter); </pre></li>
+<li id="l65"><pre>            <span class="keyword">when</span> <span class="string">&apos;x&apos;</span> =&gt; Command_Line_Parameters.Dropouts            := Natural&apos;Value (Parameter); </pre></li>
+<li id="l66"><pre>            <span class="keyword">when</span> <span class="keyword">others</span> =&gt; <span class="keyword">raise</span> Program_Error; </pre></li>
+<li id="l67"><pre>         <span class="keyword">end</span> <span class="keyword">case</span>; </pre></li>
+<li id="l68"><pre>      <span class="keyword">exception</span> </pre></li>
+<li id="l69"><pre>         <span class="keyword">when</span> <span class="keyword">others</span> =&gt; </pre></li>
+<li id="l70"><pre>            New_Line; Put (<span class="string">&quot;---&gt; Error in option -&quot;</span>); Put (Option); New_Line; </pre></li>
+<li id="l71"><pre>            <a href="src_test_routers.adb.html#l20" title="defined at test_routers.adb:20:4">Options_Ok</a> := False; </pre></li>
+<li id="l72"><pre>      <span class="keyword">end</span>; </pre></li>
+<li id="l73"><pre>   <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l74"><pre> </pre></li>
+<li id="l75"><pre>   <span class="droplink">Print_Options<ul><li><a href="src_test_routers.adb.html#l22" title="To spec">To spec</a></li><li><a href="src_test_routers.adb.html#l22" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l76"><pre> </pre></li>
+<li id="l77"><pre>   <span class="keyword">if</span> <a href="src_test_routers.adb.html#l20" title="defined at test_routers.adb:20:4">Options_Ok</a> <span class="keyword">then</span> </pre></li>
+<li id="l78"><pre> </pre></li>
+<li id="l79"><pre>      New_Line; </pre></li>
+<li id="l80"><pre>      Put_Line (<span class="string">&quot;----------------------- Instantiating router tasks -----------------------------&quot;</span>); </pre></li>
+<li id="l81"><pre> </pre></li>
+<li id="l82"><pre>      <span class="keyword">declare</span> </pre></li>
+<li id="l83"><pre> </pre></li>
+<li id="l84"><pre>         <span class="keyword">package</span> Routers_Configuration <span class="keyword">is</span> <span class="keyword">new</span> <span class="droplink">Generic_Routers_Configuration<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:11:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l11" title="To spec">To spec</a></li></ul></span> (<a href="src_test_routers.adb.html#l19" title="defined at test_routers.adb:19:4">Command_Line_Parameters</a>); </pre></li>
+<li id="l85"><pre>         <span class="keyword">package</span> Message_Structures    <span class="keyword">is</span> <span class="keyword">new</span> <span class="droplink">Generic_Message_Structures<ul><li><a href="generic_message_structures.ads.html#generic_message_structures.ads:11:9" title="To API doc">To API doc</a></li><li><a href="src_generic_message_structures.ads.html#l11" title="To spec">To spec</a></li></ul></span>    (Routers_Configuration); </pre></li>
+<li id="l86"><pre>         <span class="keyword">package</span> Router                <span class="keyword">is</span> <span class="keyword">new</span> <span class="droplink">Generic_Router<ul><li><a href="generic_router.ads.html#generic_router.ads:13:9" title="To API doc">To API doc</a></li><li><a href="src_generic_router.ads.html#l13" title="To spec">To spec</a></li><li><a href="src_generic_router.adb.html#l7" title="To body">To body</a></li></ul></span>                (Message_Structures); </pre></li>
+<li id="l87"><pre>         <span class="keyword">package</span> Routers               <span class="keyword">is</span> <span class="keyword">new</span> <span class="droplink">Generic_Routers<ul><li><a href="generic_routers.ads.html#generic_routers.ads:11:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers.ads.html#l11" title="To spec">To spec</a></li><li><a href="src_generic_routers.adb.html#l8" title="To body">To body</a></li></ul></span>               (Router); </pre></li>
+<li id="l88"><pre> </pre></li>
+<li id="l89"><pre>         <span class="keyword">use</span> Routers_Configuration; </pre></li>
+<li id="l90"><pre>         <span class="keyword">use</span> Message_Structures; </pre></li>
+<li id="l91"><pre>         <span class="keyword">use</span> Routers; </pre></li>
+<li id="l92"><pre> </pre></li>
+<li id="l93"><pre>         <span class="keyword">package</span> Random_Router         <span class="keyword">is</span> <span class="keyword">new</span> Discrete_Random               (<span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span>); </pre></li>
+<li id="l94"><pre>         <span class="keyword">use</span> Random_Router; </pre></li>
+<li id="l95"><pre> </pre></li>
+<li id="l96"><pre>         <span class="keyword">use</span> <span class="droplink">Message_Strings<ul><li><a href="generic_message_structures.ads.html#generic_message_structures.ads:15:12" title="To API doc">To API doc</a></li><li><a href="src_generic_message_structures.ads.html#l15" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l97"><pre> </pre></li>
+<li id="l98"><pre>         Router_Generator : Generator; </pre></li>
+<li id="l99"><pre> </pre></li>
+<li id="l100"><pre>         <span class="keyword">type</span> Distances_Map <span class="keyword">is</span> <span class="keyword">array</span> (<span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span>, <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span>) <span class="keyword">of</span> Natural; </pre></li>
+<li id="l101"><pre> </pre></li>
+<li id="l102"><pre>         <span class="keyword">procedure</span> Print_Connections <span class="keyword">is</span> </pre></li>
+<li id="l103"><pre> </pre></li>
+<li id="l104"><pre>         <span class="keyword">begin</span> </pre></li>
+<li id="l105"><pre>            New_Line; </pre></li>
+<li id="l106"><pre>            Put (<span class="string">&quot;    &quot;</span>); </pre></li>
+<li id="l107"><pre>            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span> <span class="keyword">loop</span> </pre></li>
+<li id="l108"><pre>               Put (Integer (i), 3); </pre></li>
+<li id="l109"><pre>            <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l110"><pre>            New_Line; </pre></li>
+<li id="l111"><pre>            Put (<span class="string">&quot;    +&quot;</span>); </pre></li>
+<li id="l112"><pre>            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span> <span class="keyword">loop</span> </pre></li>
+<li id="l113"><pre>               Put (<span class="string">&quot;---&quot;</span>); </pre></li>
+<li id="l114"><pre>            <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l115"><pre>            Put (<span class="string">&apos;+&apos;</span>); </pre></li>
+<li id="l116"><pre>            New_Line; </pre></li>
+<li id="l117"><pre>            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span> <span class="keyword">loop</span> </pre></li>
+<li id="l118"><pre>               Put (Integer (i), 3); </pre></li>
+<li id="l119"><pre>               Put (<span class="string">&quot; |&quot;</span>); </pre></li>
+<li id="l120"><pre>               <span class="keyword">for</span> j <span class="keyword">in</span> <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span> <span class="keyword">loop</span> </pre></li>
+<li id="l121"><pre>                  <span class="keyword">if</span> i = j <span class="keyword">then</span> </pre></li>
+<li id="l122"><pre>                     Put (<span class="string">&quot; . &quot;</span>); </pre></li>
+<li id="l123"><pre>                  <span class="keyword">elsif</span> <span class="droplink">Nodes_Connected<ul><li><a href="topologies.ads.html#topologies.ads:10:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l10" title="To spec">To spec</a></li></ul></span> (Connection_Topology, Positive (i), Positive (j)) <span class="keyword">then</span> </pre></li>
+<li id="l124"><pre>                     <span class="keyword">if</span> <span class="droplink">Router_Active<ul><li><a href="generic_routers.ads.html#generic_routers.ads:18:4" title="To API doc">To API doc</a></li><li><a href="src_generic_routers.ads.html#l18" title="To spec">To spec</a></li></ul></span> (i) <span class="keyword">and</span> <span class="keyword">then</span> <span class="droplink">Router_Active<ul><li><a href="generic_routers.ads.html#generic_routers.ads:18:4" title="To API doc">To API doc</a></li><li><a href="src_generic_routers.ads.html#l18" title="To spec">To spec</a></li></ul></span> (j) <span class="keyword">then</span> </pre></li>
+<li id="l125"><pre>                        <span class="keyword">if</span> <span class="droplink">Nodes_Connected<ul><li><a href="topologies.ads.html#topologies.ads:10:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l10" title="To spec">To spec</a></li></ul></span> (Connection_Topology, Positive (j), Positive (i)) <span class="keyword">then</span> </pre></li>
+<li id="l126"><pre>                           Put (<span class="string">&quot;&lt;-&gt;&quot;</span>); </pre></li>
+<li id="l127"><pre>                        <span class="keyword">else</span> </pre></li>
+<li id="l128"><pre>                           Put (<span class="string">&quot; -&gt;&quot;</span>); </pre></li>
+<li id="l129"><pre>                        <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l130"><pre>                     <span class="keyword">else</span> </pre></li>
+<li id="l131"><pre>                        Put (<span class="string">&quot; x &quot;</span>); </pre></li>
+<li id="l132"><pre>                     <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l133"><pre>                  <span class="keyword">else</span> </pre></li>
+<li id="l134"><pre>                     Put (<span class="string">&quot;   &quot;</span>); </pre></li>
+<li id="l135"><pre>                  <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l136"><pre>               <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l137"><pre>               Put (<span class="string">&apos;|&apos;</span>); </pre></li>
+<li id="l138"><pre>               New_Line; </pre></li>
+<li id="l139"><pre>            <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l140"><pre>            Put (<span class="string">&quot;    +&quot;</span>); </pre></li>
+<li id="l141"><pre>            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span> <span class="keyword">loop</span> </pre></li>
+<li id="l142"><pre>               Put (<span class="string">&quot;---&quot;</span>); </pre></li>
+<li id="l143"><pre>            <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l144"><pre>            Put (<span class="string">&apos;+&apos;</span>); </pre></li>
+<li id="l145"><pre>            New_Line; </pre></li>
+<li id="l146"><pre>         <span class="keyword">end</span> Print_Connections; </pre></li>
+<li id="l147"><pre> </pre></li>
+<li id="l148"><pre>         <span class="keyword">procedure</span> Print_Distance_Map (Map : Distances_Map) <span class="keyword">is</span> </pre></li>
+<li id="l149"><pre> </pre></li>
+<li id="l150"><pre>         <span class="keyword">begin</span> </pre></li>
+<li id="l151"><pre>            New_Line; </pre></li>
+<li id="l152"><pre>            Put (<span class="string">&quot;     &quot;</span>); </pre></li>
+<li id="l153"><pre>            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span> <span class="keyword">loop</span> </pre></li>
+<li id="l154"><pre>               Put (Integer (i), 3); </pre></li>
+<li id="l155"><pre>            <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l156"><pre>            New_Line; </pre></li>
+<li id="l157"><pre>            Put (<span class="string">&quot;    +&quot;</span>); </pre></li>
+<li id="l158"><pre>            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span> <span class="keyword">loop</span> </pre></li>
+<li id="l159"><pre>               Put (<span class="string">&quot;---&quot;</span>); </pre></li>
+<li id="l160"><pre>            <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l161"><pre>            Put (<span class="string">&apos;+&apos;</span>); </pre></li>
+<li id="l162"><pre>            New_Line; </pre></li>
+<li id="l163"><pre>            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span> <span class="keyword">loop</span> </pre></li>
+<li id="l164"><pre>               Put (Integer (i), 3); </pre></li>
+<li id="l165"><pre>               Put (<span class="string">&quot; |&quot;</span>); </pre></li>
+<li id="l166"><pre>               <span class="keyword">for</span> j <span class="keyword">in</span> <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span> <span class="keyword">loop</span> </pre></li>
+<li id="l167"><pre>                  <span class="keyword">if</span> i = j <span class="keyword">then</span> </pre></li>
+<li id="l168"><pre>                     Put (<span class="string">&quot;  .&quot;</span>); </pre></li>
+<li id="l169"><pre>                  <span class="keyword">elsif</span> Map (i, j) = 1 <span class="keyword">then</span> </pre></li>
+<li id="l170"><pre>                     Put (<span class="string">&quot;   &quot;</span>); </pre></li>
+<li id="l171"><pre>                  <span class="keyword">elsif</span> <span class="droplink">Router_Active<ul><li><a href="generic_routers.ads.html#generic_routers.ads:18:4" title="To API doc">To API doc</a></li><li><a href="src_generic_routers.ads.html#l18" title="To spec">To spec</a></li></ul></span> (i) <span class="keyword">and</span> <span class="keyword">then</span> <span class="droplink">Router_Active<ul><li><a href="generic_routers.ads.html#generic_routers.ads:18:4" title="To API doc">To API doc</a></li><li><a href="src_generic_routers.ads.html#l18" title="To spec">To spec</a></li></ul></span> (j) <span class="keyword">then</span> </pre></li>
+<li id="l172"><pre>                     Put (Map (i, j), 3); </pre></li>
+<li id="l173"><pre>                  <span class="keyword">else</span> </pre></li>
+<li id="l174"><pre>                     Put (<span class="string">&quot;  x&quot;</span>); </pre></li>
+<li id="l175"><pre>                  <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l176"><pre>               <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l177"><pre>               Put (<span class="string">&apos;|&apos;</span>); </pre></li>
+<li id="l178"><pre>               New_Line; </pre></li>
+<li id="l179"><pre>            <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l180"><pre>            Put (<span class="string">&quot;    +&quot;</span>); </pre></li>
+<li id="l181"><pre>            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span> <span class="keyword">loop</span> </pre></li>
+<li id="l182"><pre>               Put (<span class="string">&quot;---&quot;</span>); </pre></li>
+<li id="l183"><pre>            <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l184"><pre>            Put (<span class="string">&apos;+&apos;</span>); </pre></li>
+<li id="l185"><pre>            New_Line; </pre></li>
+<li id="l186"><pre>         <span class="keyword">end</span> Print_Distance_Map; </pre></li>
+<li id="l187"><pre> </pre></li>
+<li id="l188"><pre>      <span class="keyword">begin</span> </pre></li>
+<li id="l189"><pre>         <span class="keyword">if</span> <span class="droplink">Routers_Configured<ul><li><a href="generic_routers.ads.html#generic_routers.ads:20:4" title="To API doc">To API doc</a></li><li><a href="src_generic_routers.ads.html#l20" title="To spec">To spec</a></li></ul></span> <span class="keyword">then</span> </pre></li>
+<li id="l190"><pre> </pre></li>
+<li id="l191"><pre>            Put_Line (<span class="string">&quot;  =&gt; Routers up and running &quot;</span>); </pre></li>
+<li id="l192"><pre>            Put_Line (<span class="string">&quot;-------------------------------- Waiting ---------------------------------------&quot;</span>); </pre></li>
+<li id="l193"><pre>            Put (<span class="string">&quot;  Time for routers to establish their strategies : &quot;</span>); Put (Float (Command_Line_Parameters.Routers_Settle_Time), 2, 2, 0); Put (<span class="string">&quot; second(s)&quot;</span>); New_Line; </pre></li>
+<li id="l194"><pre> </pre></li>
+<li id="l195"><pre>            <span class="keyword">delay</span> Command_Line_Parameters.Routers_Settle_Time; <span class="comment">-- let the routers establish their strategies first</span> </pre></li>
+<li id="l196"><pre> </pre></li>
+<li id="l197"><pre>            <span class="keyword">if</span> Command_Line_Parameters.Dropouts &gt; 0 <span class="keyword">then</span> </pre></li>
+<li id="l198"><pre>               Reset (Router_Generator); </pre></li>
+<li id="l199"><pre>               <span class="keyword">for</span> Id <span class="keyword">in</span> 1 .. Command_Line_Parameters.Dropouts <span class="keyword">loop</span> </pre></li>
+<li id="l200"><pre>                  <span class="keyword">loop</span> </pre></li>
+<li id="l201"><pre>                     <span class="keyword">declare</span> </pre></li>
+<li id="l202"><pre>                        Candidate : <span class="keyword">constant</span> <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span> := Random (Router_Generator); </pre></li>
+<li id="l203"><pre>                     <span class="keyword">begin</span> </pre></li>
+<li id="l204"><pre>                        <span class="keyword">if</span> <span class="droplink">Router_Active<ul><li><a href="generic_routers.ads.html#generic_routers.ads:18:4" title="To API doc">To API doc</a></li><li><a href="src_generic_routers.ads.html#l18" title="To spec">To spec</a></li></ul></span> (Candidate) <span class="keyword">then</span> </pre></li>
+<li id="l205"><pre>                           <span class="droplink">Router_Shutdown<ul><li><a href="generic_routers.ads.html#generic_routers.ads:22:14" title="To API doc">To API doc</a></li><li><a href="src_generic_routers.ads.html#l22" title="To spec">To spec</a></li><li><a href="src_generic_routers.adb.html#l10" title="To body">To body</a></li></ul></span> (Candidate); </pre></li>
+<li id="l206"><pre>                           Put (<span class="string">&quot;   -&gt; Router&quot;</span>); Put (Integer (Candidate), 3); Put_Line (<span class="string">&quot; dropped service&quot;</span>); </pre></li>
+<li id="l207"><pre>                           <span class="keyword">exit</span>; </pre></li>
+<li id="l208"><pre>                        <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l209"><pre>                     <span class="keyword">end</span>; </pre></li>
+<li id="l210"><pre>                  <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l211"><pre>               <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l212"><pre>               Put (Command_Line_Parameters.Dropouts); Put_Line (<span class="string">&quot; routers in total dropped out.&quot;</span>); </pre></li>
+<li id="l213"><pre>            <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l214"><pre> </pre></li>
+<li id="l215"><pre>            Put_Line (<span class="string">&quot;------------------------------ Measurements ------------------------------------&quot;</span>); </pre></li>
+<li id="l216"><pre> </pre></li>
+<li id="l217"><pre>            <span class="keyword">declare</span> </pre></li>
+<li id="l218"><pre>               Sum_Hops                : Natural       := 0; </pre></li>
+<li id="l219"><pre>               Min_Hops                : Natural       := Natural&apos;Last; </pre></li>
+<li id="l220"><pre>               Max_Hops                : Natural       := Natural&apos;First; </pre></li>
+<li id="l221"><pre>               Distance_Map            : Distances_Map := (<span class="keyword">others</span> =&gt; (<span class="keyword">others</span> =&gt; Natural&apos;Last)); </pre></li>
+<li id="l222"><pre>               Measurements_Successful : Boolean       := True; </pre></li>
+<li id="l223"><pre> </pre></li>
+<li id="l224"><pre>               <span class="keyword">function</span> Send_Probe (Sender, Receiver : <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span>) <span class="keyword">return</span> Boolean <span class="keyword">is</span> </pre></li>
+<li id="l225"><pre> </pre></li>
+<li id="l226"><pre>               <span class="keyword">begin</span> </pre></li>
+<li id="l227"><pre>                  <span class="keyword">select</span> </pre></li>
+<li id="l228"><pre>                     <span class="droplink">Router_Tasks<ul><li><a href="generic_routers.ads.html#generic_routers.ads:17:4" title="To API doc">To API doc</a></li><li><a href="src_generic_routers.ads.html#l17" title="To spec">To spec</a></li></ul></span> (Sender).<span class="droplink">Send_Message<ul><li><a href="generic_router.ads.html#generic_router.ads:31:13" title="To API doc">To API doc</a></li><li><a href="src_generic_router.ads.html#l31" title="To spec">To spec</a></li></ul></span> ((Destination =&gt; Receiver, </pre></li>
+<li id="l229"><pre>                                                          The_Message =&gt; To_Bounded_String (<span class="string">&quot; - The quick brown fox jumps over the lazy dog - &quot;</span>))); </pre></li>
+<li id="l230"><pre>                     <span class="keyword">return</span> True; </pre></li>
+<li id="l231"><pre>                  <span class="keyword">or</span> </pre></li>
+<li id="l232"><pre>                     <span class="keyword">delay</span> Command_Line_Parameters.Comms_Timeout; </pre></li>
+<li id="l233"><pre>                     Put_Line (<span class="string">&quot;Error: Unresponsive router found : &quot;</span> &amp; <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span>&apos;Image (Sender) &amp; <span class="string">&quot; (does not respond to Send_Message)&quot;</span>); </pre></li>
+<li id="l234"><pre>                     Put_Line (<span class="string">&quot;   -&gt; Measurements aborted&quot;</span>); </pre></li>
+<li id="l235"><pre>                     <span class="keyword">return</span> False; </pre></li>
+<li id="l236"><pre>                  <span class="keyword">end</span> <span class="keyword">select</span>; </pre></li>
+<li id="l237"><pre>               <span class="keyword">end</span> Send_Probe; </pre></li>
+<li id="l238"><pre> </pre></li>
+<li id="l239"><pre>               <span class="keyword">function</span> Receive_Probe (Sender, Receiver : <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span>) <span class="keyword">return</span> Boolean <span class="keyword">is</span> </pre></li>
+<li id="l240"><pre> </pre></li>
+<li id="l241"><pre>                  Mailbox_Message : <span class="droplink">Messages_Mailbox<ul><li><a href="generic_message_structures.ads.html#generic_message_structures.ads:25:9" title="To API doc">To API doc</a></li><li><a href="src_generic_message_structures.ads.html#l25" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l242"><pre> </pre></li>
+<li id="l243"><pre>               <span class="keyword">begin</span> </pre></li>
+<li id="l244"><pre>                  <span class="keyword">select</span> </pre></li>
+<li id="l245"><pre>                     <span class="droplink">Router_Tasks<ul><li><a href="generic_routers.ads.html#generic_routers.ads:17:4" title="To API doc">To API doc</a></li><li><a href="src_generic_routers.ads.html#l17" title="To spec">To spec</a></li></ul></span> (Receiver).<span class="droplink">Receive_Message<ul><li><a href="generic_router.ads.html#generic_router.ads:32:13" title="To API doc">To API doc</a></li><li><a href="src_generic_router.ads.html#l32" title="To spec">To spec</a></li></ul></span> (Mailbox_Message); </pre></li>
+<li id="l246"><pre>                     Distance_Map (Mailbox_Message.Sender, Receiver) := Mailbox_Message.Hop_Counter; </pre></li>
+<li id="l247"><pre>                     Sum_Hops := Sum_Hops + Mailbox_Message.Hop_Counter; </pre></li>
+<li id="l248"><pre>                     Min_Hops := Natural&apos;Min (Min_Hops, Mailbox_Message.Hop_Counter); </pre></li>
+<li id="l249"><pre>                     Max_Hops := Natural&apos;Max (Max_Hops, Mailbox_Message.Hop_Counter); </pre></li>
+<li id="l250"><pre>                     <span class="keyword">return</span> True; </pre></li>
+<li id="l251"><pre>                  <span class="keyword">or</span> </pre></li>
+<li id="l252"><pre>                     <span class="keyword">delay</span> Command_Line_Parameters.Comms_Timeout; </pre></li>
+<li id="l253"><pre>                     Put_Line (<span class="string">&quot;Error: Message not received in time : from router&quot;</span> &amp; <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span>&apos;Image (Sender) &amp; <span class="string">&quot; to router&quot;</span> &amp; <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span>&apos;Image (Receiver)); </pre></li>
+<li id="l254"><pre>                     Put_Line (<span class="string">&quot;   -&gt; Measurements aborted&quot;</span>); </pre></li>
+<li id="l255"><pre>                     <span class="keyword">return</span> False; </pre></li>
+<li id="l256"><pre>                  <span class="keyword">end</span> <span class="keyword">select</span>; </pre></li>
+<li id="l257"><pre>               <span class="keyword">end</span> Receive_Probe; </pre></li>
+<li id="l258"><pre> </pre></li>
+<li id="l259"><pre>            <span class="keyword">begin</span> </pre></li>
+<li id="l260"><pre>               Main_Measurement : <span class="keyword">for</span> i <span class="keyword">in</span> <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span> <span class="keyword">loop</span> </pre></li>
+<li id="l261"><pre>                  <span class="keyword">for</span> j <span class="keyword">in</span> <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span> <span class="keyword">loop</span> </pre></li>
+<li id="l262"><pre>                     <span class="keyword">if</span> i /= j <span class="keyword">and</span> <span class="keyword">then</span> <span class="droplink">Router_Active<ul><li><a href="generic_routers.ads.html#generic_routers.ads:18:4" title="To API doc">To API doc</a></li><li><a href="src_generic_routers.ads.html#l18" title="To spec">To spec</a></li></ul></span> (i) <span class="keyword">and</span> <span class="keyword">then</span> <span class="droplink">Router_Active<ul><li><a href="generic_routers.ads.html#generic_routers.ads:18:4" title="To API doc">To API doc</a></li><li><a href="src_generic_routers.ads.html#l18" title="To spec">To spec</a></li></ul></span> (j) <span class="keyword">then</span> </pre></li>
+<li id="l263"><pre>                        <span class="keyword">case</span> Command_Line_Parameters.Test_Mode <span class="keyword">is</span> </pre></li>
+<li id="l264"><pre>                           <span class="keyword">when</span> One_To_All =&gt; Measurements_Successful := Send_Probe (i, j); </pre></li>
+<li id="l265"><pre>                           <span class="keyword">when</span> All_to_One =&gt; Measurements_Successful := Send_Probe (j, i); </pre></li>
+<li id="l266"><pre>                        <span class="keyword">end</span> <span class="keyword">case</span>; </pre></li>
+<li id="l267"><pre>                        <span class="keyword">if</span> <span class="keyword">not</span> Measurements_Successful <span class="keyword">then</span> </pre></li>
+<li id="l268"><pre>                           <span class="keyword">exit</span> Main_Measurement; </pre></li>
+<li id="l269"><pre>                        <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l270"><pre>                     <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l271"><pre>                  <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l272"><pre>                  <span class="keyword">for</span> j <span class="keyword">in</span> <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span> <span class="keyword">loop</span> </pre></li>
+<li id="l273"><pre>                     <span class="keyword">if</span> i /= j <span class="keyword">and</span> <span class="keyword">then</span> <span class="droplink">Router_Active<ul><li><a href="generic_routers.ads.html#generic_routers.ads:18:4" title="To API doc">To API doc</a></li><li><a href="src_generic_routers.ads.html#l18" title="To spec">To spec</a></li></ul></span> (i) <span class="keyword">and</span> <span class="keyword">then</span> <span class="droplink">Router_Active<ul><li><a href="generic_routers.ads.html#generic_routers.ads:18:4" title="To API doc">To API doc</a></li><li><a href="src_generic_routers.ads.html#l18" title="To spec">To spec</a></li></ul></span> (j) <span class="keyword">then</span> </pre></li>
+<li id="l274"><pre>                        <span class="keyword">case</span> Command_Line_Parameters.Test_Mode <span class="keyword">is</span> </pre></li>
+<li id="l275"><pre>                           <span class="keyword">when</span> One_To_All =&gt; Measurements_Successful := Receive_Probe (i, j); </pre></li>
+<li id="l276"><pre>                           <span class="keyword">when</span> All_to_One =&gt; Measurements_Successful := Receive_Probe (j, i); </pre></li>
+<li id="l277"><pre>                        <span class="keyword">end</span> <span class="keyword">case</span>; </pre></li>
+<li id="l278"><pre>                        <span class="keyword">if</span> <span class="keyword">not</span> Measurements_Successful <span class="keyword">then</span> </pre></li>
+<li id="l279"><pre>                           <span class="keyword">exit</span> Main_Measurement; </pre></li>
+<li id="l280"><pre>                        <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l281"><pre>                     <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l282"><pre>                  <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l283"><pre>               <span class="keyword">end</span> <span class="keyword">loop</span> Main_Measurement; </pre></li>
+<li id="l284"><pre> </pre></li>
+<li id="l285"><pre>               <span class="keyword">if</span> Measurements_Successful <span class="keyword">then</span> </pre></li>
+<li id="l286"><pre>                  <span class="keyword">declare</span> </pre></li>
+<li id="l287"><pre>                     Avg_Hops : <span class="keyword">constant</span> Float := Float (Sum_Hops) / Float (((<span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span>&apos;Last ** 2) - <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span>&apos;Last)); </pre></li>
+<li id="l288"><pre>                  <span class="keyword">begin</span> </pre></li>
+<li id="l289"><pre>                     Put (<span class="string">&quot;Minimal hops : &quot;</span>); Put (Min_Hops, 3); New_Line; </pre></li>
+<li id="l290"><pre>                     Put (<span class="string">&quot;Maximal hops : &quot;</span>); Put (Max_Hops, 3); New_Line; </pre></li>
+<li id="l291"><pre>                     Put      (<span class="string">&quot;Average hops : &quot;</span>); Put (Avg_Hops, 3, 2, 0); New_Line; </pre></li>
+<li id="l292"><pre>                     <span class="keyword">for</span> i <span class="keyword">in</span> <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span> <span class="keyword">loop</span> </pre></li>
+<li id="l293"><pre>                        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span>&apos;First .. i <span class="keyword">loop</span> </pre></li>
+<li id="l294"><pre>                           <span class="keyword">if</span> Distance_Map (i, j) /= Distance_Map (j, i) <span class="keyword">then</span> </pre></li>
+<li id="l295"><pre>                              Put_Line (<span class="string">&quot;Warning: unsymmetrical distances &quot;</span> &amp; <span class="string">&quot;(&quot;</span> &amp; <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span>&apos;Image (i) &amp; <span class="string">&quot;-&gt;&quot;</span> &amp; <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span>&apos;Image (j) &amp; <span class="string">&quot;):&quot;</span> &amp; Natural&apos;Image (Distance_Map (i, j)) </pre></li>
+<li id="l296"><pre>                                        &amp; <span class="string">&quot; while &quot;</span> &amp; <span class="string">&quot;(&quot;</span> &amp; <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span>&apos;Image (j) &amp; <span class="string">&quot;-&gt;&quot;</span> &amp; <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span>&apos;Image (i) &amp; <span class="string">&quot;):&quot;</span> &amp; Natural&apos;Image (Distance_Map (j, i))); </pre></li>
+<li id="l297"><pre>                           <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l298"><pre>                        <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l299"><pre>                     <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l300"><pre> </pre></li>
+<li id="l301"><pre>                     <span class="keyword">if</span> Command_Line_Parameters.Print_Distances <span class="keyword">then</span> </pre></li>
+<li id="l302"><pre>                        Print_Distance_Map (Distance_Map); </pre></li>
+<li id="l303"><pre>                     <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l304"><pre>                  <span class="keyword">end</span>; </pre></li>
+<li id="l305"><pre>               <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l306"><pre>            <span class="keyword">end</span>; </pre></li>
+<li id="l307"><pre>            New_Line; </pre></li>
+<li id="l308"><pre> </pre></li>
+<li id="l309"><pre>         <span class="keyword">else</span> </pre></li>
+<li id="l310"><pre>            Put_Line (<span class="string">&quot;  =&gt; Routers did not respond to configuration call -&gt; no measurements performed&quot;</span>); </pre></li>
+<li id="l311"><pre>         <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l312"><pre> </pre></li>
+<li id="l313"><pre>         Put_Line (<span class="string">&quot;--------------- Information about the selected network topology ----------------&quot;</span>); </pre></li>
+<li id="l314"><pre>         Put_Line (<span class="string">&quot;  Topology                    : &quot;</span> &amp; <span class="droplink">Preconfigured_Topologies<ul><li><a href="routers_configuration_structures.ads.html#routers_configuration_structures.ads:9:9" title="To API doc">To API doc</a></li><li><a href="src_routers_configuration_structures.ads.html#l9" title="To spec">To spec</a></li></ul></span>&apos;Image (Command_Line_Parameters.Selected_Topology)); </pre></li>
+<li id="l315"><pre>         <span class="keyword">case</span> Command_Line_Parameters.Selected_Topology <span class="keyword">is</span> </pre></li>
+<li id="l316"><pre>            <span class="keyword">when</span> Line                  =&gt; Put (<span class="string">&quot;  Size                        : &quot;</span>); Put (Command_Line_Parameters.Size,      4); New_Line; </pre></li>
+<li id="l317"><pre>            <span class="keyword">when</span> Ring                  =&gt; Put (<span class="string">&quot;  Size                        : &quot;</span>); Put (Command_Line_Parameters.Size,      4); New_Line; </pre></li>
+<li id="l318"><pre>            <span class="keyword">when</span> Star                  =&gt; Put (<span class="string">&quot;  Size                        : &quot;</span>); Put (Command_Line_Parameters.Size,      4); New_Line; </pre></li>
+<li id="l319"><pre>            <span class="keyword">when</span> Fully_Connected       =&gt; Put (<span class="string">&quot;  Size                        : &quot;</span>); Put (Command_Line_Parameters.Size,      4); New_Line; </pre></li>
+<li id="l320"><pre>            <span class="keyword">when</span> Tree                  =&gt; Put (<span class="string">&quot;  Degree                      : &quot;</span>); Put (Command_Line_Parameters.Degree,    4); New_Line; </pre></li>
+<li id="l321"><pre>               Put (<span class="string">&quot;  Depths                      : &quot;</span>); Put (Command_Line_Parameters.Depths,    4); New_Line; </pre></li>
+<li id="l322"><pre>            <span class="keyword">when</span> Mesh                  =&gt; Put (<span class="string">&quot;  Dimension                   : &quot;</span>); Put (Command_Line_Parameters.Dimension, 4); New_Line; </pre></li>
+<li id="l323"><pre>               Put (<span class="string">&quot;  Size                        : &quot;</span>); Put (Command_Line_Parameters.Size,      4); New_Line; </pre></li>
+<li id="l324"><pre>            <span class="keyword">when</span> Torus                 =&gt; Put (<span class="string">&quot;  Dimension                   : &quot;</span>); Put (Command_Line_Parameters.Dimension, 4); New_Line; </pre></li>
+<li id="l325"><pre>               Put (<span class="string">&quot;  Size                        : &quot;</span>); Put (Command_Line_Parameters.Size,      4); New_Line; </pre></li>
+<li id="l326"><pre>            <span class="keyword">when</span> Hypercube             =&gt; Put (<span class="string">&quot;  Dimension                   : &quot;</span>); Put (Command_Line_Parameters.Dimension, 4); New_Line; </pre></li>
+<li id="l327"><pre>            <span class="keyword">when</span> Cube_Connected_Cycles =&gt; Put (<span class="string">&quot;  Dimension                   : &quot;</span>); Put (Command_Line_Parameters.Dimension, 4); New_Line; </pre></li>
+<li id="l328"><pre>            <span class="keyword">when</span> Butterfly              =&gt; Put (<span class="string">&quot;  Dimension                   : &quot;</span>); Put (Command_Line_Parameters.Dimension, 4); New_Line; </pre></li>
+<li id="l329"><pre>            <span class="keyword">when</span> Wrap_Around_Butterfly  =&gt; Put (<span class="string">&quot;  Dimension                   : &quot;</span>); Put (Command_Line_Parameters.Dimension, 4); New_Line; </pre></li>
+<li id="l330"><pre>         <span class="keyword">end</span> <span class="keyword">case</span>; </pre></li>
+<li id="l331"><pre>         Put    (<span class="string">&quot;  Number of nodes in topology : &quot;</span>); Put (<span class="droplink">Nodes_in_Topology<ul><li><a href="topologies.ads.html#topologies.ads:9:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l9" title="To spec">To spec</a></li></ul></span> (Connection_Topology), 4); New_Line; </pre></li>
+<li id="l332"><pre>         <span class="keyword">if</span> <span class="droplink">Min_Degree<ul><li><a href="topologies.ads.html#topologies.ads:13:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l13" title="To spec">To spec</a></li><li><a href="src_topologies.adb.html#l439" title="To body">To body</a></li></ul></span> (Connection_Topology) = <span class="droplink">Max_Degree<ul><li><a href="topologies.ads.html#topologies.ads:14:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l14" title="To spec">To spec</a></li><li><a href="src_topologies.adb.html#l463" title="To body">To body</a></li></ul></span> (Connection_Topology) <span class="keyword">then</span> </pre></li>
+<li id="l333"><pre>            Put (<span class="string">&quot;  Constant connection degree  : &quot;</span>);  Put (<span class="droplink">Min_Degree<ul><li><a href="topologies.ads.html#topologies.ads:13:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l13" title="To spec">To spec</a></li><li><a href="src_topologies.adb.html#l439" title="To body">To body</a></li></ul></span> (Connection_Topology), 4); New_Line; </pre></li>
+<li id="l334"><pre>         <span class="keyword">else</span> </pre></li>
+<li id="l335"><pre>            Put (<span class="string">&quot;  Minimal connection degree   : &quot;</span>); Put (<span class="droplink">Min_Degree<ul><li><a href="topologies.ads.html#topologies.ads:13:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l13" title="To spec">To spec</a></li><li><a href="src_topologies.adb.html#l439" title="To body">To body</a></li></ul></span> (Connection_Topology), 4); New_Line; </pre></li>
+<li id="l336"><pre>            Put (<span class="string">&quot;  Maximal connection degree   : &quot;</span>); Put (<span class="droplink">Max_Degree<ul><li><a href="topologies.ads.html#topologies.ads:14:13" title="To API doc">To API doc</a></li><li><a href="src_topologies.ads.html#l14" title="To spec">To spec</a></li><li><a href="src_topologies.adb.html#l463" title="To body">To body</a></li></ul></span> (Connection_Topology), 4); New_Line; </pre></li>
+<li id="l337"><pre>         <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l338"><pre>         <span class="keyword">if</span> Command_Line_Parameters.Print_Connections <span class="keyword">then</span> </pre></li>
+<li id="l339"><pre>            Print_Connections; </pre></li>
+<li id="l340"><pre>         <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l341"><pre>         New_Line; </pre></li>
+<li id="l342"><pre> </pre></li>
+<li id="l343"><pre>         <span class="droplink">Global_Shutdown<ul><li><a href="generic_routers.ads.html#generic_routers.ads:23:14" title="To API doc">To API doc</a></li><li><a href="src_generic_routers.ads.html#l23" title="To spec">To spec</a></li><li><a href="src_generic_routers.adb.html#l23" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l344"><pre> </pre></li>
+<li id="l345"><pre>      <span class="keyword">end</span>; </pre></li>
+<li id="l346"><pre>   <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l347"><pre> </pre></li>
+<li id="l348"><pre><span class="keyword">end</span> <span class="droplink">Test_Routers<ul><li><a href="src_test_routers.adb.html#l17" title="To spec">To spec</a></li><li><a href="src_test_routers.adb.html#l17" title="To body">To body</a></li></ul></span>; </pre></li>
+</ol></div>
+</div>
+
+</body>
+</html>

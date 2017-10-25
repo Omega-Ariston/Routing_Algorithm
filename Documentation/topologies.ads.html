@@ -1,0 +1,490 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+
+  <title>
+    Package: Topologies
+  </title>
+  <link rel='stylesheet' href='support/docgen.css' type='text/css'/>
+  <link rel='stylesheet' href='support/tags.css' type='text/css'/>
+  <script src='support/docgen.js' type='text/javascript' charset='utf-8'></script>
+</head>
+<body onload="onloadDoc();">
+
+<div id='leftSide'>
+  <div id='leftSideInside'>
+  <div id='header'>
+    <h2 class="button">Documentation</h2>
+    <a href='toc.html'><div class="button2">Table of Contents</div></a>
+
+    <a href='tree.html'><div class="button2">Class Inheritance Tree</div></a>
+
+  </div>
+
+  <div id='navigation'>
+    <h2 class="button">Navigation</h2>
+    <a href='#Description'><div class="button2">Description</div></a>
+    <a href='#Types'><div class="button2">Types</div></a>
+    <a href='#Methods'><div class="button2">Subprograms &amp; Entries</div></a>
+  </div><!-- navigation -->
+  </div>
+</div> <!-- leftSide -->
+
+<div class='default' id='rightSide'>
+ <div id='rightSideInside'>
+ <div id='Index'>
+  <h2>Index</h2>
+  <script type="text/javascript">
+    var names = new Array (
+new Array ('Topology_<wbr/>Kind (abstract)', 'topologies.ads:7:9', 'type-spec'),
+new Array ('Nodes_<wbr/>in_<wbr/>Topology (abstract)', 'topologies.ads:9:13', 'subp-spec'),
+new Array ('Nodes_<wbr/>Connected (abstract)', 'topologies.ads:10:13', 'subp-spec'),
+new Array ('Min_<wbr/>Degree', 'topologies.ads:13:13', 'subp-spec'),
+new Array ('Max_<wbr/>Degree', 'topologies.ads:14:13', 'subp-spec'),
+new Array ('Line', 'topologies.ads:16:13', 'subp-spec'),
+new Array ('Ring', 'topologies.ads:17:13', 'subp-spec'),
+new Array ('Star', 'topologies.ads:18:13', 'subp-spec'),
+new Array ('Fully_<wbr/>Connected', 'topologies.ads:19:13', 'subp-spec'),
+new Array ('Trees', 'topologies.ads:20:13', 'subp-spec'),
+new Array ('Mesh', 'topologies.ads:21:13', 'subp-spec'),
+new Array ('Torus', 'topologies.ads:22:13', 'subp-spec'),
+new Array ('Hypercube', 'topologies.ads:23:13', 'subp-spec'),
+new Array ('Cube_<wbr/>Connected_<wbr/>Cycles', 'topologies.ads:24:13', 'subp-spec'),
+new Array ('Butterfly', 'topologies.ads:25:13', 'subp-spec'),
+new Array ('Wrap_<wbr/>Around_<wbr/>Butterfly', 'topologies.ads:26:13', 'subp-spec'),
+      new Array ('dummy', '', ''));
+    printIndexList (names);
+  </script>
+  <noscript>
+    <ul>
+      <li class='type-spec'><a href="#topologies.ads:7:9">Topology_<wbr/>Kind (abstract)</a></li>
+      <li class='subp-spec'><a href="#topologies.ads:9:13">Nodes_<wbr/>in_<wbr/>Topology (abstract)</a></li>
+      <li class='subp-spec'><a href="#topologies.ads:10:13">Nodes_<wbr/>Connected (abstract)</a></li>
+      <li class='subp-spec'><a href="#topologies.ads:13:13">Min_<wbr/>Degree</a></li>
+      <li class='subp-spec'><a href="#topologies.ads:14:13">Max_<wbr/>Degree</a></li>
+      <li class='subp-spec'><a href="#topologies.ads:16:13">Line</a></li>
+      <li class='subp-spec'><a href="#topologies.ads:17:13">Ring</a></li>
+      <li class='subp-spec'><a href="#topologies.ads:18:13">Star</a></li>
+      <li class='subp-spec'><a href="#topologies.ads:19:13">Fully_<wbr/>Connected</a></li>
+      <li class='subp-spec'><a href="#topologies.ads:20:13">Trees</a></li>
+      <li class='subp-spec'><a href="#topologies.ads:21:13">Mesh</a></li>
+      <li class='subp-spec'><a href="#topologies.ads:22:13">Torus</a></li>
+      <li class='subp-spec'><a href="#topologies.ads:23:13">Hypercube</a></li>
+      <li class='subp-spec'><a href="#topologies.ads:24:13">Cube_<wbr/>Connected_<wbr/>Cycles</a></li>
+      <li class='subp-spec'><a href="#topologies.ads:25:13">Butterfly</a></li>
+      <li class='subp-spec'><a href="#topologies.ads:26:13">Wrap_<wbr/>Around_<wbr/>Butterfly</a></li>
+    </ul>
+  </noscript>
+ </div>
+ </div>
+</div>
+
+<div class='default' id='documentation'>
+  <div class='title'>
+    Package:
+<span class="droplink"><i>Topologies</i><ul>
+  <li><a href="src_topologies.ads.html">Goto spec source</a></li>
+  <li><a href="src_topologies.adb.html">Goto body source</a></li>
+</ul></span>
+  </div>
+  <div class='subprograms'>
+    <h1><a name='Description' id='Description'></a>Description</h1>
+    <div class="class">
+    <div class='details'><pre><span class="keyword">package</span> <span class="name_emphasis">Topologies</span> <span class="keyword">is</span></pre></div>
+    <div class='comment'>
+Uwe R. Zimmer, Australia, September 2011
+
+</div>
+    </div>
+  </div>
+
+
+
+
+  <div class='subprograms'>
+    <h1><a name='Types' id='Types'></a>Types</h1>
+    <div class="class">
+      <h3>
+        <a name='topologies.ads:7:9' id='topologies.ads:7:9'></a>
+<span class="droplink">Topology_Kind (abstract)<ul>
+  <li><a href="src_topologies.ads.html#l7">Goto declaration in source</a></li>
+</ul></span>
+      </h3>
+      <div class='details'><pre><span class="keyword">type</span> <span class="name_emphasis">Topology_Kind</span> <span class="keyword">is</span> <span class="keyword">interface</span>;</pre></div>
+      <div class='profile'>
+          <h4>References:</h4>
+          <div><i><a href="src_topologies.ads.html#l7" title="topologies.ads:7:9">topologies.ads:7:9</a> (declaration)</i></div>
+          <div><i><a href="src_generic_routers_configuration.ads.html#l13" title="generic_routers_configuration.ads:13:35">generic_routers_configuration.ads:13:35</a> (reference)</i></div>
+          <div><i><a href="src_routers_configuration_structures.adb.html#l7" title="routers_configuration_structures.adb:7:82">routers_configuration_structures.adb:7:82</a> (reference)</i></div>
+          <div><i><a href="src_routers_configuration_structures.ads.html#l27" title="routers_configuration_structures.ads:27:82">routers_configuration_structures.ads:27:82</a> (reference)</i></div>
+          <div><i><a href="src_topologies.adb.html#l9" title="topologies.adb:9:42">topologies.adb:9:42</a> (reference)</i></div>
+          <div><i><a href="src_topologies.adb.html#l13" title="topologies.adb:13:47">topologies.adb:13:47</a> (reference)</i></div>
+          <div><i><a href="src_topologies.adb.html#l21" title="topologies.adb:21:44">topologies.adb:21:44</a> (reference)</i></div>
+          <div><i><a href="src_topologies.adb.html#l439" title="topologies.adb:439:41">topologies.adb:439:41</a> (reference)</i></div>
+          <div><i><a href="src_topologies.adb.html#l463" title="topologies.adb:463:41">topologies.adb:463:41</a> (reference)</i></div>
+          <div><i><a href="src_topologies.adb.html#l489" title="topologies.adb:489:65">topologies.adb:489:65</a> (reference)</i></div>
+          <div><i><a href="src_topologies.adb.html#l490" title="topologies.adb:490:65">topologies.adb:490:65</a> (reference)</i></div>
+          <div><i><a href="src_topologies.adb.html#l491" title="topologies.adb:491:65">topologies.adb:491:65</a> (reference)</i></div>
+          <div><i><a href="src_topologies.adb.html#l492" title="topologies.adb:492:65">topologies.adb:492:65</a> (reference)</i></div>
+          <div><i><a href="src_topologies.adb.html#l493" title="topologies.adb:493:65">topologies.adb:493:65</a> (reference)</i></div>
+          <div><i><a href="src_topologies.adb.html#l494" title="topologies.adb:494:65">topologies.adb:494:65</a> (reference)</i></div>
+          <div><i><a href="src_topologies.adb.html#l495" title="topologies.adb:495:65">topologies.adb:495:65</a> (reference)</i></div>
+          <div><i><a href="src_topologies.adb.html#l496" title="topologies.adb:496:65">topologies.adb:496:65</a> (reference)</i></div>
+          <div><i><a href="src_topologies.adb.html#l497" title="topologies.adb:497:65">topologies.adb:497:65</a> (reference)</i></div>
+          <div><i><a href="src_topologies.adb.html#l498" title="topologies.adb:498:65">topologies.adb:498:65</a> (reference)</i></div>
+          <div><i><a href="src_topologies.adb.html#l499" title="topologies.adb:499:65">topologies.adb:499:65</a> (reference)</i></div>
+          <div><i><a href="src_topologies.ads.html#l9" title="topologies.ads:9:48">topologies.ads:9:48</a> (reference)</i></div>
+          <div><i><a href="src_topologies.ads.html#l10" title="topologies.ads:10:48">topologies.ads:10:48</a> (reference)</i></div>
+          <div><i><a href="src_topologies.ads.html#l13" title="topologies.ads:13:48">topologies.ads:13:48</a> (reference)</i></div>
+          <div><i><a href="src_topologies.ads.html#l14" title="topologies.ads:14:48">topologies.ads:14:48</a> (reference)</i></div>
+          <div><i><a href="src_topologies.ads.html#l16" title="topologies.ads:16:71">topologies.ads:16:71</a> (reference)</i></div>
+          <div><i><a href="src_topologies.ads.html#l17" title="topologies.ads:17:71">topologies.ads:17:71</a> (reference)</i></div>
+          <div><i><a href="src_topologies.ads.html#l18" title="topologies.ads:18:71">topologies.ads:18:71</a> (reference)</i></div>
+          <div><i><a href="src_topologies.ads.html#l19" title="topologies.ads:19:71">topologies.ads:19:71</a> (reference)</i></div>
+          <div><i><a href="src_topologies.ads.html#l20" title="topologies.ads:20:71">topologies.ads:20:71</a> (reference)</i></div>
+          <div><i><a href="src_topologies.ads.html#l21" title="topologies.ads:21:71">topologies.ads:21:71</a> (reference)</i></div>
+          <div><i><a href="src_topologies.ads.html#l22" title="topologies.ads:22:71">topologies.ads:22:71</a> (reference)</i></div>
+          <div><i><a href="src_topologies.ads.html#l23" title="topologies.ads:23:71">topologies.ads:23:71</a> (reference)</i></div>
+          <div><i><a href="src_topologies.ads.html#l24" title="topologies.ads:24:71">topologies.ads:24:71</a> (reference)</i></div>
+          <div><i><a href="src_topologies.ads.html#l25" title="topologies.ads:25:71">topologies.ads:25:71</a> (reference)</i></div>
+          <div><i><a href="src_topologies.ads.html#l26" title="topologies.ads:26:71">topologies.ads:26:71</a> (reference)</i></div>
+      </div>
+    </div>
+  </div>
+
+
+    <div class='subprograms'>
+      <h1><a name='Methods' id='Methods'></a>Subprograms &amp; Entries</h1>
+      <div class="class">
+        <h3>
+          <a name='topologies.ads:9:13' id='topologies.ads:9:13'></a>
+<span class="droplink">Nodes_in_Topology (abstract)<ul>
+  <li><a href="src_topologies.ads.html#l9">Goto spec in source</a></li>
+</ul></span>
+        </h3>
+        <div class='details'><pre><span class="keyword">function</span> <span class="name_emphasis">Nodes_in_Topology</span> <table><tr><td>(</td><td><span class="name"><a name="topologies.ads:9:32"></a>Configuration</span></td><td>: <a href="topologies.ads.html#topologies.ads:7:9" title="defined at topologies.ads:7:9">Topology_Kind</a>) <span class="keyword">return</span> Positive <span class="keyword">is</span> <span class="keyword">abstract</span>;</td></tr></table></pre></div>
+        <div class='profile'>
+          <h4>References:</h4>
+            <div><i><a href="src_topologies.ads.html#l9" title="topologies.ads:9:13">topologies.ads:9:13</a> (declaration)</i></div>
+            <div><i><a href="src_generic_routers_configuration.ads.html#l15" title="generic_routers_configuration.ads:15:49">generic_routers_configuration.ads:15:49</a> (dispatching call)</i></div>
+            <div><i><a href="src_test_routers.adb.html#l331" title="test_routers.adb:331:60">test_routers.adb:331:60</a> (dispatching call)</i></div>
+            <div><i><a href="src_topologies.adb.html#l441" title="topologies.adb:441:50">topologies.adb:441:50</a> (dispatching call)</i></div>
+            <div><i><a href="src_topologies.adb.html#l465" title="topologies.adb:465:50">topologies.adb:465:50</a> (dispatching call)</i></div>
+        </div>
+        <div class='profile'>
+          <h4>Called by:</h4>
+            <div><i><a href="topologies.ads.html#topologies.ads:14:13" title="defined at topologies.ads:14:13">Max_Degree</a> defined at <a href="src_topologies.ads.html#l14" title="topologies.ads:14:13">topologies.ads:14:13</a></i></div>
+            <div><i><a href="topologies.ads.html#topologies.ads:13:13" title="defined at topologies.ads:13:13">Min_Degree</a> defined at <a href="src_topologies.ads.html#l13" title="topologies.ads:13:13">topologies.ads:13:13</a></i></div>
+            <div><i><a href="test_routers.adb.html#test_routers.adb:17:11" title="defined at test_routers.adb:17:11">Test_Routers</a> defined at <a href="src_test_routers.adb.html#l17" title="test_routers.adb:17:11">test_routers.adb:17:11</a></i></div>
+        </div>
+      </div>
+      <div class="class">
+        <h3>
+          <a name='topologies.ads:10:13' id='topologies.ads:10:13'></a>
+<span class="droplink">Nodes_Connected (abstract)<ul>
+  <li><a href="src_topologies.ads.html#l10">Goto spec in source</a></li>
+</ul></span>
+        </h3>
+        <div class='details'><pre><span class="keyword">function</span> <span class="name_emphasis">Nodes_Connected</span>   <table><tr><td>(</td><td><span class="name"><a name="topologies.ads:10:32"></a>Configuration</span></td><td>: <a href="topologies.ads.html#topologies.ads:7:9" title="defined at topologies.ads:7:9">Topology_Kind</a>;</td></tr><tr><td></td><td><span class="name"><a name="topologies.ads:11:32"></a>Node_A</span>, <span class="name"><a name="topologies.ads:11:40"></a>Node_B</span></td><td>: Positive)     <span class="keyword">return</span> Boolean  <span class="keyword">is</span> <span class="keyword">abstract</span>;</td></tr></table></pre></div>
+        <div class='profile'>
+          <h4>References:</h4>
+            <div><i><a href="src_topologies.ads.html#l10" title="topologies.ads:10:13">topologies.ads:10:13</a> (declaration)</i></div>
+            <div><i><a href="src_generic_routers.adb.html#l41" title="generic_routers.adb:41:61">generic_routers.adb:41:61</a> (dispatching call)</i></div>
+            <div><i><a href="src_test_routers.adb.html#l123" title="test_routers.adb:123:25">test_routers.adb:123:25</a> (dispatching call)</i></div>
+            <div><i><a href="src_test_routers.adb.html#l125" title="test_routers.adb:125:28">test_routers.adb:125:28</a> (dispatching call)</i></div>
+            <div><i><a href="src_topologies.adb.html#l451" title="topologies.adb:451:19">topologies.adb:451:19</a> (dispatching call)</i></div>
+            <div><i><a href="src_topologies.adb.html#l475" title="topologies.adb:475:19">topologies.adb:475:19</a> (dispatching call)</i></div>
+        </div>
+        <div class='profile'>
+          <h4>Called by:</h4>
+            <div><i><a href="topologies.ads.html#topologies.ads:14:13" title="defined at topologies.ads:14:13">Max_Degree</a> defined at <a href="src_topologies.ads.html#l14" title="topologies.ads:14:13">topologies.ads:14:13</a></i></div>
+            <div><i><a href="topologies.ads.html#topologies.ads:13:13" title="defined at topologies.ads:13:13">Min_Degree</a> defined at <a href="src_topologies.ads.html#l13" title="topologies.ads:13:13">topologies.ads:13:13</a></i></div>
+            <div><i>Test_Routers.Print_Connections defined at <a href="src_test_routers.adb.html#l102" title="test_routers.adb:102:20">test_routers.adb:102:20</a></i></div>
+            <div><i>Test_Routers.Print_Connections defined at <a href="src_test_routers.adb.html#l102" title="test_routers.adb:102:20">test_routers.adb:102:20</a></i></div>
+        </div>
+      </div>
+      <div class="class">
+        <h3>
+          <a name='topologies.ads:13:13' id='topologies.ads:13:13'></a>
+<span class="droplink">Min_Degree<ul>
+  <li><a href="src_topologies.ads.html#l13">Goto spec in source</a></li>
+  <li><a href="src_topologies.adb.html#l439">Goto body in source</a></li>
+</ul></span>
+        </h3>
+        <div class='details'><pre><span class="keyword">function</span> <span class="name_emphasis">Min_Degree</span>        <table><tr><td>(</td><td><span class="name"><a name="topologies.ads:13:32"></a>Configuration</span></td><td>: <a href="topologies.ads.html#topologies.ads:7:9" title="defined at topologies.ads:7:9">Topology_Kind</a>'Class) <span class="keyword">return</span> Natural;</td></tr></table></pre></div>
+        <div class='profile'>
+          <h4>References:</h4>
+            <div><i><a href="src_topologies.ads.html#l13" title="topologies.ads:13:13">topologies.ads:13:13</a> (declaration)</i></div>
+            <div><i><a href="src_test_routers.adb.html#l332" title="test_routers.adb:332:13">test_routers.adb:332:13</a> (call)</i></div>
+            <div><i><a href="src_test_routers.adb.html#l333" title="test_routers.adb:333:61">test_routers.adb:333:61</a> (call)</i></div>
+            <div><i><a href="src_test_routers.adb.html#l335" title="test_routers.adb:335:60">test_routers.adb:335:60</a> (call)</i></div>
+            <div><i><a href="src_topologies.adb.html#l439" title="topologies.adb:439:13">topologies.adb:439:13</a> (body)</i></div>
+            <div><i><a href="src_topologies.adb.html#l459" title="topologies.adb:459:8">topologies.adb:459:8</a> (label)</i></div>
+        </div>
+        <div class='profile'>
+          <h4>Called by:</h4>
+            <div><i><a href="test_routers.adb.html#test_routers.adb:17:11" title="defined at test_routers.adb:17:11">Test_Routers</a> defined at <a href="src_test_routers.adb.html#l17" title="test_routers.adb:17:11">test_routers.adb:17:11</a></i></div>
+            <div><i><a href="test_routers.adb.html#test_routers.adb:17:11" title="defined at test_routers.adb:17:11">Test_Routers</a> defined at <a href="src_test_routers.adb.html#l17" title="test_routers.adb:17:11">test_routers.adb:17:11</a></i></div>
+            <div><i><a href="test_routers.adb.html#test_routers.adb:17:11" title="defined at test_routers.adb:17:11">Test_Routers</a> defined at <a href="src_test_routers.adb.html#l17" title="test_routers.adb:17:11">test_routers.adb:17:11</a></i></div>
+        </div>
+        <div class='profile'>
+          <h4>Calls:</h4>
+            <div><i><a href="topologies.ads.html#topologies.ads:10:13" title="defined at topologies.ads:10:13">Nodes_Connected</a> defined at <a href="src_topologies.ads.html#l10" title="topologies.ads:10:13">topologies.ads:10:13</a></i></div>
+            <div><i><a href="topologies.ads.html#topologies.ads:9:13" title="defined at topologies.ads:9:13">Nodes_in_Topology</a> defined at <a href="src_topologies.ads.html#l9" title="topologies.ads:9:13">topologies.ads:9:13</a></i></div>
+        </div>
+      </div>
+      <div class="class">
+        <h3>
+          <a name='topologies.ads:14:13' id='topologies.ads:14:13'></a>
+<span class="droplink">Max_Degree<ul>
+  <li><a href="src_topologies.ads.html#l14">Goto spec in source</a></li>
+  <li><a href="src_topologies.adb.html#l463">Goto body in source</a></li>
+</ul></span>
+        </h3>
+        <div class='details'><pre><span class="keyword">function</span> <span class="name_emphasis">Max_Degree</span>        <table><tr><td>(</td><td><span class="name"><a name="topologies.ads:14:32"></a>Configuration</span></td><td>: <a href="topologies.ads.html#topologies.ads:7:9" title="defined at topologies.ads:7:9">Topology_Kind</a>'Class) <span class="keyword">return</span> Natural;</td></tr></table></pre></div>
+        <div class='profile'>
+          <h4>References:</h4>
+            <div><i><a href="src_topologies.ads.html#l14" title="topologies.ads:14:13">topologies.ads:14:13</a> (declaration)</i></div>
+            <div><i><a href="src_test_routers.adb.html#l332" title="test_routers.adb:332:48">test_routers.adb:332:48</a> (call)</i></div>
+            <div><i><a href="src_test_routers.adb.html#l336" title="test_routers.adb:336:60">test_routers.adb:336:60</a> (call)</i></div>
+            <div><i><a href="src_topologies.adb.html#l463" title="topologies.adb:463:13">topologies.adb:463:13</a> (body)</i></div>
+            <div><i><a href="src_topologies.adb.html#l483" title="topologies.adb:483:8">topologies.adb:483:8</a> (label)</i></div>
+        </div>
+        <div class='profile'>
+          <h4>Called by:</h4>
+            <div><i><a href="test_routers.adb.html#test_routers.adb:17:11" title="defined at test_routers.adb:17:11">Test_Routers</a> defined at <a href="src_test_routers.adb.html#l17" title="test_routers.adb:17:11">test_routers.adb:17:11</a></i></div>
+            <div><i><a href="test_routers.adb.html#test_routers.adb:17:11" title="defined at test_routers.adb:17:11">Test_Routers</a> defined at <a href="src_test_routers.adb.html#l17" title="test_routers.adb:17:11">test_routers.adb:17:11</a></i></div>
+        </div>
+        <div class='profile'>
+          <h4>Calls:</h4>
+            <div><i><a href="topologies.ads.html#topologies.ads:10:13" title="defined at topologies.ads:10:13">Nodes_Connected</a> defined at <a href="src_topologies.ads.html#l10" title="topologies.ads:10:13">topologies.ads:10:13</a></i></div>
+            <div><i><a href="topologies.ads.html#topologies.ads:9:13" title="defined at topologies.ads:9:13">Nodes_in_Topology</a> defined at <a href="src_topologies.ads.html#l9" title="topologies.ads:9:13">topologies.ads:9:13</a></i></div>
+        </div>
+      </div>
+      <div class="class">
+        <h3>
+          <a name='topologies.ads:16:13' id='topologies.ads:16:13'></a>
+<span class="droplink">Line<ul>
+  <li><a href="src_topologies.ads.html#l16">Goto spec in source</a></li>
+  <li><a href="src_topologies.adb.html#l489">Goto body in source</a></li>
+</ul></span>
+        </h3>
+        <div class='details'><pre><span class="keyword">function</span> <span class="name_emphasis">Line</span>                  <table><tr><td>(</td><td><span class="name"><a name="topologies.ads:16:36"></a>Size</span></td><td>: Positive) <span class="keyword">return</span> <a href="topologies.ads.html#topologies.ads:7:9" title="defined at topologies.ads:7:9">Topology_Kind</a>'Class;</td></tr></table></pre></div>
+        <div class='profile'>
+          <h4>References:</h4>
+            <div><i><a href="src_topologies.ads.html#l16" title="topologies.ads:16:13">topologies.ads:16:13</a> (declaration)</i></div>
+            <div><i><a href="src_routers_configuration_structures.adb.html#l13" title="routers_configuration_structures.adb:13:47">routers_configuration_structures.adb:13:47</a> (call)</i></div>
+            <div><i><a href="src_topologies.adb.html#l489" title="topologies.adb:489:13">topologies.adb:489:13</a> (body)</i></div>
+        </div>
+        <div class='profile'>
+          <h4>Called by:</h4>
+            <div><i><a href="routers_configuration_structures.ads.html#routers_configuration_structures.ads:27:13" title="defined at routers_configuration_structures.ads:27:13">Routers_Configuration_Structures.Get_Topology</a> defined at <a href="src_routers_configuration_structures.ads.html#l27" title="routers_configuration_structures.ads:27:13">routers_configuration_structures.ads:27:13</a></i></div>
+        </div>
+      </div>
+      <div class="class">
+        <h3>
+          <a name='topologies.ads:17:13' id='topologies.ads:17:13'></a>
+<span class="droplink">Ring<ul>
+  <li><a href="src_topologies.ads.html#l17">Goto spec in source</a></li>
+  <li><a href="src_topologies.adb.html#l490">Goto body in source</a></li>
+</ul></span>
+        </h3>
+        <div class='details'><pre><span class="keyword">function</span> <span class="name_emphasis">Ring</span>                  <table><tr><td>(</td><td><span class="name"><a name="topologies.ads:17:36"></a>Size</span></td><td>: Positive) <span class="keyword">return</span> <a href="topologies.ads.html#topologies.ads:7:9" title="defined at topologies.ads:7:9">Topology_Kind</a>'Class;</td></tr></table></pre></div>
+        <div class='profile'>
+          <h4>References:</h4>
+            <div><i><a href="src_topologies.ads.html#l17" title="topologies.ads:17:13">topologies.ads:17:13</a> (declaration)</i></div>
+            <div><i><a href="src_routers_configuration_structures.adb.html#l14" title="routers_configuration_structures.adb:14:47">routers_configuration_structures.adb:14:47</a> (call)</i></div>
+            <div><i><a href="src_topologies.adb.html#l490" title="topologies.adb:490:13">topologies.adb:490:13</a> (body)</i></div>
+        </div>
+        <div class='profile'>
+          <h4>Called by:</h4>
+            <div><i><a href="routers_configuration_structures.ads.html#routers_configuration_structures.ads:27:13" title="defined at routers_configuration_structures.ads:27:13">Routers_Configuration_Structures.Get_Topology</a> defined at <a href="src_routers_configuration_structures.ads.html#l27" title="routers_configuration_structures.ads:27:13">routers_configuration_structures.ads:27:13</a></i></div>
+        </div>
+      </div>
+      <div class="class">
+        <h3>
+          <a name='topologies.ads:18:13' id='topologies.ads:18:13'></a>
+<span class="droplink">Star<ul>
+  <li><a href="src_topologies.ads.html#l18">Goto spec in source</a></li>
+  <li><a href="src_topologies.adb.html#l491">Goto body in source</a></li>
+</ul></span>
+        </h3>
+        <div class='details'><pre><span class="keyword">function</span> <span class="name_emphasis">Star</span>                  <table><tr><td>(</td><td><span class="name"><a name="topologies.ads:18:36"></a>Size</span></td><td>: Positive) <span class="keyword">return</span> <a href="topologies.ads.html#topologies.ads:7:9" title="defined at topologies.ads:7:9">Topology_Kind</a>'Class;</td></tr></table></pre></div>
+        <div class='profile'>
+          <h4>References:</h4>
+            <div><i><a href="src_topologies.ads.html#l18" title="topologies.ads:18:13">topologies.ads:18:13</a> (declaration)</i></div>
+            <div><i><a href="src_routers_configuration_structures.adb.html#l15" title="routers_configuration_structures.adb:15:47">routers_configuration_structures.adb:15:47</a> (call)</i></div>
+            <div><i><a href="src_topologies.adb.html#l491" title="topologies.adb:491:13">topologies.adb:491:13</a> (body)</i></div>
+        </div>
+        <div class='profile'>
+          <h4>Called by:</h4>
+            <div><i><a href="routers_configuration_structures.ads.html#routers_configuration_structures.ads:27:13" title="defined at routers_configuration_structures.ads:27:13">Routers_Configuration_Structures.Get_Topology</a> defined at <a href="src_routers_configuration_structures.ads.html#l27" title="routers_configuration_structures.ads:27:13">routers_configuration_structures.ads:27:13</a></i></div>
+        </div>
+      </div>
+      <div class="class">
+        <h3>
+          <a name='topologies.ads:19:13' id='topologies.ads:19:13'></a>
+<span class="droplink">Fully_Connected<ul>
+  <li><a href="src_topologies.ads.html#l19">Goto spec in source</a></li>
+  <li><a href="src_topologies.adb.html#l492">Goto body in source</a></li>
+</ul></span>
+        </h3>
+        <div class='details'><pre><span class="keyword">function</span> <span class="name_emphasis">Fully_Connected</span>       <table><tr><td>(</td><td><span class="name"><a name="topologies.ads:19:36"></a>Size</span></td><td>: Positive) <span class="keyword">return</span> <a href="topologies.ads.html#topologies.ads:7:9" title="defined at topologies.ads:7:9">Topology_Kind</a>'Class;</td></tr></table></pre></div>
+        <div class='profile'>
+          <h4>References:</h4>
+            <div><i><a href="src_topologies.ads.html#l19" title="topologies.ads:19:13">topologies.ads:19:13</a> (declaration)</i></div>
+            <div><i><a href="src_routers_configuration_structures.adb.html#l16" title="routers_configuration_structures.adb:16:47">routers_configuration_structures.adb:16:47</a> (call)</i></div>
+            <div><i><a href="src_topologies.adb.html#l492" title="topologies.adb:492:13">topologies.adb:492:13</a> (body)</i></div>
+        </div>
+        <div class='profile'>
+          <h4>Called by:</h4>
+            <div><i><a href="routers_configuration_structures.ads.html#routers_configuration_structures.ads:27:13" title="defined at routers_configuration_structures.ads:27:13">Routers_Configuration_Structures.Get_Topology</a> defined at <a href="src_routers_configuration_structures.ads.html#l27" title="routers_configuration_structures.ads:27:13">routers_configuration_structures.ads:27:13</a></i></div>
+        </div>
+      </div>
+      <div class="class">
+        <h3>
+          <a name='topologies.ads:20:13' id='topologies.ads:20:13'></a>
+<span class="droplink">Trees<ul>
+  <li><a href="src_topologies.ads.html#l20">Goto spec in source</a></li>
+  <li><a href="src_topologies.adb.html#l493">Goto body in source</a></li>
+</ul></span>
+        </h3>
+        <div class='details'><pre><span class="keyword">function</span> <span class="name_emphasis">Trees</span>                 <table><tr><td>(</td><td><span class="name"><a name="topologies.ads:20:36"></a>Degree</span>, <span class="name"><a name="topologies.ads:20:44"></a>Depths</span></td><td>: Positive) <span class="keyword">return</span> <a href="topologies.ads.html#topologies.ads:7:9" title="defined at topologies.ads:7:9">Topology_Kind</a>'Class;</td></tr></table></pre></div>
+        <div class='profile'>
+          <h4>References:</h4>
+            <div><i><a href="src_topologies.ads.html#l20" title="topologies.ads:20:13">topologies.ads:20:13</a> (declaration)</i></div>
+            <div><i><a href="src_routers_configuration_structures.adb.html#l17" title="routers_configuration_structures.adb:17:47">routers_configuration_structures.adb:17:47</a> (call)</i></div>
+            <div><i><a href="src_topologies.adb.html#l493" title="topologies.adb:493:13">topologies.adb:493:13</a> (body)</i></div>
+        </div>
+        <div class='profile'>
+          <h4>Called by:</h4>
+            <div><i><a href="routers_configuration_structures.ads.html#routers_configuration_structures.ads:27:13" title="defined at routers_configuration_structures.ads:27:13">Routers_Configuration_Structures.Get_Topology</a> defined at <a href="src_routers_configuration_structures.ads.html#l27" title="routers_configuration_structures.ads:27:13">routers_configuration_structures.ads:27:13</a></i></div>
+        </div>
+      </div>
+      <div class="class">
+        <h3>
+          <a name='topologies.ads:21:13' id='topologies.ads:21:13'></a>
+<span class="droplink">Mesh<ul>
+  <li><a href="src_topologies.ads.html#l21">Goto spec in source</a></li>
+  <li><a href="src_topologies.adb.html#l494">Goto body in source</a></li>
+</ul></span>
+        </h3>
+        <div class='details'><pre><span class="keyword">function</span> <span class="name_emphasis">Mesh</span>                  <table><tr><td>(</td><td><span class="name"><a name="topologies.ads:21:36"></a>Dimension</span>, <span class="name"><a name="topologies.ads:21:47"></a>Size</span></td><td>: Positive) <span class="keyword">return</span> <a href="topologies.ads.html#topologies.ads:7:9" title="defined at topologies.ads:7:9">Topology_Kind</a>'Class;</td></tr></table></pre></div>
+        <div class='profile'>
+          <h4>References:</h4>
+            <div><i><a href="src_topologies.ads.html#l21" title="topologies.ads:21:13">topologies.ads:21:13</a> (declaration)</i></div>
+            <div><i><a href="src_routers_configuration_structures.adb.html#l18" title="routers_configuration_structures.adb:18:47">routers_configuration_structures.adb:18:47</a> (call)</i></div>
+            <div><i><a href="src_topologies.adb.html#l494" title="topologies.adb:494:13">topologies.adb:494:13</a> (body)</i></div>
+        </div>
+        <div class='profile'>
+          <h4>Called by:</h4>
+            <div><i><a href="routers_configuration_structures.ads.html#routers_configuration_structures.ads:27:13" title="defined at routers_configuration_structures.ads:27:13">Routers_Configuration_Structures.Get_Topology</a> defined at <a href="src_routers_configuration_structures.ads.html#l27" title="routers_configuration_structures.ads:27:13">routers_configuration_structures.ads:27:13</a></i></div>
+        </div>
+      </div>
+      <div class="class">
+        <h3>
+          <a name='topologies.ads:22:13' id='topologies.ads:22:13'></a>
+<span class="droplink">Torus<ul>
+  <li><a href="src_topologies.ads.html#l22">Goto spec in source</a></li>
+  <li><a href="src_topologies.adb.html#l495">Goto body in source</a></li>
+</ul></span>
+        </h3>
+        <div class='details'><pre><span class="keyword">function</span> <span class="name_emphasis">Torus</span>                 <table><tr><td>(</td><td><span class="name"><a name="topologies.ads:22:36"></a>Dimension</span>, <span class="name"><a name="topologies.ads:22:47"></a>Size</span></td><td>: Positive) <span class="keyword">return</span> <a href="topologies.ads.html#topologies.ads:7:9" title="defined at topologies.ads:7:9">Topology_Kind</a>'Class;</td></tr></table></pre></div>
+        <div class='profile'>
+          <h4>References:</h4>
+            <div><i><a href="src_topologies.ads.html#l22" title="topologies.ads:22:13">topologies.ads:22:13</a> (declaration)</i></div>
+            <div><i><a href="src_routers_configuration_structures.adb.html#l19" title="routers_configuration_structures.adb:19:47">routers_configuration_structures.adb:19:47</a> (call)</i></div>
+            <div><i><a href="src_topologies.adb.html#l495" title="topologies.adb:495:13">topologies.adb:495:13</a> (body)</i></div>
+        </div>
+        <div class='profile'>
+          <h4>Called by:</h4>
+            <div><i><a href="routers_configuration_structures.ads.html#routers_configuration_structures.ads:27:13" title="defined at routers_configuration_structures.ads:27:13">Routers_Configuration_Structures.Get_Topology</a> defined at <a href="src_routers_configuration_structures.ads.html#l27" title="routers_configuration_structures.ads:27:13">routers_configuration_structures.ads:27:13</a></i></div>
+        </div>
+      </div>
+      <div class="class">
+        <h3>
+          <a name='topologies.ads:23:13' id='topologies.ads:23:13'></a>
+<span class="droplink">Hypercube<ul>
+  <li><a href="src_topologies.ads.html#l23">Goto spec in source</a></li>
+  <li><a href="src_topologies.adb.html#l496">Goto body in source</a></li>
+</ul></span>
+        </h3>
+        <div class='details'><pre><span class="keyword">function</span> <span class="name_emphasis">Hypercube</span>             <table><tr><td>(</td><td><span class="name"><a name="topologies.ads:23:36"></a>Dimension</span></td><td>: Positive) <span class="keyword">return</span> <a href="topologies.ads.html#topologies.ads:7:9" title="defined at topologies.ads:7:9">Topology_Kind</a>'Class;</td></tr></table></pre></div>
+        <div class='profile'>
+          <h4>References:</h4>
+            <div><i><a href="src_topologies.ads.html#l23" title="topologies.ads:23:13">topologies.ads:23:13</a> (declaration)</i></div>
+            <div><i><a href="src_routers_configuration_structures.adb.html#l20" title="routers_configuration_structures.adb:20:47">routers_configuration_structures.adb:20:47</a> (call)</i></div>
+            <div><i><a href="src_topologies.adb.html#l496" title="topologies.adb:496:13">topologies.adb:496:13</a> (body)</i></div>
+        </div>
+        <div class='profile'>
+          <h4>Called by:</h4>
+            <div><i><a href="routers_configuration_structures.ads.html#routers_configuration_structures.ads:27:13" title="defined at routers_configuration_structures.ads:27:13">Routers_Configuration_Structures.Get_Topology</a> defined at <a href="src_routers_configuration_structures.ads.html#l27" title="routers_configuration_structures.ads:27:13">routers_configuration_structures.ads:27:13</a></i></div>
+        </div>
+      </div>
+      <div class="class">
+        <h3>
+          <a name='topologies.ads:24:13' id='topologies.ads:24:13'></a>
+<span class="droplink">Cube_Connected_Cycles<ul>
+  <li><a href="src_topologies.ads.html#l24">Goto spec in source</a></li>
+  <li><a href="src_topologies.adb.html#l497">Goto body in source</a></li>
+</ul></span>
+        </h3>
+        <div class='details'><pre><span class="keyword">function</span> <span class="name_emphasis">Cube_Connected_Cycles</span> <table><tr><td>(</td><td><span class="name"><a name="topologies.ads:24:36"></a>Dimension</span></td><td>: Positive) <span class="keyword">return</span> <a href="topologies.ads.html#topologies.ads:7:9" title="defined at topologies.ads:7:9">Topology_Kind</a>'Class;</td></tr></table></pre></div>
+        <div class='profile'>
+          <h4>References:</h4>
+            <div><i><a href="src_topologies.ads.html#l24" title="topologies.ads:24:13">topologies.ads:24:13</a> (declaration)</i></div>
+            <div><i><a href="src_routers_configuration_structures.adb.html#l21" title="routers_configuration_structures.adb:21:47">routers_configuration_structures.adb:21:47</a> (call)</i></div>
+            <div><i><a href="src_topologies.adb.html#l497" title="topologies.adb:497:13">topologies.adb:497:13</a> (body)</i></div>
+        </div>
+        <div class='profile'>
+          <h4>Called by:</h4>
+            <div><i><a href="routers_configuration_structures.ads.html#routers_configuration_structures.ads:27:13" title="defined at routers_configuration_structures.ads:27:13">Routers_Configuration_Structures.Get_Topology</a> defined at <a href="src_routers_configuration_structures.ads.html#l27" title="routers_configuration_structures.ads:27:13">routers_configuration_structures.ads:27:13</a></i></div>
+        </div>
+      </div>
+      <div class="class">
+        <h3>
+          <a name='topologies.ads:25:13' id='topologies.ads:25:13'></a>
+<span class="droplink">Butterfly<ul>
+  <li><a href="src_topologies.ads.html#l25">Goto spec in source</a></li>
+  <li><a href="src_topologies.adb.html#l498">Goto body in source</a></li>
+</ul></span>
+        </h3>
+        <div class='details'><pre><span class="keyword">function</span> <span class="name_emphasis">Butterfly</span>             <table><tr><td>(</td><td><span class="name"><a name="topologies.ads:25:36"></a>Dimension</span></td><td>: Positive) <span class="keyword">return</span> <a href="topologies.ads.html#topologies.ads:7:9" title="defined at topologies.ads:7:9">Topology_Kind</a>'Class;</td></tr></table></pre></div>
+        <div class='profile'>
+          <h4>References:</h4>
+            <div><i><a href="src_topologies.ads.html#l25" title="topologies.ads:25:13">topologies.ads:25:13</a> (declaration)</i></div>
+            <div><i><a href="src_routers_configuration_structures.adb.html#l22" title="routers_configuration_structures.adb:22:47">routers_configuration_structures.adb:22:47</a> (call)</i></div>
+            <div><i><a href="src_topologies.adb.html#l498" title="topologies.adb:498:13">topologies.adb:498:13</a> (body)</i></div>
+        </div>
+        <div class='profile'>
+          <h4>Called by:</h4>
+            <div><i><a href="routers_configuration_structures.ads.html#routers_configuration_structures.ads:27:13" title="defined at routers_configuration_structures.ads:27:13">Routers_Configuration_Structures.Get_Topology</a> defined at <a href="src_routers_configuration_structures.ads.html#l27" title="routers_configuration_structures.ads:27:13">routers_configuration_structures.ads:27:13</a></i></div>
+        </div>
+      </div>
+      <div class="class">
+        <h3>
+          <a name='topologies.ads:26:13' id='topologies.ads:26:13'></a>
+<span class="droplink">Wrap_Around_Butterfly<ul>
+  <li><a href="src_topologies.ads.html#l26">Goto spec in source</a></li>
+  <li><a href="src_topologies.adb.html#l499">Goto body in source</a></li>
+</ul></span>
+        </h3>
+        <div class='details'><pre><span class="keyword">function</span> <span class="name_emphasis">Wrap_Around_Butterfly</span> <table><tr><td>(</td><td><span class="name"><a name="topologies.ads:26:36"></a>Dimension</span></td><td>: Positive) <span class="keyword">return</span> <a href="topologies.ads.html#topologies.ads:7:9" title="defined at topologies.ads:7:9">Topology_Kind</a>'Class;</td></tr></table></pre></div>
+        <div class='profile'>
+          <h4>References:</h4>
+            <div><i><a href="src_topologies.ads.html#l26" title="topologies.ads:26:13">topologies.ads:26:13</a> (declaration)</i></div>
+            <div><i><a href="src_routers_configuration_structures.adb.html#l23" title="routers_configuration_structures.adb:23:47">routers_configuration_structures.adb:23:47</a> (call)</i></div>
+            <div><i><a href="src_topologies.adb.html#l499" title="topologies.adb:499:13">topologies.adb:499:13</a> (body)</i></div>
+        </div>
+        <div class='profile'>
+          <h4>Called by:</h4>
+            <div><i><a href="routers_configuration_structures.ads.html#routers_configuration_structures.ads:27:13" title="defined at routers_configuration_structures.ads:27:13">Routers_Configuration_Structures.Get_Topology</a> defined at <a href="src_routers_configuration_structures.ads.html#l27" title="routers_configuration_structures.ads:27:13">routers_configuration_structures.ads:27:13</a></i></div>
+        </div>
+      </div>
+    </div>
+</div> <!-- documentation -->
+
+</body>
+</html>

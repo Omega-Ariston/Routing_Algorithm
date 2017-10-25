@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+
+  <title>
+    File: generic_routers.ads
+  </title>
+  <link rel='stylesheet' href='support/docgen.css' type='text/css'/>
+  <link rel='stylesheet' href='support/tags.css' type='text/css'/>
+  <script src='support/docgen.js' type='text/javascript' charset='utf-8'></script>
+</head>
+<body onload="onloadDoc();">
+
+<div id='leftSide'>
+  <div id='leftSideInside'>
+  <div id='header'>
+    <h2 class="button">Documentation</h2>
+    <a href='toc.html'><div class="button2">Table of Contents</div></a>
+
+    <a href='tree.html'><div class="button2">Class Inheritance Tree</div></a>
+
+  </div>
+  </div>
+</div> <!-- leftSide -->
+
+<div class='subprograms'>
+  <div class='details'><ol><li id="l1"><pre><span class="comment">--</span> </pre></li>
+<li id="l2"><pre><span class="comment">--  Uwe R. Zimmer, Australia, September 2016</span> </pre></li>
+<li id="l3"><pre><span class="comment">--</span> </pre></li>
+<li id="l4"><pre> </pre></li>
+<li id="l5"><pre><span class="keyword">with</span> <span class="droplink">Generic_Router<ul><li><a href="generic_router.ads.html#generic_router.ads:13:9" title="To API doc">To API doc</a></li><li><a href="src_generic_router.ads.html#l13" title="To spec">To spec</a></li><li><a href="src_generic_router.adb.html#l7" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l6"><pre> </pre></li>
+<li id="l7"><pre><span class="keyword">generic</span> </pre></li>
+<li id="l8"><pre> </pre></li>
+<li id="l9"><pre>   <span class="keyword">with</span> <span class="keyword">package</span> <a href="generic_routers.ads.html#generic_routers.ads:9:17" title="defined at generic_routers.ads:9:17">Router</a> <span class="keyword">is</span> <span class="keyword">new</span> <span class="droplink">Generic_Router<ul><li><a href="generic_router.ads.html#generic_router.ads:13:9" title="To API doc">To API doc</a></li><li><a href="src_generic_router.ads.html#l13" title="To spec">To spec</a></li><li><a href="src_generic_router.adb.html#l7" title="To body">To body</a></li></ul></span> (&lt;&gt;); </pre></li>
+<li id="l10"><pre> </pre></li>
+<li id="l11"><pre><span class="keyword">package</span> <span class="droplink">Generic_Routers<ul><li><a href="generic_routers.ads.html#generic_routers.ads:11:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers.adb.html#l8" title="To body">To body</a></li></ul></span> <span class="keyword">is</span> </pre></li>
+<li id="l12"><pre> </pre></li>
+<li id="l13"><pre>   <span class="keyword">use</span> <span class="droplink">Router<ul><li><a href="generic_routers.ads.html#generic_routers.ads:9:17" title="To API doc">To API doc</a></li><li><a href="src_generic_routers.ads.html#l9" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l14"><pre>   <span class="keyword">use</span> <span class="droplink">Message_Structures<ul><li><a href="generic_router.ads.html#generic_router.ads:11:17" title="To API doc">To API doc</a></li><li><a href="src_generic_router.ads.html#l11" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l15"><pre>   <span class="keyword">use</span> <span class="droplink">Routers_Configuration<ul><li><a href="generic_message_structures.ads.html#generic_message_structures.ads:9:17" title="To API doc">To API doc</a></li><li><a href="src_generic_message_structures.ads.html#l9" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l16"><pre> </pre></li>
+<li id="l17"><pre>   <a href="generic_routers.ads.html#generic_routers.ads:17:4" title="defined at generic_routers.ads:17:4">Router_Tasks</a>  : <span class="keyword">array</span> (<span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span>) <span class="keyword">of</span> <span class="keyword">aliased</span> <span class="droplink">Router_Task<ul><li><a href="generic_router.ads.html#generic_router.ads:21:9" title="To API doc">To API doc</a></li><li><a href="src_generic_router.ads.html#l21" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l18"><pre>   <a href="generic_routers.ads.html#generic_routers.ads:18:4" title="defined at generic_routers.ads:18:4">Router_Active</a> : <span class="keyword">array</span> (<span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span>) <span class="keyword">of</span> Boolean := (<span class="keyword">others</span> =&gt; True); </pre></li>
+<li id="l19"><pre> </pre></li>
+<li id="l20"><pre>   <a href="generic_routers.ads.html#generic_routers.ads:20:4" title="defined at generic_routers.ads:20:4">Routers_Configured</a> : Boolean := True; <span class="comment">-- potentially set to False if the body does not successfully elaborate</span> </pre></li>
+<li id="l21"><pre> </pre></li>
+<li id="l22"><pre>   <span class="keyword">procedure</span> <span class="droplink">Router_Shutdown<ul><li><a href="generic_routers.ads.html#generic_routers.ads:22:14" title="To API doc">To API doc</a></li><li><a href="src_generic_routers.adb.html#l10" title="To body">To body</a></li></ul></span> (<a href="generic_routers.ads.html#generic_routers.ads:22:31" title="defined at generic_routers.ads:22:31">Id</a> : <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span>); </pre></li>
+<li id="l23"><pre>   <span class="keyword">procedure</span> <span class="droplink">Global_Shutdown<ul><li><a href="generic_routers.ads.html#generic_routers.ads:23:14" title="To API doc">To API doc</a></li><li><a href="src_generic_routers.adb.html#l23" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l24"><pre> </pre></li>
+<li id="l25"><pre><span class="keyword">end</span> <span class="droplink">Generic_Routers<ul><li><a href="generic_routers.ads.html#generic_routers.ads:11:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers.ads.html#l11" title="To spec">To spec</a></li><li><a href="src_generic_routers.adb.html#l8" title="To body">To body</a></li></ul></span>; </pre></li>
+</ol></div>
+</div>
+
+</body>
+</html>

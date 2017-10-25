@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+
+  <title>
+    File: generic_message_structures.ads
+  </title>
+  <link rel='stylesheet' href='support/docgen.css' type='text/css'/>
+  <link rel='stylesheet' href='support/tags.css' type='text/css'/>
+  <script src='support/docgen.js' type='text/javascript' charset='utf-8'></script>
+</head>
+<body onload="onloadDoc();">
+
+<div id='leftSide'>
+  <div id='leftSideInside'>
+  <div id='header'>
+    <h2 class="button">Documentation</h2>
+    <a href='toc.html'><div class="button2">Table of Contents</div></a>
+
+    <a href='tree.html'><div class="button2">Class Inheritance Tree</div></a>
+
+  </div>
+  </div>
+</div> <!-- leftSide -->
+
+<div class='subprograms'>
+  <div class='details'><ol><li id="l1"><pre><span class="comment">--</span> </pre></li>
+<li id="l2"><pre><span class="comment">--  Framework: Uwe R. Zimmer, Australia, 2015</span> </pre></li>
+<li id="l3"><pre><span class="comment">--</span> </pre></li>
+<li id="l4"><pre> </pre></li>
+<li id="l5"><pre><span class="keyword">with</span> Ada.Strings.Bounded;           <span class="keyword">use</span> Ada.Strings.Bounded; </pre></li>
+<li id="l6"><pre><span class="keyword">with</span> <span class="droplink">Generic_Routers_Configuration<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:11:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l11" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l7"><pre> </pre></li>
+<li id="l8"><pre><span class="keyword">generic</span> </pre></li>
+<li id="l9"><pre>   <span class="keyword">with</span> <span class="keyword">package</span> <a href="generic_message_structures.ads.html#generic_message_structures.ads:9:17" title="defined at generic_message_structures.ads:9:17">Routers_Configuration</a> <span class="keyword">is</span> <span class="keyword">new</span> <span class="droplink">Generic_Routers_Configuration<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:11:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l11" title="To spec">To spec</a></li></ul></span> (&lt;&gt;); </pre></li>
+<li id="l10"><pre> </pre></li>
+<li id="l11"><pre><span class="keyword">package</span> <a href="generic_message_structures.ads.html#generic_message_structures.ads:11:9" title="defined at generic_message_structures.ads:11:9">Generic_Message_Structures</a> <span class="keyword">is</span> </pre></li>
+<li id="l12"><pre> </pre></li>
+<li id="l13"><pre>   <span class="keyword">use</span> <span class="droplink">Routers_Configuration<ul><li><a href="generic_message_structures.ads.html#generic_message_structures.ads:9:17" title="To API doc">To API doc</a></li><li><a href="src_generic_message_structures.ads.html#l9" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l14"><pre> </pre></li>
+<li id="l15"><pre>   <span class="keyword">package</span> <a href="generic_message_structures.ads.html#generic_message_structures.ads:15:12" title="defined at generic_message_structures.ads:15:12">Message_Strings</a> <span class="keyword">is</span> <span class="keyword">new</span> Generic_Bounded_Length (Max =&gt; 80); </pre></li>
+<li id="l16"><pre>   <span class="keyword">use</span> <span class="droplink">Message_Strings<ul><li><a href="generic_message_structures.ads.html#generic_message_structures.ads:15:12" title="To API doc">To API doc</a></li><li><a href="src_generic_message_structures.ads.html#l15" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l17"><pre> </pre></li>
+<li id="l18"><pre>   <span class="keyword">subtype</span> <a href="generic_message_structures.ads.html#generic_message_structures.ads:18:12" title="defined at generic_message_structures.ads:18:12">The_Core_Message</a> <span class="keyword">is</span> Bounded_String; </pre></li>
+<li id="l19"><pre> </pre></li>
+<li id="l20"><pre>   <span class="keyword">type</span> <a href="generic_message_structures.ads.html#generic_message_structures.ads:20:9" title="defined at generic_message_structures.ads:20:9">Messages_Client</a> <span class="keyword">is</span> <span class="keyword">record</span> </pre></li>
+<li id="l21"><pre>      Destination : <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l22"><pre>      The_Message : <span class="droplink">The_Core_Message<ul><li><a href="generic_message_structures.ads.html#generic_message_structures.ads:18:12" title="To API doc">To API doc</a></li><li><a href="src_generic_message_structures.ads.html#l18" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l23"><pre>   <span class="keyword">end</span> <span class="keyword">record</span>; </pre></li>
+<li id="l24"><pre> </pre></li>
+<li id="l25"><pre>   <span class="keyword">type</span> <a href="generic_message_structures.ads.html#generic_message_structures.ads:25:9" title="defined at generic_message_structures.ads:25:9">Messages_Mailbox</a> <span class="keyword">is</span> <span class="keyword">record</span> </pre></li>
+<li id="l26"><pre>      Sender      : <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span>     := <span class="droplink">Router_Range<ul><li><a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:15:9" title="To API doc">To API doc</a></li><li><a href="src_generic_routers_configuration.ads.html#l15" title="To spec">To spec</a></li></ul></span>&apos;Invalid_Value; </pre></li>
+<li id="l27"><pre>      The_Message : <span class="droplink">The_Core_Message<ul><li><a href="generic_message_structures.ads.html#generic_message_structures.ads:18:12" title="To API doc">To API doc</a></li><li><a href="src_generic_message_structures.ads.html#l18" title="To spec">To spec</a></li></ul></span> := Message_Strings.To_Bounded_String (<span class="string">&quot;&quot;</span>); </pre></li>
+<li id="l28"><pre>      Hop_Counter : Natural          := 0; </pre></li>
+<li id="l29"><pre>   <span class="keyword">end</span> <span class="keyword">record</span>; </pre></li>
+<li id="l30"><pre> </pre></li>
+<li id="l31"><pre>   <span class="comment">-- Leave anything above this line as it will be used by the testing framework</span> </pre></li>
+<li id="l32"><pre>   <span class="comment">-- to communicate with your router.</span> </pre></li>
+<li id="l33"><pre> </pre></li>
+<li id="l34"><pre>   <span class="comment">--  Add one or multiple more messages formats here ..</span> </pre></li>
+<li id="l35"><pre> </pre></li>
+<li id="l36"><pre><span class="keyword">end</span> <span class="droplink">Generic_Message_Structures<ul><li><a href="generic_message_structures.ads.html#generic_message_structures.ads:11:9" title="To API doc">To API doc</a></li><li><a href="src_generic_message_structures.ads.html#l11" title="To spec">To spec</a></li></ul></span>; </pre></li>
+</ol></div>
+</div>
+
+</body>
+</html>

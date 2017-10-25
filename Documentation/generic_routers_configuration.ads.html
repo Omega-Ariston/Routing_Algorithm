@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+
+  <title>
+    Package: Generic_Routers_Configuration (generic)
+  </title>
+  <link rel='stylesheet' href='support/docgen.css' type='text/css'/>
+  <link rel='stylesheet' href='support/tags.css' type='text/css'/>
+  <script src='support/docgen.js' type='text/javascript' charset='utf-8'></script>
+</head>
+<body onload="onloadDoc();">
+
+<div id='leftSide'>
+  <div id='leftSideInside'>
+  <div id='header'>
+    <h2 class="button">Documentation</h2>
+    <a href='toc.html'><div class="button2">Table of Contents</div></a>
+
+    <a href='tree.html'><div class="button2">Class Inheritance Tree</div></a>
+
+  </div>
+
+  <div id='navigation'>
+    <h2 class="button">Navigation</h2>
+    <a href='#Description'><div class="button2">Description</div></a>
+    <a href='#Types'><div class="button2">Types</div></a>
+    <a href='#Constants'><div class="button2">Constants &amp; Global variables</div></a>
+  </div><!-- navigation -->
+  </div>
+</div> <!-- leftSide -->
+
+<div class='default' id='rightSide'>
+ <div id='rightSideInside'>
+ <div id='Index'>
+  <h2>Index</h2>
+  <script type="text/javascript">
+    var names = new Array (
+new Array ('Router_<wbr/>Range', 'generic_routers_configuration.ads:15:9', 'type-spec'),
+new Array ('Command_<wbr/>Line_<wbr/>Parameters', 'generic_routers_configuration.ads:9:4', 'var-spec'),
+new Array ('Connection_<wbr/>Topology', 'generic_routers_configuration.ads:13:4', 'var-spec'),
+      new Array ('dummy', '', ''));
+    printIndexList (names);
+  </script>
+  <noscript>
+    <ul>
+      <li class='type-spec'><a href="#generic_routers_configuration.ads:15:9">Router_<wbr/>Range</a></li>
+      <li class='var-spec'><a href="#generic_routers_configuration.ads:9:4">Command_<wbr/>Line_<wbr/>Parameters</a></li>
+      <li class='var-spec'><a href="#generic_routers_configuration.ads:13:4">Connection_<wbr/>Topology</a></li>
+    </ul>
+  </noscript>
+ </div>
+ </div>
+</div>
+
+<div class='default' id='documentation'>
+  <div class='title'>
+    Package:
+<span class="droplink"><i>Generic_Routers_Configuration (generic)</i><ul>
+  <li><a href="src_generic_routers_configuration.ads.html">Goto spec source</a></li>
+</ul></span>
+  </div>
+  <div class='subprograms'>
+    <h1><a name='Description' id='Description'></a>Description</h1>
+    <div class="class">
+    <div class='details'><pre><span class="keyword">generic</span>
+   <span class="name"><a name="generic_routers_configuration.ads:9:4"></a>Command_Line_Parameters</span> : <a href="routers_configuration_structures.ads.html#routers_configuration_structures.ads:13:9" title="defined at routers_configuration_structures.ads:13:9">Command_Line_Options</a>;
+
+<span class="keyword">package</span> <span class="name_emphasis">Generic_Routers_Configuration</span> <span class="keyword">is</span></pre></div>
+    <div class='comment'>
+Uwe R. Zimmer, Australia, September 2011
+
+</div>
+    </div>
+  </div>
+
+
+
+
+  <div class='subprograms'>
+    <h1><a name='Types' id='Types'></a>Types</h1>
+    <div class="class">
+      <h3>
+        <a name='generic_routers_configuration.ads:15:9' id='generic_routers_configuration.ads:15:9'></a>
+<span class="droplink">Router_Range<ul>
+  <li><a href="src_generic_routers_configuration.ads.html#l15">Goto declaration in source</a></li>
+</ul></span>
+      </h3>
+      <div class='details'><pre><span class="keyword">type</span> <span class="name_emphasis">Router_Range</span> <span class="keyword">is</span> <span class="keyword">new</span> Positive <span class="keyword">range</span> 1 .. <a href="topologies.ads.html#topologies.ads:9:13" title="defined at topologies.ads:9:13">Nodes_in_Topology</a> (<a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:13:4" title="defined at generic_routers_configuration.ads:13:4">Connection_Topology</a>);</pre></div>
+      <div class='profile'>
+          <h4>References:</h4>
+          <div><i><a href="src_generic_routers_configuration.ads.html#l15" title="generic_routers_configuration.ads:15:9">generic_routers_configuration.ads:15:9</a> (declaration)</i></div>
+          <div><i><a href="src_generic_routers.adb.html#l10" title="generic_routers.adb:10:36">generic_routers.adb:10:36</a> (reference)</i></div>
+          <div><i><a href="src_generic_routers.adb.html#l17" title="generic_routers.adb:17:40">generic_routers.adb:17:40</a> (reference)</i></div>
+          <div><i><a href="src_generic_routers.adb.html#l26" title="generic_routers.adb:26:17">generic_routers.adb:26:17</a> (reference)</i></div>
+          <div><i><a href="src_generic_routers.adb.html#l36" title="generic_routers.adb:36:21">generic_routers.adb:36:21</a> (reference)</i></div>
+          <div><i><a href="src_generic_routers.adb.html#l40" title="generic_routers.adb:40:40">generic_routers.adb:40:40</a> (reference)</i></div>
+          <div><i><a href="src_generic_routers.ads.html#l17" title="generic_routers.ads:17:27">generic_routers.ads:17:27</a> (reference)</i></div>
+          <div><i><a href="src_generic_routers.ads.html#l18" title="generic_routers.ads:18:27">generic_routers.ads:18:27</a> (reference)</i></div>
+          <div><i><a href="src_generic_routers.ads.html#l22" title="generic_routers.ads:22:36">generic_routers.ads:22:36</a> (reference)</i></div>
+          <div><i><a href="src_generic_message_structures.ads.html#l21" title="generic_message_structures.ads:21:21">generic_message_structures.ads:21:21</a> (reference)</i></div>
+          <div><i><a href="src_generic_message_structures.ads.html#l26" title="generic_message_structures.ads:26:21">generic_message_structures.ads:26:21</a> (reference)</i></div>
+          <div><i><a href="src_generic_message_structures.ads.html#l26" title="generic_message_structures.ads:26:41">generic_message_structures.ads:26:41</a> (reference)</i></div>
+          <div><i><a href="src_generic_router.ads.html#l18" title="generic_router.ads:18:64">generic_router.ads:18:64</a> (reference)</i></div>
+          <div><i><a href="src_generic_router.ads.html#l24" title="generic_router.ads:24:53">generic_router.ads:24:53</a> (reference)</i></div>
+          <div><i><a href="src_generic_router.ads.html#l27" title="generic_router.ads:27:38">generic_router.ads:27:38</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l93" title="test_routers.adb:93:78">test_routers.adb:93:78</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l100" title="test_routers.adb:100:39">test_routers.adb:100:39</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l100" title="test_routers.adb:100:53">test_routers.adb:100:53</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l107" title="test_routers.adb:107:22">test_routers.adb:107:22</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l112" title="test_routers.adb:112:22">test_routers.adb:112:22</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l117" title="test_routers.adb:117:22">test_routers.adb:117:22</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l120" title="test_routers.adb:120:25">test_routers.adb:120:25</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l141" title="test_routers.adb:141:22">test_routers.adb:141:22</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l153" title="test_routers.adb:153:22">test_routers.adb:153:22</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l158" title="test_routers.adb:158:22">test_routers.adb:158:22</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l163" title="test_routers.adb:163:22">test_routers.adb:163:22</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l166" title="test_routers.adb:166:25">test_routers.adb:166:25</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l181" title="test_routers.adb:181:22">test_routers.adb:181:22</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l202" title="test_routers.adb:202:46">test_routers.adb:202:46</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l224" title="test_routers.adb:224:56">test_routers.adb:224:56</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l233" title="test_routers.adb:233:72">test_routers.adb:233:72</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l239" title="test_routers.adb:239:59">test_routers.adb:239:59</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l253" title="test_routers.adb:253:86">test_routers.adb:253:86</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l253" title="test_routers.adb:253:131">test_routers.adb:253:131</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l260" title="test_routers.adb:260:44">test_routers.adb:260:44</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l261" title="test_routers.adb:261:28">test_routers.adb:261:28</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l272" title="test_routers.adb:272:28">test_routers.adb:272:28</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l287" title="test_routers.adb:287:79">test_routers.adb:287:79</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l287" title="test_routers.adb:287:105">test_routers.adb:287:105</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l292" title="test_routers.adb:292:31">test_routers.adb:292:31</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l293" title="test_routers.adb:293:34">test_routers.adb:293:34</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l295" title="test_routers.adb:295:85">test_routers.adb:295:85</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l295" title="test_routers.adb:295:117">test_routers.adb:295:117</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l296" title="test_routers.adb:296:61">test_routers.adb:296:61</a> (reference)</i></div>
+          <div><i><a href="src_test_routers.adb.html#l296" title="test_routers.adb:296:93">test_routers.adb:296:93</a> (reference)</i></div>
+      </div>
+    </div>
+  </div>
+
+  <div class='subprograms'>
+    <h1><a name='Constants' id='Constants'></a>Constants &amp; Global variables</h1>
+    <div class="class">
+      <h3><a name='generic_routers_configuration.ads:9:4' id='generic_routers_configuration.ads:9:4'></a>
+<span class="droplink">Command_Line_Parameters<ul>
+  <li><a href="src_generic_routers_configuration.ads.html#l9">Goto declaration in source</a></li>
+</ul></span>
+        <span class="type">(<a href="routers_configuration_structures.ads.html#routers_configuration_structures.ads:13:9" title="defined at routers_configuration_structures.ads:13:9">Routers_Configuration_Structures.Command_Line_Options</a>)</span>
+      </h3>
+      <div class='details'><pre><span class="name_emphasis">Command_Line_Parameters</span> : <a href="routers_configuration_structures.ads.html#routers_configuration_structures.ads:13:9" title="defined at routers_configuration_structures.ads:13:9">Command_Line_Options</a>;</pre></div>
+      <div class='profile'>
+        <h4>References:</h4>
+          <div><i><a href="src_generic_routers_configuration.ads.html#l9" title="generic_routers_configuration.ads:9:4">generic_routers_configuration.ads:9:4</a> (declaration)</i></div>
+          <div><i><a href="src_generic_routers.adb.html#l16" title="generic_routers.adb:16:16">generic_routers.adb:16:16</a> (reference)</i></div>
+          <div><i><a href="src_generic_routers.adb.html#l48" title="generic_routers.adb:48:19">generic_routers.adb:48:19</a> (reference)</i></div>
+          <div><i><a href="src_generic_routers_configuration.ads.html#l13" title="generic_routers_configuration.ads:13:72">generic_routers_configuration.ads:13:72</a> (reference)</i></div>
+      </div>
+    </div>
+    <div class="class">
+      <h3><a name='generic_routers_configuration.ads:13:4' id='generic_routers_configuration.ads:13:4'></a>
+<span class="droplink">Connection_Topology<ul>
+  <li><a href="src_generic_routers_configuration.ads.html#l13">Goto declaration in source</a></li>
+</ul></span>
+        <span class="type">(<a href="topologies.ads.html#topologies.ads:7:9" title="defined at topologies.ads:7:9">Topologies.Topology_Kind</a>)</span>
+      </h3>
+      <div class='details'><pre><span class="name_emphasis">Connection_Topology</span> : <span class="keyword">constant</span> <a href="topologies.ads.html#topologies.ads:7:9" title="defined at topologies.ads:7:9">Topology_Kind</a>'Class := <a href="routers_configuration_structures.ads.html#routers_configuration_structures.ads:27:13" title="defined at routers_configuration_structures.ads:27:13">Get_Topology</a> (<a href="generic_routers_configuration.ads.html#generic_routers_configuration.ads:9:4" title="defined at generic_routers_configuration.ads:9:4">Command_Line_Parameters</a>);</pre></div>
+      <div class='profile'>
+        <h4>References:</h4>
+          <div><i><a href="src_generic_routers_configuration.ads.html#l13" title="generic_routers_configuration.ads:13:4">generic_routers_configuration.ads:13:4</a> (declaration)</i></div>
+          <div><i><a href="src_generic_routers.adb.html#l41" title="generic_routers.adb:41:78">generic_routers.adb:41:78</a> (reference)</i></div>
+          <div><i><a href="src_generic_routers_configuration.ads.html#l15" title="generic_routers_configuration.ads:15:68">generic_routers_configuration.ads:15:68</a> (reference)</i></div>
+      </div>
+    </div>
+  </div>
+
+</div> <!-- documentation -->
+
+</body>
+</html>
