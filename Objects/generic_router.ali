@@ -91,13 +91,13 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 RV MAX_TASK_ENTRIES=5
 
-U generic_router%b	generic_router.adb	5dc1d680 DE NE OO PK GE IS
+U generic_router%b	generic_router.adb	3294d24d DE NE OO PK GE IS
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W exceptions%s		exceptions.adb		exceptions.ali
 
-U generic_router%s	generic_router.ads	951b0916 BN DE EE NE OO PK GE IS
+U generic_router%s	generic_router.ads	3e9f1130 BN DE EE NE OO PK GE IS
 W generic_message_structures%s  generic_message_structures.ads  generic_message_structures.ali
 W generic_router_links%s  generic_router_links.adb  generic_router_links.ali
 W id_dispenser%s	id_dispenser.adb	id_dispenser.ali
@@ -117,9 +117,9 @@ D a-tags.ads		20170516105954 d3a89129 ada.tags%s
 D a-textio.ads		20170516105954 386df5d4 ada.text_io%s
 D a-unccon.ads		20170516105954 31484697 ada.unchecked_conversion%s
 D exceptions.ads	20171025031224 93f8a807 exceptions%s
-D generic_message_structures.ads  20171025065138 ad5d2814 generic_message_structures%s
+D generic_message_structures.ads  20171025133004 06d93032 generic_message_structures%s
 D generic_router.ads	20171025050034 ba2a77db generic_router%s
-D generic_router.adb	20171025082448 4c7efc88 generic_router%b
+D generic_router.adb	20171025134618 232bf845 generic_router%b
 D generic_router_links.ads  20171025031224 267d71e6 generic_router_links%s
 D generic_router_links.adb  20171025031224 2cc629d1 generic_router_links%b
 D generic_routers_configuration.ads  20171025031224 5fb99a32 generic_routers_configuration%s
@@ -145,30 +145,31 @@ X 1 ada.ads
 16K9*Ada 20e8 18|6r6 6r23
 X 13 a-textio.ads
 49K13*Text_IO 471e16 18|6w10 6r27
-166U14*New_Line 18|94s28
-242U14*Put 18|90s28 92s31
-263U14*Put_Line 18|58s22
+263U14*Put_Line 18|89s28
 X 15 exceptions.ads
 17K10*Exceptions 22e15 18|5w6 5r22
-19U14*Show_Exception 18|104s37
+19U14*Show_Exception 18|99s37
 X 16 generic_message_structures.ads
 9K17 Routers_Configuration[21|11] 17|16r8[11]
-11k9*Generic_Message_Structures 40e31 17|5w6 11r43
+11k9*Generic_Message_Structures 41e31 17|5w6 11r43
 20R9 Messages_Client 17|31r44[11]
 25R9 Messages_Mailbox 17|32r44[11]
-30A9 Neighbours(natural)<integer>
-31R9 Router_Status 17|40r38[11] 18|21r22[17|11] 22r24[17|11] 53r48[17|11]
-32i7 Sender{positive} 18|25m20[17|11] 56r39[17|11] 62r51[17|11] 65r39[17|11]
-33a7 Neighbour{30A9[17|11]} 18|28m23[17|11] 60r49[17|11] 61r37[17|11] 62r71[17|11]
+30A9 Modified(natural)<integer>
+31A9 Table(natural)<integer><integer>
+32R9 Router_Status 17|40r38[11] 18|20r22[17|11] 22r24[17|11] 62r54[17|11]
+33a7 Md{30A9[17|11]} 18|26m20[17|11] 65r48[17|11] 66r47[17|11] 67r48[17|11]
+. 68m38[17|11] 68r67[17|11] 71r57[17|11] 71r103[17|11] 73r48[17|11]
+34a7 Tb{31A9[17|11]} 18|30m23[17|11] 70r56[17|11] 71m41[17|11] 71r87[17|11]
+. 82r52[17|11] 83r55[17|11] 84r47[17|11]
 X 17 generic_router.ads
 11K17 Message_Structures[16|11] 15r8
-13k9*Generic_Router 11z17 43l5 43e19 18|7b14 107l5 107t19
+13k9*Generic_Router 11z17 43l5 43e19 18|7b14 102l5 102t19
 18K12*Router_Id_Generator[22|9] 19r8
 21T9*Router_Task 22r37
 22P9*Router_Task_P(21T9) 24r67
 24K12*Router_Link[19|12] 25r8
-27T14*Router_Task 27d27 41l8 41e19 18|9b14 105l8 105t19
-27i27 Task_Id{21|15I9[16|9[17|11]]} 18|19r74 25r40 26r28 57r32 88r34
+27T14*Router_Task 27d27 41l8 41e19 18|9b14 100l8 100t19
+27i27 Task_Id{21|15I9[16|9[17|11]]} 18|19r74 26r46 28r28 30r37 89r70
 29Y13 Configure 29>24 18|14b14 16l11 16t20
 29a24 Links{19|20A9[24]} 18|15r31
 31Y13 Send_Message 31>30
@@ -176,48 +177,47 @@ X 17 generic_router.ads
 32Y13 Receive_Message 32<30
 32r30 Message{16|25R9[11]}
 34Y13 Shutdown
-40Y13 Receive_Status 40>29 18|47s43 53b23 55l20 55t34 83s52
-40r29 Status{16|31R9[11]} 18|54r34
+40Y13 Receive_Status 40>29 18|45s43 62b29 64l26 64t40
+40r29 Status{16|32R9[11]} 18|63r40
 X 18 generic_router.adb
 11a7 Connected_Routers{19|20A9[17|24]} 15m10 19r83
 14a25 Links{19|20A9[17|24]}
-19a10 Port_List{19|19A9[17|24]} 27r28 28r54 35r33 43r33 47r19 71r43 79r42
-. 83r28
-20a10 Router_Table(natural) 62m25 89r39 91r42 92r51
-21r10 My_Status{16|31R9[17|11]} 25m10 28m13 47r59
-22r10 Temp_Status{16|31R9[17|11]} 54m19 56r27 60r37 61r25 62r39 62r59 65r27
-. 83r68
-23a10 Stored(boolean) 26m10 56r19 65m19
-27i14 index{integer} 28r34 28r65
-31T23 Send_Status 33l17 33e28 35r54 36b23 49l17 49t28
-32Y22 Send 32>28 41b26 44s43 46l23 46t27 51s23
-32i28 index{positive} 42r28 43r25 44r32 44r49
-35a13 Flood(31T23) 44r25 51r13
-39i19 To{positive} 42m22 47r30
-41i32 index{positive}
-53r39 Status{16|31R9[17|11]}
-60i23 index{integer} 61r48 62r82
-67T32 Resend_Status 69l26 69e39 71r64 72b32 85l26 85t39
-68Y31 Send 68>37 77b35 80s53 82l32 82t36 87s33
-68i37 index{positive} 78r37 79r34 80r42 80r59
-71a22 Flood2(67T32) 80r34 87r22
-75i28 To{positive} 78m31 83r39
-77i41 index{positive}
-89i29 i{integer} 90r48 92r65
-91i32 j{integer} 92r68
-104r12 Exception_Id{4|63R9} 104r53
+19a10 Port_List{19|19A9[17|24]} 29r28 30r57 45r19 52r44 61r33
+20r10 My_Status{16|32R9[17|11]} 26m10 30m13 45r59 68m28 70r46 71m31 82r42
+. 83r45 84r37
+21i10 Modifyer{natural} 26r24 27m10 27r22 68r42 69m28 69r40
+22r10 Temp_Status{16|32R9[17|11]} 63m25 65r36 66r35 67r36 68r55 71r45 71r75
+. 71r91 73r36
+23a10 Stored(boolean) 28m10 67r28 73m28
+24i10 Already_Have{natural} 54r22 55m22 55r38 74m28 74r44 77r25
+29i14 index{integer} 30r68
+33T23 Send_Status 35l17 35e28 37b23 47l17 47t28 52r65
+34Y22 Send 34>28 42b26 44l23 44t27 58s37
+34i28 index{positive} 43r28
+40i19 To{positive} 43m22 45r30
+42i32 index{positive}
+52a19 Send_Flood(33T23) 57r33 58r22
+57i23 i{integer} 58r34 58r43
+61i23 i{integer}
+62r45 Status{16|32R9[17|11]}
+65i26 j{integer} 66r51 67r52 68r71 71r61 71r107 73r52
+70i32 index{integer} 71r65 71r111
+80i28 Counter{natural} 85m37 85r48 89r103
+82i32 i{integer} 84r51
+83i35 j{integer} 84r54
+99r12 Exception_Id{4|63R9} 99r53
 X 19 generic_router_links.ads
 12k9*Generic_Router_Links 17|6w6 24r31 19|24e25
 14R9 Router_Ports
-15i7 Id{21|15I9[16|9[17|11]]} 18|28r72[17|24]
-16p7 Link{17|22P9} 18|47r34[17|24] 83r43[17|24]
+15i7 Id{21|15I9[16|9[17|11]]} 18|30r75[17|24]
+16p7 Link{17|22P9} 18|45r34[17|24]
 19A9 Connected_Router_Ports(14R9[17|24])<integer> 18|19r31[17|24]
 20A9 Ids_To_Links(17|22P9)<21|15I9[16|9[17|11]]> 17|29r32[24] 18|11r27[17|24]
 . 14r33[17|24]
 22V13 To_Router_Ports{19A9[17|24]} 18|19s57[17|24]
 X 21 generic_routers_configuration.ads
 15I9 Router_Range<integer> 17|18r64[16|9[17|11]] 24r53[16|9[17|11]] 27r38[16|9[17|11]]
-. 18|20r47[16|9[17|11]] 20r82[16|9[17|11]] 20r147[16|9[17|11]] 23r41[16|9[17|11]]
+. 18|23r41[16|9[17|11]] 54r47[16|9[17|11]] 77r50[16|9[17|11]]
 X 22 id_dispenser.ads
 7E9 Element 17|18r53
 9k9*Id_Dispenser 17|7w6 18r39 22|15e17

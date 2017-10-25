@@ -1,1 +1,0 @@
-generic_router.adb:47:42: invalid reference to private operation of some object of type "Router_Task"
