@@ -30,6 +30,7 @@ package Generic_Message_Structures is
    type Modified is array (1 .. Positive (Router_Range'Last)) of Natural;
    type Table is array (1 .. Positive (Router_Range'Last), 1 .. Positive (Router_Range'Last)) of Natural;
    type Router_Status is record
+      Carrier : Boolean := False;
       Md : Modified := (others => 0);
       Tb : Table := (others => (others => Natural (Router_Range'Last + 1)));
    end record;

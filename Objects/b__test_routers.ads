@@ -36,7 +36,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#f28736e6#;
+   u00001 : constant Version_32 := 16#47754a17#;
    pragma Export (C, u00001, "test_routersB");
    u00002 : constant Version_32 := 16#b6df930e#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -476,7 +476,7 @@ package ada_main is
    pragma Export (C, u00219, "system__traces__taskingB");
    u00220 : constant Version_32 := 16#09f07b39#;
    pragma Export (C, u00220, "system__traces__taskingS");
-   u00221 : constant Version_32 := 16#0acbfeae#;
+   u00221 : constant Version_32 := 16#bf39825f#;
    pragma Export (C, u00221, "generic_message_structuresS");
    u00222 : constant Version_32 := 16#2c6470be#;
    pragma Export (C, u00222, "generic_routers_configurationS");
@@ -516,9 +516,9 @@ package ada_main is
    pragma Export (C, u00239, "system__stream_attributesB");
    u00240 : constant Version_32 := 16#8bc30a4e#;
    pragma Export (C, u00240, "system__stream_attributesS");
-   u00241 : constant Version_32 := 16#3294d24d#;
+   u00241 : constant Version_32 := 16#d2efeea9#;
    pragma Export (C, u00241, "generic_routerB");
-   u00242 : constant Version_32 := 16#3e9f1130#;
+   u00242 : constant Version_32 := 16#8b6d6dc1#;
    pragma Export (C, u00242, "generic_routerS");
    u00243 : constant Version_32 := 16#0abb5837#;
    pragma Export (C, u00243, "generic_router_linksB");

@@ -114,7 +114,7 @@ D a-strsup.ads		20170516105950 a27dcb33 ada.strings.superbounded%s
 D a-tags.ads		20170516105954 d3a89129 ada.tags%s
 D a-textio.ads		20170516105954 386df5d4 ada.text_io%s
 D a-unccon.ads		20170516105954 31484697 ada.unchecked_conversion%s
-D generic_message_structures.ads  20171025133004 06d93032 generic_message_structures%s
+D generic_message_structures.ads  20171025224108 b32b4cc3 generic_message_structures%s
 D generic_router.ads	20171025050034 ba2a77db generic_router%s
 D generic_router_links.ads  20171025031224 267d71e6 generic_router_links%s
 D generic_router_links.adb  20171025031224 2cc629d1 generic_router_links%b

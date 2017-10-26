@@ -76,17 +76,17 @@ package body Generic_Router is
                      end loop;
                      if Already_Have = Positive (Router_Range'Last)
                      then
-                        declare
-                           Counter : Natural := 0;
                         begin
-                           for i in 1 .. My_Status.Tb'Length (1) loop
-                              for j in 1 .. My_Status.Tb'Length (2) loop
-                                 if My_Status.Tb (i, j) = 1 then
-                                    Counter := Counter + 1;
-                                 end if;
+                           if Task_Id = 1 then
+                              for i in 1 .. My_Status.Tb'Length (1) loop
+                                 Put (Integer'Image (i));
+                                 for j in 1 .. My_Status.Tb'Length (2) loop
+                                    Put (Integer'Image (My_Status.Tb (i, j)));
+                                 end loop;
+                                 New_Line;
                               end loop;
-                           end loop;
-                           Put_Line ("No." & Integer'Image (Integer (Task_Id)) & " " & Integer'Image (Counter));
+                              New_Line;
+                           end if;
                         end;
                      end if;
                   end loop;

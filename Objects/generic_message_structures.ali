@@ -87,7 +87,7 @@ RV NO_IMPLEMENTATION_ATTRIBUTES
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U generic_message_structures%s  generic_message_structures.ads  0acbfeae DE NE OO PK GE IS
+U generic_message_structures%s  generic_message_structures.ads  bf39825f DE NE OO PK GE IS
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.bounded%s	a-strbou.adb		a-strbou.ali
@@ -100,7 +100,7 @@ D a-string.ads		20170516105952 90ac6797 ada.strings%s
 D a-strbou.ads		20170516105950 53ab54ae ada.strings.bounded%s
 D a-strmap.ads		20170516105952 e8bb714a ada.strings.maps%s
 D a-strsup.ads		20170516105950 a27dcb33 ada.strings.superbounded%s
-D generic_message_structures.ads  20171025133004 06d93032 generic_message_structures%s
+D generic_message_structures.ads  20171025224108 b32b4cc3 generic_message_structures%s
 D generic_routers_configuration.ads  20171025031224 5fb99a32 generic_routers_configuration%s
 D routers_configuration_structures.ads  20171025031224 4685d3a5 routers_configuration_structures%s
 D system.ads		20170516105954 32a08138 system%s
@@ -118,7 +118,7 @@ X 5 a-strbou.ads
 63V16 To_Bounded_String{50R12[8|15]} 8|27s57[15]
 X 8 generic_message_structures.ads
 9K17 Routers_Configuration[9|11] 13r8
-11k9*Generic_Message_Structures 9z17 41l5 41e31
+11k9*Generic_Message_Structures 9z17 42l5 42e31
 15K12*Message_Strings[5|46] 16r8 27r41
 18R12*The_Core_Message{5|50R12[15]} 22r21 27r21
 20R9*Messages_Client 23e14
@@ -128,13 +128,14 @@ X 8 generic_message_structures.ads
 26i7 Sender{9|15I9[9]}
 27r7 The_Message{18R12}
 28i7 Hop_Counter{natural}
-30A9*Modified(natural)<integer> 33r12
-31A9*Table(natural)<integer><integer> 34r12
-32R9*Router_Status 35e14
-33a7 Md{30A9}
-34a7 Tb{31A9}
+30A9*Modified(natural)<integer> 34r12
+31A9*Table(natural)<integer><integer> 35r12
+32R9*Router_Status 36e14
+33b7 Carrier{boolean}
+34a7 Md{30A9}
+35a7 Tb{31A9}
 X 9 generic_routers_configuration.ads
 11k9*Generic_Routers_Configuration 8|6w6 9r46 9|17e34
 15I9 Router_Range<integer> 8|21r21[9] 26r21[9] 26r41[9] 30r43[9] 31r40[9]
-. 31r75[9] 34r52[9]
+. 31r75[9] 35r52[9]
 
