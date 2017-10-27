@@ -135,8 +135,8 @@ D s-stposu.ads		20170516105948 97a6219c system.storage_pools.subpools%s
 D s-stratt.ads		20170516105948 aedef97e system.stream_attributes%s
 D s-traent.ads		20170516105950 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20170516105952 34867c83 system.unsigned_types%s
-D topologies.ads	20171025031224 35583929 topologies%s
-D topologies.adb	20171025031224 b5a347ed topologies%b
+D topologies.ads	20171027074102 35583929 topologies%s
+D topologies.adb	20171027074102 b5a347ed topologies%b
 X 25 topologies.ads
 5K9*Topologies 28l5 28e15 26|5b14 501l5 501t15
 7h9*Topology_Kind 9p13 9r48 10p13 10r48 13r48 14r48 16r71 17r71 18r71 19r71

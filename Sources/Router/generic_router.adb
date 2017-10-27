@@ -4,7 +4,7 @@
 
 with Exceptions; use Exceptions;
 with Ada.Containers.Multiway_Trees;
--- with Ada.Text_IO; use Ada.Text_IO;
+with Ada.Text_IO; use Ada.Text_IO;
 -- with Ada.Task_Identification; use Ada.Task_Identification;
 -- with Ada.Real_Time; use Ada.Real_Time;
 
@@ -45,27 +45,6 @@ package body Generic_Router is
             Packets (index).Md := My_Status.Md;
             Packets (index).Tb := My_Status.Tb;
          end loop;
-         declare
-            task type Send_Status is
-               entry Send (index : Positive);
-            end Send_Status;
-            task body Send_Status is
-               To : Positive;
-            begin
-               accept Send (index : Positive) do
-                  To := index;
-                  Packets (index).Md := My_Status.Md;
-                  Packets (index).Tb := My_Status.Tb;
-                  Packets (index).Last := Router_Range (Id);
-               end Send;
-               Port_List (To).Link.all.Receive_Packet (Packets (To));
-               Packets (To).Courier := False;
-               Sent (To) := True;
-               --   if Packets (To).Courier then
-               --    Put_Line ("Number" & Integer'Image (Id) & " Sent to" & Integer'Image (Integer (Port_List (To).Id)) & " for" & Integer'Image (Integer (Packets (To).Origin)) & " To" & Integer'Image (Integer (Packets (To).Destination)));
-               -- end if;
-            end Send_Status;
-
          begin
             loop
                exit when Shutdown'Count > 0;
@@ -73,6 +52,28 @@ package body Generic_Router is
                   Sent := (others => False);
                   ------------------------------------------------------------
                   declare
+                     task type Send_Status is
+                        entry Send (index : Positive);
+                     end Send_Status;
+                     task body Send_Status is
+                        To : Positive;
+                     begin
+                        accept Send (index : Positive) do
+                           To := index;
+                           Packets (index).Md := My_Status.Md;
+                           Packets (index).Tb := My_Status.Tb;
+                           Packets (index).Last := Router_Range (Id);
+                        end Send;
+                        Port_List (To).Link.all.Receive_Packet (Packets (To));
+                        Packets (To).Courier := False;
+                        Sent (To) := True;
+                     exception
+                        when Exception_Id : others =>  Show_Exception (Exception_Id);
+                           --   if Packets (To).Courier then
+                           --    Put_Line ("Number" & Integer'Image (Id) & " Sent to" & Integer'Image (Integer (Port_List (To).Id)) & " for" & Integer'Image (Integer (Packets (To).Origin)) & " To" & Integer'Image (Integer (Packets (To).Destination)));
+                           -- end if;
+                     end Send_Status;
+
                      task Sending;
                      task body Sending is
                         New_Send_Packets : array (1 .. Port_List'Length) of Send_Status;
@@ -91,6 +92,7 @@ package body Generic_Router is
                               Pointer := Parent (Pointer);
                            end loop;
                            for i in 1 .. Port_List'Length loop
+                              exit when Shutdown'Count > 0;
                               Packets (i).Hop_Counter := 0;
                               if Port_List (i).Id = Router_Range (Element (Pointer)) then
                                  Packets (i).Next := Router_Range (Element (Pointer));
@@ -109,11 +111,11 @@ package body Generic_Router is
                               Message.Sender := Mail.Sender;
                               Message.The_Message := Mail.The_Message;
                               Message.Hop_Counter := Mail.Hop_Counter;
-                --              Put_Line ("Number" & Integer'Image (Id) & " Received from" & Integer'Image (Integer (Mail.Sender)) & " Hop:" & Integer'Image (Mail.Hop_Counter));
+                              --              Put_Line ("Number" & Integer'Image (Id) & " Received from" & Integer'Image (Integer (Mail.Sender)) & " Hop:" & Integer'Image (Mail.Hop_Counter));
                            end Receive_Message;
                         exception
                            when Exception_Id : others => Show_Exception (Exception_Id);
-                  --            Put_Line ("Error" & Positive'Image (Id));
+                              Put_Line ("Error" & Positive'Image (Id));
                         end;
                      end if;
                      -------------------------------------------------------
@@ -125,9 +127,10 @@ package body Generic_Router is
                               Go := False;
                            end if;
                         end loop;
-                        exit when Go;
+                        exit when Go or else Shutdown'Count > 0;
                         accept Receive_Packet (Packet : Heart_Beat) do
                            for i in 1 .. Port_List'Length loop
+                              exit when Shutdown'Count > 0;
                               if Port_List (i).Id = Packet.Last then
                                  if Received (i) then
                                     requeue Receive_Packet;
@@ -142,16 +145,17 @@ package body Generic_Router is
                                  Mail.The_Message := Packet.The_Message;
                                  Mail.Hop_Counter := Packet.Hop_Counter + 1;
                               else
-                --                 Put_Line ("Number" & Integer'Image (Id) & " Transfering for" & Integer'Image (Integer (Packet.Origin)) & " To" & Integer'Image (Integer (Packet.Destination)));
+                                 --                 Put_Line ("Number" & Integer'Image (Id) & " Transfering for" & Integer'Image (Integer (Packet.Origin)) & " To" & Integer'Image (Integer (Packet.Destination)));
                                  Pointer := Find (Local_Tree, Integer (Packet.Destination));
                                  loop
                                     exit when Element (Parent (Pointer)) = Id;
                                     Pointer := Parent (Pointer);
                                  end loop;
                                  for i in 1 .. Port_List'Length loop
+                                    exit when Shutdown'Count > 0;
                                     if Port_List (i).Id = Router_Range (Element (Pointer)) then
                                        loop
-                                          exit when Sent (i);
+                                          exit when Sent (i) or else Shutdown'Count > 0;
                                        end loop;
                                        Packets (i).Next := Router_Range (Element (Pointer));
                                        Packets (i).Origin := Packet.Origin;
@@ -178,6 +182,7 @@ package body Generic_Router is
                            end loop;
 
                            for i in 1 .. Port_List'Length loop
+                              exit when Shutdown'Count > 0;
                               Packets (i).Md := My_Status.Md;
                               Packets (i).Tb := My_Status.Tb;
                            end loop;
@@ -216,11 +221,11 @@ package body Generic_Router is
                         end Receive_Packet;
                         -----------------------------------------------------
                      end loop;
-                     --      Put_Line (Positive'Image (Id) & " age is" & Natural'Image (My_Status.Age) & " gained");
                   end;
                end;
             end loop;
             accept Shutdown;
+            Put_Line ("Terminated" & Integer'Image (Id));
          end;
       end;
 

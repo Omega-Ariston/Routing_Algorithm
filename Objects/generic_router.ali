@@ -87,6 +87,7 @@ RV NO_DISPATCH
 RV NO_EXCEPTION_HANDLERS
 RV NO_EXCEPTION_PROPAGATION
 RV NO_EXCEPTIONS
+RV NO_IO
 RV NO_LOCAL_ALLOCATORS
 RV NO_NESTED_FINALIZATION
 RV NO_RECURSION
@@ -103,7 +104,7 @@ RV NO_IMPLICIT_ALIASING
 RV SPARK_05
 RV MAX_TASK_ENTRIES=5
 
-U generic_router%b	generic_router.adb	0af5eccd DE NE OO PK GE IS
+U generic_router%b	generic_router.adb	776a537d DE NE OO PK GE IS
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 Z ada.containers.helpers%s  a-conhel.adb	a-conhel.ali
@@ -113,6 +114,7 @@ Z ada.finalization%s	a-finali.ads		a-finali.ali
 Z ada.iterator_interfaces%s
 W ada.streams%s		a-stream.adb		a-stream.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
 Z ada.unchecked_conversion%s
 Z ada.unchecked_deallocation%s
 W exceptions%s		exceptions.adb		exceptions.ali
@@ -130,9 +132,10 @@ D a-contai.ads		20170516105950 61e5e089 ada.containers%s
 D a-conhel.ads		20170516105950 20298884 ada.containers.helpers%s
 D a-conhel.adb		20170516105954 9cc5095b ada.containers.helpers%b
 D a-comutr.ads		20170516105948 b57684d7 ada.containers.multiway_trees%s
-D a-comutr.adb		20171026025248 48aa6c50 ada.containers.multiway_trees%b
+D a-comutr.adb		20170516105954 48aa6c50 ada.containers.multiway_trees%b
 D a-except.ads		20170516105952 291912d5 ada.exceptions%s
 D a-finali.ads		20170516105954 bf4f806b ada.finalization%s
+D a-ioexce.ads		20170516105948 e4a01f64 ada.io_exceptions%s
 D a-iteint.ads		20170516105952 7c7305e9 ada.iterator_interfaces%s
 D a-stream.ads		20170516105952 119b8fb3 ada.streams%s
 D a-string.ads		20170516105952 90ac6797 ada.strings%s
@@ -141,21 +144,26 @@ D a-strbou.adb		20170516105952 adb4aa70 ada.strings.bounded%b
 D a-strmap.ads		20170516105952 e8bb714a ada.strings.maps%s
 D a-strsup.ads		20170516105950 a27dcb33 ada.strings.superbounded%s
 D a-tags.ads		20170516105954 d3a89129 ada.tags%s
+D a-textio.ads		20170516105954 386df5d4 ada.text_io%s
 D a-unccon.ads		20170516105954 31484697 ada.unchecked_conversion%s
 D a-uncdea.ads		20170516105954 f15a5ed1 ada.unchecked_deallocation%s
-D exceptions.ads	20171025031224 93f8a807 exceptions%s
-D generic_message_structures.ads  20171027031002 c87a99d9 generic_message_structures%s
-D generic_router.ads	20171026151930 d02069ee generic_router%s
-D generic_router.adb	20171027031002 fc5ba9f3 generic_router%b
-D generic_router_links.ads  20171025031224 267d71e6 generic_router_links%s
-D generic_router_links.adb  20171025031224 2cc629d1 generic_router_links%b
-D generic_routers_configuration.ads  20171025031224 5fb99a32 generic_routers_configuration%s
-D id_dispenser.ads	20171025031224 a411273f id_dispenser%s
-D id_dispenser.adb	20171025031224 d484d9fa id_dispenser%b
-D routers_configuration_structures.ads  20171025031224 4685d3a5 routers_configuration_structures%s
+D exceptions.ads	20171027074102 93f8a807 exceptions%s
+D generic_message_structures.ads  20171027074134 c87a99d9 generic_message_structures%s
+D generic_router.ads	20171027074102 d02069ee generic_router%s
+D generic_router.adb	20171027074134 b9a9e397 generic_router%b
+D generic_router_links.ads  20171027074102 267d71e6 generic_router_links%s
+D generic_router_links.adb  20171027074102 2cc629d1 generic_router_links%b
+D generic_routers_configuration.ads  20171027074102 5fb99a32 generic_routers_configuration%s
+D id_dispenser.ads	20171027074102 a411273f id_dispenser%s
+D id_dispenser.adb	20171027074102 d484d9fa id_dispenser%b
+D interfac.ads		20170516105950 5ab55268 interfaces%s
+D i-cstrea.ads		20170516105950 e53d8b8e interfaces.c_streams%s
+D routers_configuration_structures.ads  20171027074102 4685d3a5 routers_configuration_structures%s
 D system.ads		20170516105954 32a08138 system%s
 D s-atocou.ads		20170516105956 b45c2d8d system.atomic_counters%s
+D s-crtl.ads		20170516105948 0ebbdb71 system.crtl%s
 D s-exctab.ads		20170516105954 54135002 system.exception_table%s
+D s-ficobl.ads		20170516105956 078245e4 system.file_control_block%s
 D s-finroo.ads		20170516105954 4ff27390 system.finalization_root%s
 D s-parame.ads		20170516105954 7e2a0d7f system.parameters%s
 D s-soflin.ads		20170516105950 14e1eb6c system.soft_links%s
@@ -164,151 +172,156 @@ D s-stalib.ads		20170516105954 09bd3940 system.standard_library%s
 D s-stoele.ads		20170516105956 2dc34a04 system.storage_elements%s
 D s-traent.ads		20170516105950 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20170516105952 34867c83 system.unsigned_types%s
-D topologies.ads	20171025031224 35583929 topologies%s
+D s-wchcon.ads		20170516105954 1b7d22d2 system.wch_con%s
+D topologies.ads	20171027074102 35583929 topologies%s
 X 1 ada.ads
-16K9*Ada 20e8 24|6r6 28r31
+16K9*Ada 20e8 26|6r6 7r6 7r23 28r31
 X 4 a-contai.ads
-16K13*Containers 24e19 24|6r10 28r35
+16K13*Containers 24e19 26|6r10 28r35
 20I9*Count_Type<integer>
 X 7 a-comutr.ads
-45k24*Multiway_Trees 511e34 24|6w21 28r46
-50R9 Tree<10|43R9> 24|29r29[28]
-57R9 Cursor 24|30r26[28]
-63V13 Has_Element{boolean} 24|208s50[28]
-86V13 Root{57R9[24|28]} 24|30s47[28] 186s72[28] 213s69[28]
-90V13 Element{integer} 24|90s41[28] 95s67[28] 96s68[28] 148s47[28] 152s73[28]
-. 156s74[28]
-142V13 Find{57R9[24|28]} 24|88s39[28] 146s45[28] 196s48[28]
-178V13 Contains{boolean} 24|200s54[28]
-201V13 Child_Count{4|20I9} 24|186s48[28]
-233U14 Append_Child 24|194s45[28] 202s57[28]
-275V13 Parent{57R9[24|28]} 24|90s50[28] 91s42[28] 148s56[28] 149s48[28]
-277V13 First_Child{57R9[24|28]} 24|213s45[28]
-285V13 Next_Sibling{57R9[24|28]} 24|208s63[28] 209s51[28]
-X 11 a-iteint.ads
+45k24*Multiway_Trees 511e34 26|6w21 28r46
+50R9 Tree<10|43R9> 26|29r29[28]
+57R9 Cursor 26|30r26[28]
+63V13 Has_Element{boolean} 26|213s50[28]
+86V13 Root{57R9[26|28]} 26|30s47[28] 191s72[28] 218s69[28]
+90V13 Element{integer} 26|91s41[28] 97s67[28] 98s68[28] 151s47[28] 156s73[28]
+. 160s74[28]
+142V13 Find{57R9[26|28]} 26|89s39[28] 149s45[28] 201s48[28]
+178V13 Contains{boolean} 26|205s54[28]
+201V13 Child_Count{4|20I9} 26|191s48[28]
+233U14 Append_Child 26|199s45[28] 207s57[28]
+275V13 Parent{57R9[26|28]} 26|91s50[28] 92s42[28] 151s56[28] 152s48[28]
+277V13 First_Child{57R9[26|28]} 26|218s45[28]
+285V13 Next_Sibling{57R9[26|28]} 26|213s63[28] 214s51[28]
+X 12 a-iteint.ads
 24h9 Forward_Iterator
-X 14 a-strbou.ads
-50R12 Bounded_String<17|47R9>
-X 21 exceptions.ads
-17K10*Exceptions 22e15 24|5w6 5r22
-19U14*Show_Exception 24|115s58 228s37
-X 22 generic_message_structures.ads
-9K17 Routers_Configuration[27|11] 23|16r8[11]
-11k9*Generic_Message_Structures 48e31 23|5w6 11r43
-18R12 The_Core_Message{14|50R12[15[23|11]]}
-20R9 Messages_Client 23|31r44[11] 24|87r59[23|11]
-21i7 Destination{27|15I9[9[23|11]]} 24|88r74[23|11] 99r69[23|11]
-22r7 The_Message{18R12[23|11]} 24|98r69[23|11]
-25R9 Messages_Mailbox 23|32r44[11] 24|31r17[23|11] 108r66[23|11]
-26i7 Sender{27|15I9[9[23|11]]} 24|109m39[23|11] 109r54[23|11] 141m39[23|11]
-27r7 The_Message{18R12[23|11]} 24|110m39[23|11] 110r59[23|11] 142m39[23|11]
-28i7 Hop_Counter{natural} 24|111m39[23|11] 111r59[23|11] 143m39[23|11]
+X 15 a-strbou.ads
+50R12 Bounded_String<18|47R9>
+X 20 a-textio.ads
+49K13*Text_IO 471e16 26|7w10 7r27
+263U14*Put_Line 26|118s31 228s13
+X 23 exceptions.ads
+17K10*Exceptions 22e15 26|5w6 5r22
+19U14*Show_Exception 26|71s56 117s58 233s37
+X 24 generic_message_structures.ads
+9K17 Routers_Configuration[29|11] 25|16r8[11]
+11k9*Generic_Message_Structures 48e31 25|5w6 11r43
+18R12 The_Core_Message{15|50R12[15[25|11]]}
+20R9 Messages_Client 25|31r44[11] 26|88r59[25|11]
+21i7 Destination{29|15I9[9[25|11]]} 26|89r74[25|11] 101r69[25|11]
+22r7 The_Message{18R12[25|11]} 26|100r69[25|11]
+25R9 Messages_Mailbox 25|32r44[11] 26|31r17[25|11] 110r66[25|11]
+26i7 Sender{29|15I9[9[25|11]]} 26|111m39[25|11] 111r54[25|11] 144m39[25|11]
+27r7 The_Message{18R12[25|11]} 26|112m39[25|11] 112r59[25|11] 145m39[25|11]
+28i7 Hop_Counter{natural} 26|113m39[25|11] 113r59[25|11] 146m39[25|11]
 30A9 Modified(natural)<integer>
 31A9 Table(natural)<integer><integer>
-32R9 Heart_Beat 23|40r38[11] 24|23r22[23|11] 32r53[23|11] 129r57[23|11]
-33i7 Last{27|15I9[9[23|11]]} 24|59m35[23|11] 131r60[23|11]
-34i7 Origin{27|15I9[9[23|11]]} 24|97m46[23|11] 141r56[23|11] 157m52[23|11]
-. 157r69[23|11]
-35r7 The_Message{18R12[23|11]} 24|98m46[23|11] 142r61[23|11] 158m52[23|11]
-. 158r74[23|11]
-36i7 Destination{27|15I9[9[23|11]]} 24|99m46[23|11] 140r51[23|11] 146r79[23|11]
-. 159m52[23|11] 159r74[23|11]
-37i7 Hop_Counter{natural} 24|94m43[23|11] 143r61[23|11] 160m52[23|11] 160r74[23|11]
-38i7 Next{27|15I9[9[23|11]]} 24|96m46[23|11] 156m52[23|11]
-39b7 Courier{boolean} 24|62m29[23|11] 100m46[23|11] 139r38[23|11] 161m52[23|11]
-40a7 Md{30A9[23|11]} 24|38m20[23|11] 45m29[23|11] 45r45[23|11] 57m35[23|11]
-. 57r51[23|11] 167r49[23|11] 168r48[23|11] 169r49[23|11] 170m44[23|11] 170r68[23|11]
-. 173r58[23|11] 173r94[23|11] 175r49[23|11] 181m43[23|11] 181r59[23|11]
-41a7 Tb{31A9[23|11]} 24|42m23[23|11] 46m29[23|11] 46r45[23|11] 58m35[23|11]
-. 58r51[23|11] 172r62[23|11] 173m47[23|11] 173r83[23|11] 182m43[23|11] 182r59[23|11]
-. 199r56[23|11]
-X 23 generic_router.ads
-11K17 Message_Structures[22|11] 15r8
-13k9*Generic_Router 11z17 43l5 43e19 24|11b14 231l5 231t19
-18K12*Router_Id_Generator[28|9] 19r8
+32R9 Heart_Beat 25|40r38[11] 26|23r22[25|11] 32r53[25|11] 131r57[25|11]
+33i7 Last{29|15I9[9[25|11]]} 26|65m44[25|11] 134r60[25|11]
+34i7 Origin{29|15I9[9[25|11]]} 26|99m46[25|11] 144r56[25|11] 161m52[25|11]
+. 161r69[25|11]
+35r7 The_Message{18R12[25|11]} 26|100m46[25|11] 145r61[25|11] 162m52[25|11]
+. 162r74[25|11]
+36i7 Destination{29|15I9[9[25|11]]} 26|101m46[25|11] 143r51[25|11] 149r79[25|11]
+. 163m52[25|11] 163r74[25|11]
+37i7 Hop_Counter{natural} 26|96m43[25|11] 146r61[25|11] 164m52[25|11] 164r74[25|11]
+38i7 Next{29|15I9[9[25|11]]} 26|98m46[25|11] 160m52[25|11]
+39b7 Courier{boolean} 26|68m38[25|11] 102m46[25|11] 142r38[25|11] 165m52[25|11]
+40a7 Md{30A9[25|11]} 26|38m20[25|11] 45m29[25|11] 45r45[25|11] 63m44[25|11]
+. 63r60[25|11] 171r49[25|11] 172r48[25|11] 173r49[25|11] 174m44[25|11] 174r68[25|11]
+. 177r58[25|11] 177r94[25|11] 179r49[25|11] 186m43[25|11] 186r59[25|11]
+41a7 Tb{31A9[25|11]} 26|42m23[25|11] 46m29[25|11] 46r45[25|11] 64m44[25|11]
+. 64r60[25|11] 176r62[25|11] 177m47[25|11] 177r83[25|11] 187m43[25|11] 187r59[25|11]
+. 204r56[25|11]
+X 25 generic_router.ads
+11K17 Message_Structures[24|11] 15r8
+13k9*Generic_Router 11z17 43l5 43e19 26|11b14 236l5 236t19
+18K12*Router_Id_Generator[30|9] 19r8
 21T9*Router_Task 22r37
 22P9*Router_Task_P(21T9) 24r67
-24K12*Router_Link[25|12] 25r8
-27T14*Router_Task 27d27 41l8 41e19 24|13b14 229l8 229t19
-27i27 Task_Id{27|15I9[22|9[23|11]]} 24|22r74 24r46
-29Y13 Configure 29>24 24|18b14 20l11 20t20
-29a24 Links{25|20A9[24]} 24|19r31
-31Y13 Send_Message 31>30 24|86r25 87b32 103l29 103t41
-31r30 Message{22|20R9[11]} 24|88r66 98r61 99r61
-32Y13 Receive_Message 32<30 24|106r25 108b35 113l32 113t47
-32r30 Message{22|25R9[11]} 24|109m31 110m31 111m31
-34Y13 Shutdown 24|71r26 223b20
-40Y13 Receive_Packet 40>29 24|61s40 129b32 133r45 216l29 216t43
-40r29 Packet{22|32R9[11]} 24|131r53 139r31 140r44 141r49 142r54 143r54 146r72
-. 157r62 158r67 159r67 160r67 167r42 168r41 169r42 170r61 173r51 173r76 173r87
-. 175r42
-X 24 generic_router.adb
-15a7 Connected_Routers{25|20A9[23|24]} 19m10 22r83
-18a25 Links{25|20A9[23|24]}
-22a10 Port_List{25|19A9[23|24]} 32r32 33r33 34r29 41r28 42r41 44r28 61r16
-. 78r56 93r42 95r34 130r42 131r34 151r48 152r40 180r42
-23r10 My_Status{22|32R9[23|11]} 38m10 42m13 45r35 46r35 57r41 58r41 170m34
-. 172r52 173m37 181r49 182r49 199r46
-24i10 Id{positive} 38r37 40r18 42r27 59r57 90r70 97r70 140r66 148r76 193r52
-. 194r68
-25i10 Modifyer{natural} 38r24 39m10 39r22 170r48 171m34 171r46
-26a10 Stored(boolean) 40m10 169r34 175m34
-27i10 Already_Have{natural} 176m34 176r50 185r31
+24K12*Router_Link[27|12] 25r8
+27T14*Router_Task 27d27 41l8 41e19 26|13b14 234l8 234t19
+27i27 Task_Id{29|15I9[24|9[25|11]]} 26|22r74 24r46
+29Y13 Configure 29>24 26|18b14 20l11 20t20
+29a24 Links{27|20A9[24]} 26|19r31
+31Y13 Send_Message 31>30 26|87r25 88b32 105l29 105t41
+31r30 Message{24|20R9[11]} 26|89r66 100r61 101r61
+32Y13 Receive_Message 32<30 26|108r25 110b35 115l32 115t47
+32r30 Message{24|25R9[11]} 26|111m31 112m31 113m31
+34Y13 Shutdown 26|50r26 95r41 130r46 133r41 155r47 158r70 185r41 227b20
+40Y13 Receive_Packet 40>29 26|67s49 131b32 136r45 221l29 221t43
+40r29 Packet{24|32R9[11]} 26|134r53 142r31 143r44 144r49 145r54 146r54 149r72
+. 161r62 162r67 163r67 164r67 171r42 172r41 173r42 174r61 177r51 177r76 177r87
+. 179r42
+X 26 generic_router.adb
+15a7 Connected_Routers{27|20A9[25|24]} 19m10 22r83
+18a25 Links{27|20A9[25|24]}
+22a10 Port_List{27|19A9[25|24]} 32r32 33r33 34r29 41r28 42r41 44r28 67r25
+. 79r56 94r42 97r34 132r42 134r34 154r48 156r40 184r42
+23r10 My_Status{24|32R9[25|11]} 38m10 42m13 45r35 46r35 63r50 64r50 174m34
+. 176r52 177m37 186r49 187r49 204r46
+24i10 Id{positive} 38r37 40r18 42r27 65r66 91r70 99r70 118r67 143r66 151r76
+. 198r52 199r68 228r53
+25i10 Modifyer{natural} 38r24 39m10 39r22 174r48 175m34 175r46
+26a10 Stored(boolean) 40m10 173r34 179m34
+27i10 Already_Have{natural} 180m34 180r50 190r31
 28K18 Trees[7|45] 28r77 29r23 30r20
-29r10 Local_Tree{7|50R9[28]} 30r36 88r45 146r51 186r61 194m34 194r34 196r54
-. 200r64 202m46 202r46 213r58
-30r10 Pointer{7|57R9[28]} 88m28 90r58 91m31 91r50 95r76 96r77 146m34 148r64
-. 149m37 149r56 152r82 156r83 194r59 196m37 202r71 208r77 209m40 209r65 213m34
-31r10 Mail{22|25R9[23|11]} 109r49 110r54 111r54 141m34 142m34 143m34
-32a10 Packets(22|32R9[23|11]) 45m13 46m13 57m19 58m19 59m19 61r56 62m16 94m31
-. 96m34 97m34 98m34 99m34 100m34 156m40 157m40 158m40 159m40 160m40 161m40
-. 181m31 182m31
-33a10 Received(boolean) 120m22 123r39 124r31 132r37 135m37
-34a10 Sent(boolean) 63m16 73m19 154r53
-35b10 Go{boolean} 122m25 125m31 128r35
+29r10 Local_Tree{7|50R9[28]} 30r36 89r45 149r51 191r61 199m34 199r34 201r54
+. 205r64 207m46 207r46 218r58
+30r10 Pointer{7|57R9[28]} 89m28 91r58 92m31 92r50 97r76 98r77 149m34 151r64
+. 152m37 152r56 156r82 160r83 199r59 201m37 207r71 213r77 214m40 214r65 218m34
+31r10 Mail{24|25R9[25|11]} 111r49 112r54 113r54 144m34 145m34 146m34
+32a10 Packets(24|32R9[25|11]) 45m13 46m13 63m28 64m28 65m28 67r65 68m25 96m31
+. 98m34 99m34 100m34 101m34 102m34 160m40 161m40 162m40 163m40 164m40 165m40
+. 186m31 187m31
+33a10 Received(boolean) 122m22 125r39 126r31 135r37 138m37
+34a10 Sent(boolean) 52m19 69m25 158r53
+35b10 Go{boolean} 124m25 127m31 130r35
 41i14 index{integer} 42r52
 44i14 index{integer} 45r22 46r22
-49T23 Send_Status 51l17 51e28 52b23 67l17 67t28 78r77
-50Y22 Send 50>28 55b23 60l20 60t24 81s49
-50i28 index{positive} 56r25 57r28 58r28 59r28
-53i16 To{positive} 56m19 61r27 61r65 62r25 63r22
-55i29 index{positive}
-76t27 Sending 77b32 83l26 83t33
-78a25 New_Send_Packets(49T23) 80r39 81r28
-80i29 i{integer} 81r46 81r55
-87r46 Message{22|20R9[23|11]}
-93i32 i{integer} 94r40 95r45 96r43 97r43 98r43 99r43 100r43
-108r52 Message{22|25R9[23|11]}
-115r33 Exception_Id{9|63R9} 115r74
-123i29 i{integer} 124r41
-129r48 Packet{22|32R9[23|11]}
-130i32 i{integer} 131r45 132r47 135r47
-151i38 i{integer} 152r51 154r59 156r49 157r49 158r49 159r49 160r49 161r49
-167i32 j{integer} 168r52 169r53 170r72 173r62 173r98 175r53
-172i38 index{integer} 173r66 173r102
-180i32 i{integer} 181r40 182r40
-189a34 work_queue(natural) 193m34 196r66 199r60 203m46 211r60
-190i34 work_index{positive} 191r59 196r78 199r72 207m40 207r54 211r47
-191i34 temp_index{positive} 203r58 204m46 204r60
-198i44 i{integer} 199r85 200r76 202r80 203r73
-228r12 Exception_Id{9|63R9} 228r53
-X 25 generic_router_links.ads
-12k9*Generic_Router_Links 23|6w6 24r31 25|24e25
+55T32 Send_Status 57l26 57e37 58b32 75l26 75t37 79r77
+56Y31 Send 56>37 61b32 66l29 66t33 82s49
+56i37 index{positive} 62r34 63r37 64r37 65r37
+59i25 To{positive} 62m28 67r36 67r74 68r34 69r31
+61i38 index{positive}
+71r30 Exception_Id{9|63R9} 71r72
+77t27 Sending 78b32 84l26 84t33
+79a25 New_Send_Packets(55T32) 81r39 82r28
+81i29 i{integer} 82r46 82r55
+88r46 Message{24|20R9[25|11]}
+94i32 i{integer} 96r40 97r45 98r43 99r43 100r43 101r43 102r43
+110r52 Message{24|25R9[25|11]}
+117r33 Exception_Id{9|63R9} 117r74
+125i29 i{integer} 126r41
+131r48 Packet{24|32R9[25|11]}
+132i32 i{integer} 134r45 135r47 138r47
+154i38 i{integer} 156r51 158r59 160r49 161r49 162r49 163r49 164r49 165r49
+171i32 j{integer} 172r52 173r53 174r72 177r62 177r98 179r53
+176i38 index{integer} 177r66 177r102
+184i32 i{integer} 186r40 187r40
+194a34 work_queue(natural) 198m34 201r66 204r60 208m46 216r60
+195i34 work_index{positive} 196r59 201r78 204r72 212m40 212r54 216r47
+196i34 temp_index{positive} 208r58 209m46 209r60
+203i44 i{integer} 204r85 205r76 207r80 208r73
+233r12 Exception_Id{9|63R9} 233r53
+X 27 generic_router_links.ads
+12k9*Generic_Router_Links 25|6w6 24r31 27|24e25
 14R9 Router_Ports
-15i7 Id{27|15I9[22|9[23|11]]} 24|42r59[23|24] 95r48[23|24] 131r48[23|24]
-. 152r54[23|24]
-16p7 Link{23|22P9} 24|61r31[23|24]
-19A9 Connected_Router_Ports(14R9[23|24])<integer> 24|22r31[23|24]
-20A9 Ids_To_Links(23|22P9)<27|15I9[22|9[23|11]]> 23|29r32[24] 24|15r27[23|24]
-. 18r33[23|24]
-22V13 To_Router_Ports{19A9[23|24]} 24|22s57[23|24]
-X 27 generic_routers_configuration.ads
-15I9 Router_Range<integer> 23|18r64[22|9[23|11]] 24r53[22|9[23|11]] 27r38[22|9[23|11]]
-. 24|26r41[22|9[23|11]] 59r43[22|9[23|11]] 95r53[22|9[23|11]] 96r54[22|9[23|11]]
-. 97r56[22|9[23|11]] 152r59[22|9[23|11]] 156r60[22|9[23|11]] 185r56[22|9[23|11]]
-. 189r69[22|9[23|11]] 198r64[22|9[23|11]]
-X 28 id_dispenser.ads
-7E9 Element 23|18r53
-9k9*Id_Dispenser 23|7w6 18r39 28|15e17
-11V13 Draw_Id{27|15I9[22|9[23|11]]} 23|27s54[18]
+15i7 Id{29|15I9[24|9[25|11]]} 26|42r59[25|24] 97r48[25|24] 134r48[25|24]
+. 156r54[25|24]
+16p7 Link{25|22P9} 26|67r40[25|24]
+19A9 Connected_Router_Ports(14R9[25|24])<integer> 26|22r31[25|24]
+20A9 Ids_To_Links(25|22P9)<29|15I9[24|9[25|11]]> 25|29r32[24] 26|15r27[25|24]
+. 18r33[25|24]
+22V13 To_Router_Ports{19A9[25|24]} 26|22s57[25|24]
+X 29 generic_routers_configuration.ads
+15I9 Router_Range<integer> 25|18r64[24|9[25|11]] 24r53[24|9[25|11]] 27r38[24|9[25|11]]
+. 26|26r41[24|9[25|11]] 65r52[24|9[25|11]] 97r53[24|9[25|11]] 98r54[24|9[25|11]]
+. 99r56[24|9[25|11]] 156r59[24|9[25|11]] 160r60[24|9[25|11]] 190r56[24|9[25|11]]
+. 194r69[24|9[25|11]] 203r64[24|9[25|11]]
+X 30 id_dispenser.ads
+7E9 Element 25|18r53
+9k9*Id_Dispenser 25|7w6 18r39 30|15e17
+11V13 Draw_Id{29|15I9[24|9[25|11]]} 25|27s54[18]
 

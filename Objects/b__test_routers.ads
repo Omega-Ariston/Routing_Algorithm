@@ -526,7 +526,7 @@ package ada_main is
    pragma Export (C, u00244, "system__stream_attributesB");
    u00245 : constant Version_32 := 16#8bc30a4e#;
    pragma Export (C, u00245, "system__stream_attributesS");
-   u00246 : constant Version_32 := 16#0af5eccd#;
+   u00246 : constant Version_32 := 16#776a537d#;
    pragma Export (C, u00246, "generic_routerB");
    u00247 : constant Version_32 := 16#9a36a6ee#;
    pragma Export (C, u00247, "generic_routerS");

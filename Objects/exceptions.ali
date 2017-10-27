@@ -108,8 +108,8 @@ D a-tags.ads		20170516105954 d3a89129 ada.tags%s
 D a-taside.ads		20170516105954 c6417f71 ada.task_identification%s
 D a-textio.ads		20170516105954 386df5d4 ada.text_io%s
 D a-unccon.ads		20170516105954 31484697 ada.unchecked_conversion%s
-D exceptions.ads	20171025031224 93f8a807 exceptions%s
-D exceptions.adb	20171025031224 54a038ff exceptions%b
+D exceptions.ads	20171027074102 93f8a807 exceptions%s
+D exceptions.adb	20171027074102 54a038ff exceptions%b
 D interfac.ads		20170516105950 5ab55268 interfaces%s
 D i-c.ads		20170516105948 5421119b interfaces.c%s
 D i-cstrin.ads		20170516105952 341d0ddf interfaces.c.strings%s
