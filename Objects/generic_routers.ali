@@ -97,7 +97,7 @@ W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W topologies%s		topologies.adb		topologies.ali
 
-U generic_routers%s	generic_routers.ads	bd8852de BN DE EE NE OO PK GE IS
+U generic_routers%s	generic_routers.ads	d7824ceb BN DE EE NE OO PK GE IS
 W generic_router%s	generic_router.adb	generic_router.ali
 
 D ada.ads		20170516105950 76789da1 ada%s
@@ -114,8 +114,8 @@ D a-strsup.ads		20170516105950 a27dcb33 ada.strings.superbounded%s
 D a-tags.ads		20170516105954 d3a89129 ada.tags%s
 D a-textio.ads		20170516105954 386df5d4 ada.text_io%s
 D a-unccon.ads		20170516105954 31484697 ada.unchecked_conversion%s
-D generic_message_structures.ads  20171025224108 b32b4cc3 generic_message_structures%s
-D generic_router.ads	20171025050034 ba2a77db generic_router%s
+D generic_message_structures.ads  20171027031002 c87a99d9 generic_message_structures%s
+D generic_router.ads	20171026151930 d02069ee generic_router%s
 D generic_router_links.ads  20171025031224 267d71e6 generic_router_links%s
 D generic_router_links.adb  20171025031224 2cc629d1 generic_router_links%b
 D generic_routers.ads	20171025031224 07a22505 generic_routers%s

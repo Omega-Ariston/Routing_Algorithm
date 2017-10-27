@@ -37,7 +37,7 @@ package Generic_Router is
       -- to communicate with your router.
 
       --  Add one or multiple further entries for inter-router communications here
-      entry Receive_Status (Status : Router_Status);
+      entry Receive_Packet (Packet : Heart_Beat);
    end Router_Task;
 
 end Generic_Router;

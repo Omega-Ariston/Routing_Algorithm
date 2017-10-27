@@ -29,8 +29,14 @@ package Generic_Message_Structures is
    end record;
    type Modified is array (1 .. Positive (Router_Range'Last)) of Natural;
    type Table is array (1 .. Positive (Router_Range'Last), 1 .. Positive (Router_Range'Last)) of Natural;
-   type Router_Status is record
-      Carrier : Boolean := False;
+   type Heart_Beat is record
+      Last : Router_Range := Router_Range'Invalid_Value;
+      Origin : Router_Range := Router_Range'Invalid_Value;
+      The_Message : The_Core_Message;
+      Destination : Router_Range := Router_Range'Invalid_Value;
+      Hop_Counter : Natural := 0;
+      Next : Router_Range := Router_Range'Invalid_Value;
+      Courier : Boolean := False;
       Md : Modified := (others => 0);
       Tb : Table := (others => (others => Natural (Router_Range'Last + 1)));
    end record;

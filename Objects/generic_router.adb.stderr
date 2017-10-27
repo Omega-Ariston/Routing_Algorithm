@@ -1,3 +1,0 @@
-generic_router.adb:13:04: warning: no accept for entry "Receive_Message"
-generic_router.adb:13:04: warning: no accept for entry "Shutdown"
-generic_router.adb:63:43: warning: formal parameter "Message" is not referenced

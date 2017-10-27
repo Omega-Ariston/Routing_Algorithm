@@ -43,14 +43,14 @@ package body ada_main is
    E260 : Short_Integer; pragma Import (Ada, E260, "gnat__directory_operations_E");
    E275 : Short_Integer; pragma Import (Ada, E275, "system__assertions_E");
    E265 : Short_Integer; pragma Import (Ada, E265, "system__pool_global_E");
-   E285 : Short_Integer; pragma Import (Ada, E285, "system__random_seed_E");
+   E281 : Short_Integer; pragma Import (Ada, E281, "system__random_seed_E");
    E272 : Short_Integer; pragma Import (Ada, E272, "system__regexp_E");
    E256 : Short_Integer; pragma Import (Ada, E256, "gnat__command_line_E");
    E209 : Short_Integer; pragma Import (Ada, E209, "system__tasking__initialization_E");
    E219 : Short_Integer; pragma Import (Ada, E219, "system__tasking__protected_objects_E");
    E221 : Short_Integer; pragma Import (Ada, E221, "system__tasking__protected_objects__entries_E");
    E217 : Short_Integer; pragma Import (Ada, E217, "system__tasking__queuing_E");
-   E295 : Short_Integer; pragma Import (Ada, E295, "system__tasking__stages_E");
+   E291 : Short_Integer; pragma Import (Ada, E291, "system__tasking__stages_E");
    E203 : Short_Integer; pragma Import (Ada, E203, "exceptions_E");
    E249 : Short_Integer; pragma Import (Ada, E249, "generic_router_links_E");
    E251 : Short_Integer; pragma Import (Ada, E251, "id_dispenser_E");
@@ -226,14 +226,14 @@ package body ada_main is
            True, True, False, True, True, False, True, True, 
            False, True, True, True, True, False, True, False, 
            False, False, True, False, True, True, False, True, 
-           False, True, True, False, True, False, True, True, 
+           False, True, True, False, True, True, True, True, 
            False, True, True, False, True, False, False, False, 
            True, False, True, False, True, True, True, False, 
            False, True, False, True, True, True, False, True, 
            True, False, True, True, True, True, False, False, 
-           True, False, False, False, False, True, True, True, 
+           True, False, False, False, False, False, True, True, 
            False, True, False),
-         Count => (0, 0, 0, 0, 2, 5, 1, 0, 2, 0),
+         Count => (0, 0, 0, 0, 0, 5, 1, 0, 2, 0),
          Unknown => (False, False, False, False, False, False, True, False, True, False));
       Priority_Specific_Dispatching :=
         Local_Priority_Specific_Dispatching'Address;
@@ -328,7 +328,7 @@ package body ada_main is
       System.Pool_Global'Elab_Spec;
       E265 := E265 + 1;
       System.Random_Seed'Elab_Body;
-      E285 := E285 + 1;
+      E281 := E281 + 1;
       System.Regexp'Elab_Spec;
       E272 := E272 + 1;
       Gnat.Command_Line'Elab_Spec;
@@ -343,7 +343,7 @@ package body ada_main is
       System.Tasking.Queuing'Elab_Body;
       E217 := E217 + 1;
       System.Tasking.Stages'Elab_Body;
-      E295 := E295 + 1;
+      E291 := E291 + 1;
       E203 := E203 + 1;
       E249 := E249 + 1;
       E251 := E251 + 1;
